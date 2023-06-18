@@ -223,17 +223,6 @@ export default function Header() {
                       onClick={changeTheme}
                       sx={{
                         border:
-                          mode === "blue"
-                            ? `1px solid ${theme.palette.secondary.main}`
-                            : "",
-                      }}
-                    >
-                      Blue
-                    </MenuItem>
-                    <MenuItem
-                      onClick={changeTheme}
-                      sx={{
-                        border:
                           mode === "pink"
                             ? `1px solid ${theme.palette.secondary.main}`
                             : "",
@@ -263,17 +252,7 @@ export default function Header() {
                     >
                       Purple
                     </MenuItem>
-                    <MenuItem
-                      onClick={changeTheme}
-                      sx={{
-                        border:
-                          mode === "green"
-                            ? `1px solid ${theme.palette.secondary.main}`
-                            : "",
-                      }}
-                    >
-                      Green
-                    </MenuItem>
+
                     <MenuItem
                       onClick={changeTheme}
                       sx={{

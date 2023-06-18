@@ -42,6 +42,7 @@ import ReviewList from "./components/admin/ReviewList";
 import { Box, CssBaseline, ThemeProvider, createTheme } from "@mui/material";
 import { themeSettings } from "./theme";
 import { useSelector } from "react-redux";
+import No from "./No";
 
 //lazy route components
 const ProductDetail = lazy(() => import("./components/product/ProductDetail"));
@@ -76,6 +77,7 @@ function App() {
               <ToastContainer theme="dark" />
               <Routes>
                 <Route path="/" element={<Home />} />
+                <Route path="/no" element={<No />} />
                 <Route path="/search/:keyword" element={<ProductSearch />} />
 
                 <Route

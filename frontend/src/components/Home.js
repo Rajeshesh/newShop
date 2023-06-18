@@ -67,12 +67,6 @@ export default function Home() {
           ) : null}
         </Fragment>
       )}
-      <BorderFlowBySpan width="300px" height="350px">
-        <span className="spanA"></span>
-        <span className="spanA"></span>
-        <span className="spanA"></span>
-        <span className="spanA"></span>
-      </BorderFlowBySpan>
     </Box>
   );
 }

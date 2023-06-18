@@ -1,4 +1,59 @@
-let orange = {
+export let black = {
+  100: "#cccccc",
+  200: "#999999",
+  300: "#616161",
+  400: "#424242",
+  500: "#2b2b2b",
+  600: "#212121",
+  700: "#111211",
+  800: "#080908",
+  900: "#000000",
+};
+export let blue = {
+  100: "#d0c2ee",
+  200: "#b099e3",
+  300: "#906fd9",
+  400: "#774fd0",
+  500: "#5c2fc8",
+  600: "#512ac2",
+  700: "#4122b9",
+  800: "#301cb2",
+  900: "#000ea7",
+};
+export let lightBlue = {
+  100: "#bee3ff",
+  200: "#96d2ff",
+  300: "#6bc0ff",
+  400: "#4bb2ff",
+  500: "#2fa5ff",
+  600: "#2c96f7",
+  700: "#2783e3",
+  800: "#2372d1",
+  900: "#1c53b2",
+};
+export let green = {
+  100: "#c1e6c9",
+  200: "#99d5a7",
+  300: "#6ec684",
+  400: "#1ead4f",
+  500: "#007b30",
+  600: "#005c1c",
+  700: "#103813",
+  800: "#0b260d",
+  900: "#061607",
+};
+export let lime = {
+  100: "#e8ff99",
+  200: "#ddff66",
+  300: "#d1ff33",
+  400: "#c6ff00",
+  500: "#aeea00",
+  600: "#9ecc00",
+  700: "#79a300",
+  800: "#4f6600",
+  900: "#283300",
+};
+export let orange = {
   100: "#fadbd1",
   200: "#f5b7a3",
   300: "#f09275",
@@ -9,62 +64,72 @@ let orange = {
   800: "#5c1e0a",
   900: "#2e0f05",
 };
-let purple = {
-  100: "#954BEF",
-  200: "#7933CF",
-  300: "#6923BF",
-  400: "#561A9F",
-  500: "#4a148c",
-  600: "#381062",
-  700: "#2E0F52",
-  800: "#21093C",
-  900: "#1e0838",
+export let pink = {
+  100: "#ffc2d7",
+  200: "#ffa3c2",
+  300: "#ff85ae",
+  400: "#ff669a",
+  500: "#ff4081",
+  600: "#d81b61",
+  700: "#c2185b",
+  800: "#9b1349",
+  900: "#740e37",
 };
-let pink = {
-  100: "#f3d1de",
-  200: "#e7a3bd",
-  300: "#da749d",
-  400: "#ce467c",
-  500: "#c2185b",
-  600: "#9b1349",
-  700: "#740e37",
-  800: "#4e0a24",
-  900: "#270512",
+export let purple = {
+  100: "#dd99ff",
+  200: "#cc66ff",
+  300: "#bb33ff",
+  400: "#aa00ff",
+  500: "#8800cc",
+  600: "#660099",
+  700: "#440066",
+  800: "#29003d",
+  900: "#14001f",
 };
-let green = {
-  100: "#d1dfd2",
-  200: "#a4bfa6",
-  300: "#769e79",
-  400: "#497e4d",
-  500: "#1b5e20",
-  600: "#164b1a",
+export let red = {
+  100: "#f7cccc",
+  200: "#ee9999",
+  300: "#e66666",
+  400: "#dd3333",
+  500: "#d50000",
+  600: "#aa0000",
+  700: "#800000",
+  800: "#550000",
+  900: "#2b0000",
+};
+export let yellow = {
+  100: "#ffff99",
+  200: "#ffff66",
+  300: "#ffff33",
+  400: "#ffff00",
+  500: "#ffea00",
+  600: "#ffd600",
+  700: "#ccab00",
+  800: "#998000",
+  900: "#665600",
+};
+
+export let one = {
+  100: "#c1e6c9",
+  200: "#99d5a7",
+  300: "#6ec684",
+  400: "#1ead4f",
+  500: "#007b30",
+  600: "#005c1c",
   700: "#103813",
   800: "#0b260d",
   900: "#061607",
 };
-let black = {
-  100: "#cccccc",
-  200: "#999999",
-  300: "#484948",
-  400: "#2b2b2b",
-  500: "#151616",
-  600: "#0B0C0B",
-  700: "#100F0F",
-  800: "#080908",
-  900: "#000000",
-};
-let blue = {
-  primary: {
-    100: "#d3d4de",
-    200: "#a6a9be",
-    300: "#7a7f9d",
-    400: "#4d547d",
-    500: "#21295c",
-    600: "#191F45",
-    700: "#141937",
-    800: "#0d1025",
-    900: "#070812",
-  },
+export let two = {
+  100: "#ffff99",
+  200: "#ffff66",
+  300: "#ffff33",
+  400: "#ffff00",
+  500: "#ffea00",
+  600: "#ffd600",
+  700: "#ccab00",
+  800: "#998000",
+  900: "#665600",
 };
 
 // color design tokens export
@@ -151,11 +216,7 @@ export const themeSettings = ({ mode, font }) => {
       mode:
         mode === "dark"
           ? "dark"
-          : mode === "blue"
-          ? "dark"
           : mode === "purple"
-          ? "dark"
-          : mode === "green"
           ? "dark"
           : mode === "light"
           ? "light"
@@ -186,49 +247,6 @@ export const themeSettings = ({ mode, font }) => {
               alt1: tokensDark.primary[500],
             },
           }
-        : mode === "blue"
-        ? {
-            primary: {
-              ...blue.primary,
-              main: blue.primary[400],
-              light: blue.primary[400],
-            },
-            secondary: {
-              ...tokensDark.secondary,
-              main: tokensDark.secondary[300],
-            },
-            neutral: {
-              ...tokensDark.grey,
-              main: tokensDark.grey[500],
-            },
-            background: {
-              default: blue.primary[800],
-              alt: blue.primary[600],
-              alt1: blue.primary[500],
-            },
-          }
-        : mode === "green"
-        ? {
-            primary: {
-              ...green,
-              main: green[400],
-              light: green[400],
-            },
-            secondary: {
-              ...tokensDark.secondary,
-              main: tokensDark.secondary[300],
-            },
-            neutral: {
-              ...tokensDark.grey,
-              main: tokensDark.grey[500],
-            },
-            background: {
-              default: green[900],
-              alt: green[700],
-              alt1: green[800],
-            },
-            alt: green[500],
-          }
         : mode === "pink"
         ? {
             primary: {
@@ -245,9 +263,9 @@ export const themeSettings = ({ mode, font }) => {
               main: tokensDark.grey[500],
             },
             background: {
-              default: pink[200],
-              alt: pink[500],
-              alt1: pink[400],
+              default: pink[100],
+              alt: pink[700],
+              alt1: pink[600],
             },
           }
         : mode === "purple"
@@ -314,6 +332,40 @@ export const themeSettings = ({ mode, font }) => {
               alt1: orange[500],
             },
           }), //orange
+      bg1:
+        mode === "orange"
+          ? [blue[800], blue]
+          : mode === "pink"
+          ? [purple[700], purple]
+          : [blue[900], blue],
+      bg2:
+        mode === "orange"
+          ? [pink[700], pink]
+          : mode === "light"
+          ? [green[500], green]
+          : [green[600], green],
+      bg3:
+        mode === "purple"
+          ? [pink[600], pink]
+          : mode === "light"
+          ? [orange[500], orange]
+          : mode === "pink"
+          ? [lightBlue[800], lightBlue]
+          : mode === "dark"
+          ? [purple[500], purple]
+          : [purple[600], purple],
+      bg4:
+        mode === "orange"
+          ? [lightBlue[400], lightBlue]
+          : mode === "light"
+          ? [yellow[600], yellow]
+          : mode === "pink"
+          ? [lime[700], lime]
+          : [yellow[700], yellow],
+      bg5:
+        mode === "dark" || mode === "purple"
+          ? [black[200], black]
+          : [black[300], black],
       orange,
       purple,
       black,

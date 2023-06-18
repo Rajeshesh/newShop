@@ -391,19 +391,6 @@ const Sidebar = ({
                   onClick={changeTheme}
                   sx={{
                     border:
-                      mode === "blue"
-                        ? `1px solid ${theme.palette.secondary.main}`
-                        : "",
-                  }}
-                >
-                  <ListItemText>Blue</ListItemText>
-                </ListItemButton>
-              </SListI>
-              <SListI>
-                <ListItemButton
-                  onClick={changeTheme}
-                  sx={{
-                    border:
                       mode === "pink"
                         ? `1px solid ${theme.palette.secondary.main}`
                         : "",
@@ -436,19 +423,6 @@ const Sidebar = ({
                   }}
                 >
                   <ListItemText>Purple</ListItemText>
-                </ListItemButton>
-              </SListI>
-              <SListI>
-                <ListItemButton
-                  onClick={changeTheme}
-                  sx={{
-                    border:
-                      mode === "green"
-                        ? `1px solid ${theme.palette.secondary.main}`
-                        : "",
-                  }}
-                >
-                  <ListItemText>Green</ListItemText>
                 </ListItemButton>
               </SListI>
               <SListI>
