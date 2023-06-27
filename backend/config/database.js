@@ -1,5 +1,4 @@
 const mongoose = require("mongoose");
-const { dataProduct } = require("../data/index");
 
 const connectDatabase = () => {
   mongoose

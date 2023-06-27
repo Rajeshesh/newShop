@@ -237,7 +237,7 @@ export default function ProductSearch() {
                     <Pagination
                       onChange={(e, p) => setCurrentPage(p)}
                       page={currentPage}
-                      count={Math.ceil(3 % productsCount)}
+                      count={Math.ceil(productsCount / resPerPage)}
                       showFirstButton={true}
                       showLastButton={true}
                       shape="rounded"
