@@ -8,7 +8,7 @@ export default function Product({ product }) {
 
 
     return (
-        <div className={`product  m-1 mt-1 p-3`}>
+        <div className={`product m-1 mt-1 p-3`}>
             <div >
                 <Link to={`/product/${product._id}`}  className='product__link' >
                     <img

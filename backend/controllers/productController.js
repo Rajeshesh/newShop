@@ -39,6 +39,8 @@ exports.newProduct = catchAsyncError(async (req, res, next) => {
       images.push({ image: url });
     });
   }
+  images.push(...req.body.imagesUrl.split(",").map((v) => ({ image: v })));
+
   req.body.images = images;
 
   req.body.user = req.user.id;
@@ -84,8 +86,8 @@ exports.updateProduct = catchAsyncError(async (req, res, next) => {
       images.push({ image: url });
     });
   }
+  images.push(...req.body.imagesUrl.split(",").map((v) => ({ image: v })));
   req.body.images = images;
-
   if (!product) {
     return res.status(404).json({
       success: false,

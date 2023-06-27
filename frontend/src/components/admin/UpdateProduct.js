@@ -18,6 +18,7 @@ export default function UpdateProduct() {
   const [stock, setStock] = useState(0);
   const [seller, setSeller] = useState("");
   const [images, setImages] = useState([]);
+  const [imagesUrl, setImagesUrl] = useState("");
   const [imagesCleared, setImagesCleared] = useState(false);
   const [imagesPreview, setImagesPreview] = useState([]);
 
@@ -57,6 +58,7 @@ export default function UpdateProduct() {
     formData.append("seller", seller);
     formData.append("category", category);
     formData.append("imagesCleared", imagesCleared);
+    formData.append("imagesUrl", imagesUrl);
     images.forEach((image) => {
       formData.append("images", image);
     });
@@ -259,6 +261,16 @@ export default function UpdateProduct() {
                 variant="standard"
                 value={seller}
                 onChange={(e) => setSeller(e.target.value)}
+              />
+            </div>
+            <div>
+              <TextField
+                sx={{ width: "100%" }}
+                name="imagesUrl"
+                label="images Url use ',' to seperate"
+                variant="standard"
+                value={imagesUrl}
+                onChange={(e) => setImagesUrl(e.target.value)}
               />
             </div>
 

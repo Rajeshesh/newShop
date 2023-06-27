@@ -226,7 +226,7 @@ export default function ProductSearch() {
                 </Box>
               )}
               <div>
-                <div>
+                <div className="products">
                   {products &&
                     products.map((product) => (
                       <Product key={product._id} product={product} />
