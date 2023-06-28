@@ -27,6 +27,11 @@ export const FlexAroundStart = styled(Box)({
   justifyContent: "space-around",
   alignItems: "flex-start",
 });
+export const FlexStart = styled(Box)({
+  display: "flex",
+  justifyContent: "flex-start",
+  alignItems: "center",
+});
 
 export const FlexEvenly = styled(Box)({
   display: "flex",

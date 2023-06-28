@@ -12,9 +12,15 @@ const productSchema = new mongoose.Schema({
     required: true,
     default: 0.0,
   },
+  MRP: {
+    type: Number,
+  },
   description: {
     type: String,
     required: [true, "Please enter product description"],
+  },
+  aboutThisItem: {
+    type: String,
   },
   ratings: {
     type: Number,
@@ -24,13 +30,13 @@ const productSchema = new mongoose.Schema({
     {
       image: {
         type: String,
-        required: true,
+        required: [true,'image path is req in db'],
       },
     },
   ],
   category: {
     type: String,
-    required: [true, "Please enter product category"],
+    required: [true],
     enum: {
       values: [
         "Electronics",

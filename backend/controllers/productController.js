@@ -5,7 +5,7 @@ const APIFeatures = require("../utils/apiFeatures");
 
 //Get Products - /api/v1/products
 exports.getProducts = catchAsyncError(async (req, res, next) => {
-  const resPerPage = 3;
+  const resPerPage = req.query.resPerPage || 24;
 
   let buildQuery = () => {
     return new APIFeatures(Product.find(), req.query).search().filter();
@@ -71,7 +71,6 @@ exports.getSingleProduct = catchAsyncError(async (req, res, next) => {
 //Update Product - api/v1/product/:id
 exports.updateProduct = catchAsyncError(async (req, res, next) => {
   let product = await Product.findById(req.params.id);
-
   //uploading images
   let images = [];
 
@@ -80,13 +79,16 @@ exports.updateProduct = catchAsyncError(async (req, res, next) => {
     images = product.images;
   }
 
+  console.log(req.files);
   if (req.files.length > 0) {
     req.files.forEach((file) => {
       let url = `${process.env.BACKEND_URL}/uploads/product/${file.originalname}`;
       images.push({ image: url });
     });
   }
-  images.push(...req.body.imagesUrl.split(",").map((v) => ({ image: v })));
+  if (req.body.imagesUrl) {
+    images.push(...req.body.imagesUrl.split(",").map((v) => ({ image: v })));
+  }
   req.body.images = images;
   if (!product) {
     return res.status(404).json({

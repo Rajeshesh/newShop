@@ -108,7 +108,7 @@ export default function ProductSearch() {
     (state) => state.productsState
   );
   const [currentPage, setCurrentPage] = useState(1);
-  const [price, setPrice] = useState([0, 1000]);
+  const [price, setPrice] = useState([0, 10000]);
   const [priceChanged, setPriceChanged] = useState(price);
   const [category, setCategory] = useState(null);
   const [rating, setRating] = useState(0);
@@ -202,7 +202,7 @@ export default function ProductSearch() {
               </SwipeableDrawer>
 
               {large && (
-                <Box width="250px" height="100%">
+                <Box flex="0.25" height="100%">
                   <Box>
                     <Box width="100%" bgcolor={theme.palette.background.alt1}>
                       <Box
@@ -225,13 +225,13 @@ export default function ProductSearch() {
                   </Box>
                 </Box>
               )}
-              <div>
-                <div className="products">
+              <Box flex={large ? "0.75" : "1"}>
+                <Box className="products">
                   {products &&
                     products.map((product) => (
                       <Product key={product._id} product={product} />
                     ))}
-                </div>
+                </Box>
                 {productsCount > 0 && productsCount > resPerPage ? (
                   <FlexCenter className=" mt-5">
                     <Pagination
@@ -244,7 +244,7 @@ export default function ProductSearch() {
                     />
                   </FlexCenter>
                 ) : null}
-              </div>
+              </Box>
             </Stack>
           </section>
         </Fragment>

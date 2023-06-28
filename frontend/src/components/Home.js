@@ -1,25 +1,20 @@
 import { Fragment, useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getProducts } from "../actions/productActions";
-import Loader, { Ring } from "./layouts/Loader";
+import Loader from "./layouts/Loader";
 import MetaData from "./layouts/MetaData";
 import Product from "./product/Product";
 import { toast } from "react-toastify";
-import { BorderFlowBySpan, BoxS } from "./styledComponents/AnimationComponent";
-import { Box, useTheme, Pagination } from "@mui/material";
-import { FlexCenter } from "./styledComponents/FlexBetween";
+import { Box, useTheme } from "@mui/material";
 
 export default function Home() {
   const theme = useTheme();
   const dispatch = useDispatch();
-  const { products, loading, error, productsCount, resPerPage } = useSelector(
+  const { products, loading, error } = useSelector(
     (state) => state.productsState
   );
   const [currentPage, setCurrentPage] = useState(1);
-
-  const setCurrentPageNo = (pageNo) => {
-    setCurrentPage(pageNo);
-  };
+  const [resPerPage, setResPerPage] = useState(6);
 
   useEffect(() => {
     if (error) {
@@ -27,18 +22,11 @@ export default function Home() {
         position: toast.POSITION.BOTTOM_CENTER,
       });
     }
-    dispatch(getProducts(null, null, null, null, currentPage));
-  }, [error, dispatch, currentPage]);
+    dispatch(getProducts(null, null, null, null, currentPage, resPerPage));
+  }, [error, dispatch, currentPage, resPerPage]);
 
   return (
-    <Box
-      sx={
-        {
-          // background: `linear-gradient(to right,${theme.palette.primary[00]},${theme.palette.background.alt1})`,
-        }
-      }
-      width="100%"
-    >
+    <Box width="100%">
       {loading ? (
         <Loader />
       ) : (
@@ -53,18 +41,6 @@ export default function Home() {
                 ))}
             </div>
           </section>
-          {productsCount > 0 && productsCount > resPerPage ? (
-            <FlexCenter>
-              <Pagination
-                onChange={(e, p) => setCurrentPage(p)}
-                page={currentPage}
-                count={Math.ceil(productsCount / resPerPage)}
-                showFirstButton={true}
-                showLastButton={true}
-                shape="rounded"
-              />
-            </FlexCenter>
-          ) : null}
         </Fragment>
       )}
     </Box>

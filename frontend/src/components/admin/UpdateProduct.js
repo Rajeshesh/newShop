@@ -9,6 +9,7 @@ import Sidebar from "./Sidebar";
 import { FlexCenter } from "../styledComponents/FlexBetween";
 import { BorderFlowBySpan } from "../styledComponents/AnimationComponent";
 import { FormContainer } from "../styledComponents/Form";
+import { ClearAll } from "@mui/icons-material";
 
 export default function UpdateProduct() {
   const [name, setName] = useState("");
@@ -296,7 +297,7 @@ export default function UpdateProduct() {
                   className="mr-2 "
                   style={{ cursor: "pointer" }}
                 >
-                  <i className="fa fa-trash"></i>
+                  <ClearAll />
                 </span>
               )}
               {imagesPreview.map((image, i) => (

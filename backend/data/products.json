@@ -2,6 +2,7 @@
     {
         "name": "OPPO F21s Pro 5G",
         "price": 245.67,
+        "MRP": 294.99,
         "description": "OPPO F21s Pro 5G is a powerful device with a RAM extension feature, that offers brilliant operational speed to users.",
         "ratings": 4.5,
         "images": [
@@ -18,6 +19,7 @@
     {
         "name": "WRISTIO HD, Bluetooth Calling Smart Watch",
         "price": 150.32,
+        "MRP": 179.99,
         "description": "Minix watches are exclusively designed to fulfill the advanced tech needs of today’s generation.",
         "ratings": 3.5,
         "images": [
@@ -34,6 +36,7 @@
     {
         "name": "Dell Inspiron 3511 Laptop",
         "price": 440.57,
+        "MRP": 449.99,
         "description": "Dell Inspiron 3511 11th Generation Intel Core i5-1135G7 Processor (8MB Cache, up to 4.2 GHz);Operating System: Windows 10 Home Single Language, English",
         "ratings": 2,
         "images": [
@@ -50,6 +53,7 @@
     {
         "name": "Lenovo IdeaPad Slim 3 Laptop",
         "price": 250.45,
+        "MRP": 279.99,
         "description": "Lenovo IdeaPad Slim 311th Gen Intel Core i5-1135G7 | Speed: 2.4 GHz (Base) - 4.2 GHz (Max) | 4 Cores | 8 Threads | 8 MB Cache",
         "ratings": 4,
         "images": [
@@ -66,6 +70,7 @@
     {
         "name": "ASUS VivoBook 15 Laptop",
         "price": 767.32,
+        "MRP": 799.99,
         "description": "ASUS VivoBook 15 15.6-inch (39.62 cm) HD, Dual Core Intel Celeron N4020, Thin and Light Laptop (4GB RAM/256GB SSD/Integrated Graphics/Windows 11 Home/Transparent Silver/1.8 Kg), X515MA-BR011W",
         "ratings": 5,
         "images": [
@@ -80,98 +85,920 @@
         "reviews": []
     },
     {
-        "name": "PTron Newly Launched Tangent Sports, 60Hrs Playtime",
-        "price": 15.46,
-        "description": "Gigantic 60 + Hours of music playtime on a single charge; BT5.2 Wireless headphones with ENC (Environmental Noise Cancellation) Technology to enhance your voice quality over the voice calls",
-        "ratings": 5,
-        "images": [
-            {
-                "image": "http://127.0.0.1:8000/uploads/product/4.jpg"
-            }
-        ],
-        "category": "Headphones",
-        "seller": "Amazon",
-        "stock": 4,
-        "numOfReviews": 20,
-        "reviews": []
-    },
-    {
-        "name": "Campus Men's Maxico Running Shoes",
-        "price": 10.12,
-        "description": "The high raised back cover with extra padding.",
-        "ratings": 3,
-        "images": [
-            {
-                "image": "http://127.0.0.1:8000/uploads/product/5.jpg"
-            }
-        ],
-        "category": "Sports",
-        "seller": "Ebay",
-        "stock": 6,
-        "numOfReviews": 9,
-        "reviews": []
-    },
-    {
-        "name": "Lenovo IdeaPad  3 Laptop",
-        "price": 250.45,
-        "description": "Lenovo IdeaPad  311th Gen Intel Core i5-1135G7 | Speed: 2.4 GHz (Base) - 4.2 GHz (Max) | 4 Cores | 8 Threads | 8 MB Cache",
-        "ratings": 4,
-        "images": [
-            {
-                "image": "http://127.0.0.1:8000/uploads/product/6.jpg"
-            }
-        ],
-        "category": "Laptops",
-        "seller": "Ebay",
-        "stock": 19,
-        "numOfReviews": 0,
-        "reviews": []
-    },
-    {
-        "name": "ASUS 15 Laptop",
-        "price": 767.32,
-        "description": "ASUS 15 15.6-inch (39.62 cm) HD, Dual Core Intel Celeron N4020, Thin and Light Laptop (4GB RAM/256GB SSD/Integrated Graphics/Windows 11 Home/Transparent Silver/1.8 Kg), X515MA-BR011W",
-        "ratings": 5,
-        "images": [
-            {
-                "image": "http://127.0.0.1:8000/uploads/product/7.jpg"
-            }
-        ],
-        "category": "Laptops",
-        "seller": "Ebay",
-        "stock": 91,
-        "numOfReviews": 0,
-        "reviews": []
-    },
-    {
-        "name": "PTron Newly Launched Tangent Sports, 100Hrs Playtime",
-        "price": 15.46,
-        "description": "Gigantic 100 + Hours of music playtime on a single charge; BT5.2 Wireless headphones with ENC (Environmental Noise Cancellation) Technology to enhance your voice quality over the voice calls",
-        "ratings": 5,
-        "images": [
-            {
-                "image": "http://127.0.0.1:8000/uploads/product/4.jpg"
-            }
-        ],
-        "category": "Headphones",
-        "seller": "Amazon",
-        "stock": 40,
-        "numOfReviews": 0,
-        "reviews": []
-    },
-    {
-        "name": "Campus Men's Running Shoes",
-        "price": 10.12,
-        "description": "The high raised back cover with extra padding.",
+        "name": "Apple iPhone 13 Pro",
+        "price": 1099.99,
+        "MRP": 1199.99,
+        "description": "The Apple iPhone 13 Pro is a high-end smartphone with advanced features and cutting-edge technology. It offers a sleek design, powerful performance, and an immersive user experience.",
+        "aboutThisItem": "The Apple iPhone 13 Pro comes with a stunning Super Retina XDR display, A15 Bionic chip for lightning-fast processing, and an advanced camera system for capturing professional-quality photos and videos. It also supports 5G connectivity, Face ID for secure authentication, and has a long-lasting battery life. With its advanced features and premium build quality, the iPhone 13 Pro is the perfect choice for tech enthusiasts and professionals.",
         "ratings": 0,
         "images": [
             {
-                "image": "http://127.0.0.1:8000/uploads/product/5.jpg"
+                "image": "http://127.0.0.1:8000/uploads/product/1.jpg"
+            }
+        ],
+        "category": "Mobile Phones",
+        "seller": "TechHub",
+        "stock": 10,
+        "numOfReviews": 0,
+        "reviews": []
+    },
+    {
+        "name": "Dell XPS 15 Laptop",
+        "price": 1799.99,
+        "MRP": 1999.99,
+        "description": "The Dell XPS 15 Laptop is a powerful and versatile device designed for both work and entertainment. It features a stunning 15.6-inch 4K Ultra HD display, Intel Core i7 processor, and a dedicated NVIDIA GeForce GTX graphics card.",
+        "aboutThisItem": "The Dell XPS 15 Laptop offers exceptional performance and productivity with its high-speed processor, ample storage space, and impressive graphics capabilities. It is ideal for content creators, gamers, and professionals who require a reliable and efficient machine. With its sleek design and immersive display, the Dell XPS 15 Laptop delivers an unparalleled visual experience.",
+        "ratings": 0,
+        "images": [
+            {
+                "image": "http://127.0.0.1:8000/uploads/product/1.jpg"
+            }
+        ],
+        "category": "Laptops",
+        "seller": "TechGear",
+        "stock": 8,
+        "numOfReviews": 0,
+        "reviews": []
+    },
+    {
+        "name": "Sony WH-1000XM4 Wireless Headphones",
+        "price": 249.99,
+        "MRP": 279.99,
+        "description": "The Sony WH-1000XM4 Wireless Headphones offer an exceptional audio experience with industry-leading noise cancellation technology and high-quality sound reproduction.",
+        "aboutThisItem": "The Sony WH-1000XM4 Wireless Headphones feature advanced noise cancellation that adapts to your surroundings, ensuring a distraction-free listening experience. They deliver immersive sound with powerful bass and crystal-clear highs. The headphones are comfortable to wear for extended periods and offer convenient touch controls for easy playback and call management. With their long battery life and premium build quality, the Sony WH-1000XM4 Wireless Headphones are perfect for music lovers and frequent travelers.",
+        "ratings": 0,
+        "images": [
+            {
+                "image": "http://127.0.0.1:8000/uploads/product/1.jpg"
+            }
+        ],
+        "category": "Headphones",
+        "seller": "AudioWorld",
+        "stock": 15,
+        "numOfReviews": 0,
+        "reviews": []
+    },
+    {
+        "name": "Samsung 55-Inch 4K Smart TV",
+        "price": 799.99,
+        "MRP": 899.99,
+        "description": "The Samsung 55-Inch 4K Smart TV offers stunning visuals and smart features for an immersive home entertainment experience.",
+        "aboutThisItem": "The Samsung 55-Inch 4K Smart TV features a crystal-clear display with vibrant colors and sharp details. It supports HDR content for enhanced contrast and a wider range of colors. The TV comes with built-in streaming services, voice control, and a user-friendly interface, allowing you to access your favorite shows and movies with ease. With its sleek design and smart capabilities, the Samsung 55-Inch 4K Smart TV is a great addition to any living room or home theater setup.",
+        "ratings": 0,
+        "images": [
+            {
+                "image": "http://127.0.0.1:8000/uploads/product/1.jpg"
+            }
+        ],
+        "category": "Electronics",
+        "seller": "TechPlus",
+        "stock": 12,
+        "numOfReviews": 0,
+        "reviews": []
+    },
+    {
+        "name": "Kindle Paperwhite",
+        "price": 129.99,
+        "MRP": 149.99,
+        "description": "The Kindle Paperwhite is a lightweight and waterproof e-reader that provides an excellent reading experience, even in bright sunlight.",
+        "aboutThisItem": "The Kindle Paperwhite features a high-resolution display with adjustable backlighting, allowing you to read comfortably for hours without straining your eyes. It has a large storage capacity to hold thousands of books, and its long-lasting battery ensures uninterrupted reading. The e-reader is compact and portable, making it easy to carry your entire library wherever you go. Whether you're a casual reader or a bookworm, the Kindle Paperwhite is a must-have device for avid readers.",
+        "ratings": 0,
+        "images": [
+            {
+                "image": "http://127.0.0.1:8000/uploads/product/1.jpg"
+            }
+        ],
+        "category": "Books",
+        "seller": "BookWorld",
+        "stock": 20,
+        "numOfReviews": 0,
+        "reviews": []
+    },
+    {
+        "name": "Nike Air Zoom Pegasus 38 Running Shoes",
+        "price": 129.99,
+        "MRP": 139.99,
+        "description": "The Nike Air Zoom Pegasus 38 Running Shoes are designed to provide comfort, support, and responsiveness for a smooth running experience.",
+        "aboutThisItem": "The Nike Air Zoom Pegasus 38 Running Shoes feature a breathable and lightweight mesh upper that keeps your feet cool and comfortable. They have responsive cushioning and a durable rubber outsole for excellent traction on various surfaces. The shoes offer a snug fit and have a padded collar for added ankle support. Whether you're a seasoned runner or just starting, the Nike Air Zoom Pegasus 38 Running Shoes are a reliable choice for your daily runs.",
+        "ratings": 0,
+        "images": [
+            {
+                "image": "http://127.0.0.1:8000/uploads/product/1.jpg"
+            }
+        ],
+        "category": "Shoes",
+        "seller": "SportsZone",
+        "stock": 25,
+        "numOfReviews": 0,
+        "reviews": []
+    },
+    {
+        "name": "Sony PlayStation 5",
+        "price": 499.99,
+        "MRP": 549.99,
+        "description": "The Sony PlayStation 5 is the next-generation gaming console that delivers immersive gaming experiences with stunning visuals and fast load times.",
+        "aboutThisItem": "The Sony PlayStation 5 features a powerful custom CPU and GPU, ultra-high-speed SSD, and Tempest 3D AudioTech for a truly immersive gaming experience. It supports 4K gaming and ray tracing, bringing lifelike graphics and realistic lighting effects to your games. The console also has an innovative DualSense controller with haptic feedback and adaptive triggers, enhancing the gameplay experience. Whether you're into action, adventure, or multiplayer games, the Sony PlayStation 5 takes your gaming to the next level.",
+        "ratings": 0,
+        "images": [
+            {
+                "image": "http://127.0.0.1:8000/uploads/product/1.jpg"
+            }
+        ],
+        "category": "Electronics",
+        "seller": "GameZone",
+        "stock": 5,
+        "numOfReviews": 0,
+        "reviews": []
+    },
+    {
+        "name": "Fitbit Versa 3 Smartwatch",
+        "price": 199.99,
+        "MRP": 229.99,
+        "description": "The Fitbit Versa 3 Smartwatch is a versatile fitness tracker and smartwatch that helps you stay active and connected throughout the day.",
+        "aboutThisItem": "The Fitbit Versa 3 Smartwatch tracks your daily activity, heart rate, and sleep patterns, providing valuable insights into your health and fitness. It has built-in GPS for accurate outdoor activity tracking and supports music streaming directly from the watch. The smartwatch also offers notifications, apps, and voice assistant integration, keeping you connected and informed. With its stylish design and long battery life, the Fitbit Versa 3 Smartwatch is an essential companion for a healthy and balanced lifestyle.",
+        "ratings": 0,
+        "images": [
+            {
+                "image": "http://127.0.0.1:8000/uploads/product/1.jpg"
+            }
+        ],
+        "category": "Accessories",
+        "seller": "FitTech",
+        "stock": 18,
+        "numOfReviews": 0,
+        "reviews": []
+    },
+    {
+        "name": "Amazon Echo Dot (4th Generation)",
+        "price": 39.99,
+        "MRP": 44.99,
+        "description": "The Amazon Echo Dot (4th Generation) is a compact and smart speaker that brings voice control and Alexa to any room in your home.",
+        "aboutThisItem": "The Amazon Echo Dot (4th Generation) allows you to stream music, control smart home devices, and get information using just your voice. It features a powerful speaker for crisp and clear sound and has a built-in clock display. You can use Alexa to play music from various streaming services, set alarms, check the weather, and much more. With its small footprint and versatile functionality, the Amazon Echo Dot (4th Generation) is a convenient addition to your smart home ecosystem.",
+        "ratings": 0,
+        "images": [
+            {
+                "image": "http://127.0.0.1:8000/uploads/product/1.jpg"
+            }
+        ],
+        "category": "Electronics",
+        "seller": "SmartHome",
+        "stock": 30,
+        "numOfReviews": 0,
+        "reviews": []
+    },
+    {
+        "name": "Canon EOS Rebel T7i DSLR Camera",
+        "price": 799.99,
+        "MRP": 899.99,
+        "description": "The Canon EOS Rebel T7i DSLR Camera is a versatile and feature-packed camera that delivers stunning photos and videos.",
+        "aboutThisItem": "The Canon EOS Rebel T7i DSLR Camera features a 24.2-megapixel sensor and a DIGIC 7 image processor, capturing high-resolution images with excellent detail and clarity. It has a fast and accurate autofocus system for precise subject tracking and supports Full HD video recording. The camera offers a vari-angle touchscreen LCD for easy framing and navigation. With its advanced features and user-friendly interface, the Canon EOS Rebel T7i DSLR Camera is a great choice for photography enthusiasts and beginners alike.",
+        "ratings": 0,
+        "images": [
+            {
+                "image": "http://127.0.0.1:8000/uploads/product/1.jpg"
+            }
+        ],
+        "category": "Electronics",
+        "seller": "CameraWorld",
+        "stock": 7,
+        "numOfReviews": 0,
+        "reviews": []
+    },
+    {
+        "name": "Samsung Galaxy Watch Active2",
+        "price": 249.99,
+        "MRP": 279.99,
+        "description": "The Samsung Galaxy Watch Active2 is a stylish and feature-rich smartwatch that helps you stay connected and track your fitness goals.",
+        "aboutThisItem": "The Samsung Galaxy Watch Active2 features a sleek design and a vibrant AMOLED display. It tracks your heart rate, sleep patterns, and various fitness activities, providing valuable insights into your health and well-being. The smartwatch also offers customizable watch faces, notifications, and apps, allowing you to personalize your experience. With its built-in GPS and water resistance, the Samsung Galaxy Watch Active2 is suitable for both indoor and outdoor activities. Stay connected, motivated, and stylish with this versatile smartwatch.",
+        "ratings": 0,
+        "images": [
+            {
+                "image": "http://127.0.0.1:8000/uploads/product/1.jpg"
+            }
+        ],
+        "category": "Accessories",
+        "seller": "TechWear",
+        "stock": 14,
+        "numOfReviews": 0,
+        "reviews": []
+    },
+    {
+        "name": "Nintendo Switch",
+        "price": 299.99,
+        "MRP": 329.99,
+        "description": "The Nintendo Switch is a versatile gaming console that allows you to play games at home or on the go.",
+        "aboutThisItem": "The Nintendo Switch offers both handheld and docked modes, allowing you to seamlessly transition between gaming on the TV and playing on the console's built-in screen. It features a unique Joy-Con controller system that can be used individually or attached to the console for traditional gaming. The console has a wide range of games available, including popular titles from Nintendo's iconic franchises. Whether you're a casual gamer or a dedicated enthusiast, the Nintendo Switch offers a fun and engaging gaming experience.",
+        "ratings": 0,
+        "images": [
+            {
+                "image": "http://127.0.0.1:8000/uploads/product/1.jpg"
+            }
+        ],
+        "category": "Electronics",
+        "seller": "GameWorld",
+        "stock": 10,
+        "numOfReviews": 0,
+        "reviews": []
+    },
+    {
+        "name": "Levi's 501 Original Fit Jeans",
+        "price": 59.99,
+        "MRP": 69.99,
+        "description": "The Levi's 501 Original Fit Jeans are a timeless classic that offers comfort and style for everyday wear.",
+        "aboutThisItem": "The Levi's 501 Original Fit Jeans feature a straight leg and a mid-rise waist, providing a relaxed yet flattering fit. They are made from high-quality denim that is durable and comfortable. The jeans have a button fly and five-pocket styling, offering a classic and versatile look. Whether you dress them up or down, the Levi's 501 Original Fit Jeans are a wardrobe staple that never goes out of style.",
+        "ratings": 0,
+        "images": [
+            {
+                "image": "http://127.0.0.1:8000/uploads/product/1.jpg"
+            }
+        ],
+        "category": "Clothes",
+        "seller": "FashionHub",
+        "stock": 22,
+        "numOfReviews": 0,
+        "reviews": []
+    },
+    {
+        "name": "Apple AirPods Pro",
+        "price": 249.99,
+        "MRP": 279.99,
+        "description": "The Apple AirPods Pro are wireless earbuds that offer high-quality audio and active noise cancellation for an immersive listening experience.",
+        "aboutThisItem": "The Apple AirPods Pro deliver rich and detailed sound with adaptive EQ and a customizable fit. They feature active noise cancellation, blocking out unwanted background noise for a focused and immersive listening experience. The earbuds are sweat and water-resistant, making them suitable for workouts and outdoor activities. With their seamless integration with Apple devices and the Siri voice assistant, the Apple AirPods Pro provide a convenient and hands-free audio experience.",
+        "ratings": 0,
+        "images": [
+            {
+                "image": "http://127.0.0.1:8000/uploads/product/1.jpg"
+            }
+        ],
+        "category": "Accessories",
+        "seller": "TechZone",
+        "stock": 15,
+        "numOfReviews": 0,
+        "reviews": []
+    },
+    {
+        "name": "KitchenAid Stand Mixer",
+        "price": 399.99,
+        "MRP": 449.99,
+        "description": "The KitchenAid Stand Mixer is a versatile and powerful appliance that makes baking and cooking a breeze.",
+        "aboutThisItem": "The KitchenAid Stand Mixer features a robust motor and a large capacity bowl, allowing you to mix dough, batter, and other ingredients with ease. It comes with various attachments, including a dough hook, flat beater, and wire whip, offering versatility for different recipes. The stand mixer has multiple speed settings and a tilt-head design for easy access to the bowl. With its durable construction and timeless design, the KitchenAid Stand Mixer is a must-have for any aspiring home chef.",
+        "ratings": 0,
+        "images": [
+            {
+                "image": "http://127.0.0.1:8000/uploads/product/1.jpg"
+            }
+        ],
+        "category": "Home",
+        "seller": "KitchenEssentials",
+        "stock": 8,
+        "numOfReviews": 0,
+        "reviews": []
+    },
+    {
+        "name": "Samsung Galaxy S21 Ultra",
+        "price": 1199.99,
+        "MRP": 1349.99,
+        "description": "The Samsung Galaxy S21 Ultra is a flagship smartphone that combines cutting-edge technology with a stunning design.",
+        "aboutThisItem": "The Samsung Galaxy S21 Ultra features a large and vibrant Dynamic AMOLED display with a high refresh rate, delivering smooth scrolling and vivid colors. It is powered by a powerful processor and offers ample storage for all your apps, photos, and videos. The smartphone has a versatile camera system with multiple lenses, including a telephoto lens for capturing distant subjects. It supports 5G connectivity for fast internet speeds and has a long-lasting battery to keep you connected throughout the day. With its premium build quality and advanced features, the Samsung Galaxy S21 Ultra is a top choice for tech enthusiasts.",
+        "ratings": 0,
+        "images": [
+            {
+                "image": "http://127.0.0.1:8000/uploads/product/1.jpg"
+            }
+        ],
+        "category": "Mobile Phones",
+        "seller": "TechZone",
+        "stock": 9,
+        "numOfReviews": 0,
+        "reviews": []
+    },
+    {
+        "name": "Nike Air Max 270",
+        "price": 149.99,
+        "MRP": 164.99,
+        "description": "The Nike Air Max 270 is a stylish and comfortable sneaker that offers cushioning and support for all-day wear.",
+        "aboutThisItem": "The Nike Air Max 270 features a large Air Max unit in the heel, providing excellent cushioning and impact absorption. The sneaker has a breathable upper and a lightweight construction, allowing for enhanced comfort and flexibility. It has a lace-up closure for a secure fit and a rubber outsole for traction and durability. With its modern design and vibrant color options, the Nike Air Max 270 is a fashion-forward choice for both athletic performance and casual style.",
+        "ratings": 0,
+        "images": [
+            {
+                "image": "http://127.0.0.1:8000/uploads/product/1.jpg"
+            }
+        ],
+        "category": "Shoes",
+        "seller": "SportZone",
+        "stock": 12,
+        "numOfReviews": 0,
+        "reviews": []
+    },
+    {
+        "name": "Samsung 65-Inch 4K Ultra HD Smart TV",
+        "price": 999.99,
+        "MRP": 1099.99,
+        "description": "The Samsung 65-Inch 4K Ultra HD Smart TV offers stunning picture quality and a range of smart features for an immersive viewing experience.",
+        "aboutThisItem": "The Samsung 65-Inch 4K Ultra HD Smart TV features a Crystal Display with vibrant and lifelike colors. It supports HDR technology, delivering enhanced contrast and detail for a more realistic image. The smart TV has built-in Wi-Fi and supports popular streaming services, allowing you to access a wide range of content. It also offers voice control and has multiple HDMI and USB ports for connecting external devices. With its sleek design and immersive viewing experience, the Samsung 65-Inch 4K Ultra HD Smart TV is a centerpiece for any home entertainment setup.",
+        "ratings": 0,
+        "images": [
+            {
+                "image": "http://127.0.0.1:8000/uploads/product/1.jpg"
+            }
+        ],
+        "category": "Electronics",
+        "seller": "TechWorld",
+        "stock": 6,
+        "numOfReviews": 0,
+        "reviews": []
+    },
+    {
+        "name": "Sony WH-1000XM4 Wireless Noise-Canceling Headphones",
+        "price": 349.99,
+        "MRP": 384.99,
+        "description": "The Sony WH-1000XM4 Wireless Noise-Canceling Headphones deliver exceptional audio quality and advanced noise cancellation for an immersive listening experience.",
+        "aboutThisItem": "The Sony WH-1000XM4 Wireless Noise-Canceling Headphones feature industry-leading noise-canceling technology, blocking out ambient noise and allowing you to focus on your music. They have high-resolution audio support, delivering detailed and accurate sound reproduction. The headphones offer touch controls, allowing you to easily navigate through your music and adjust settings. With their comfortable over-ear design and long battery life, the Sony WH-1000XM4 Wireless Noise-Canceling Headphones are perfect for long listening sessions and travel.",
+        "ratings": 0,
+        "images": [
+            {
+                "image": "http://127.0.0.1:8000/uploads/product/1.jpg"
+            }
+        ],
+        "category": "Headphones",
+        "seller": "AudioZone",
+        "stock": 11,
+        "numOfReviews": 0,
+        "reviews": []
+    },
+    {
+        "name": "Amazon Kindle Paperwhite",
+        "price": 129.99,
+        "MRP": 149.99,
+        "description": "The Amazon Kindle Paperwhite is a high-resolution e-reader that provides a comfortable and convenient way to read your favorite books.",
+        "aboutThisItem": "The Amazon Kindle Paperwhite features a glare-free display and adjustable front light, allowing you to read in any lighting condition. It has a long battery life, enabling weeks of reading on a single charge. The e-reader is lightweight and compact, making it easy to carry and hold for extended periods. It also offers access to the Kindle Store, where you can browse and download a vast selection of e-books. With its user-friendly interface and dedicated reading experience, the Amazon Kindle Paperwhite is a must-have device for book lovers.",
+        "ratings": 0,
+        "images": [
+            {
+                "image": "http://127.0.0.1:8000/uploads/product/1.jpg"
+            }
+        ],
+        "category": "Books",
+        "seller": "BookWorld",
+        "stock": 18,
+        "numOfReviews": 0,
+        "reviews": []
+    },
+    {
+        "name": "Fitbit Charge 4 Fitness and Activity Tracker",
+        "price": 149.99,
+        "MRP": 169.99,
+        "description": "The Fitbit Charge 4 is a versatile fitness and activity tracker that helps you monitor your health and achieve your fitness goals.",
+        "aboutThisItem": "The Fitbit Charge 4 features advanced activity tracking, including heart rate monitoring, sleep tracking, and built-in GPS for accurate distance and pace measurement. It provides insights into your daily activity levels, calories burned, and sleep quality, helping you make informed decisions about your health and fitness. The fitness tracker also offers guided workouts, goal-based exercise modes, and real-time pace and distance tracking for outdoor activities. With its long battery life and water resistance, the Fitbit Charge 4 is a reliable companion for all your fitness adventures.",
+        "ratings": 0,
+        "images": [
+            {
+                "image": "http://127.0.0.1:8000/uploads/product/1.jpg"
+            }
+        ],
+        "category": "Beauty/Health",
+        "seller": "FitnessTech",
+        "stock": 13,
+        "numOfReviews": 0,
+        "reviews": []
+    },
+    {
+        "name": "GoPro HERO9 Black",
+        "price": 449.99,
+        "MRP": 494.99,
+        "description": "The GoPro HERO9 Black is a versatile action camera that captures high-quality videos and photos in various adventurous settings.",
+        "aboutThisItem": "The GoPro HERO9 Black features a 23.6-megapixel sensor and supports 5K video recording, delivering stunningly detailed footage. It has a rugged and waterproof design, making it suitable for capturing action-packed moments during outdoor activities. The action camera offers advanced image stabilization, time-lapse recording, and voice control, providing a seamless and user-friendly shooting experience. It also has a front-facing display for easy framing and vlogging. With its wide range of accessories and creative shooting modes, the GoPro HERO9 Black is the ultimate companion for capturing your thrilling adventures.",
+        "ratings": 0,
+        "images": [
+            {
+                "image": "http://127.0.0.1:8000/uploads/product/1.jpg"
             }
         ],
         "category": "Sports",
-        "seller": "Ebay",
+        "seller": "AdventureZone",
+        "stock": 7,
+        "numOfReviews": 0,
+        "reviews": []
+    },
+    {
+        "name": "Apple MacBook Pro",
+        "price": 1799.99,
+        "MRP": 1999.99,
+        "description": "The Apple MacBook Pro is a powerful and portable laptop that offers exceptional performance and stunning visuals.",
+        "aboutThisItem": "The Apple MacBook Pro features a high-resolution Retina display with True Tone technology, delivering vibrant colors and sharp details. It is equipped with a powerful processor and ample storage, allowing you to handle demanding tasks and store all your files and media. The laptop has a sleek and lightweight design, making it easy to carry and work on the go. It also offers a range of connectivity options, including Thunderbolt ports and Wi-Fi 6 support. With its impressive performance and macOS ecosystem, the Apple MacBook Pro is a top choice for professionals and creative individuals.",
+        "ratings": 0,
+        "images": [
+            {
+                "image": "http://127.0.0.1:8000/uploads/product/1.jpg"
+            }
+        ],
+        "category": "Laptops",
+        "seller": "TechZone",
+        "stock": 10,
+        "numOfReviews": 0,
+        "reviews": []
+    },
+    {
+        "name": "Ninja Foodi 9-in-1 Deluxe XL Pressure Cooker",
+        "price": 229.99,
+        "MRP": 254.99,
+        "description": "The Ninja Foodi 9-in-1 Deluxe XL Pressure Cooker is a versatile kitchen appliance that combines multiple cooking functions into one convenient device.",
+        "aboutThisItem": "The Ninja Foodi 9-in-1 Deluxe XL Pressure Cooker allows you to pressure cook, air fry, slow cook, steam, and more, all in a single appliance. It features a large capacity and a variety of preset cooking functions, making it easy to prepare a wide range of meals. The pressure cooker has a crisp lid for air frying, delivering crispy and golden results with less oil. It also offers a tender-crisp technology, allowing you to quickly cook ingredients and finish them with a crispy texture. With its innovative design and versatile cooking options, the Ninja Foodi 9-in-1 Deluxe XL Pressure Cooker simplifies meal preparation and saves valuable countertop space.",
+        "ratings": 0,
+        "images": [
+            {
+                "image": "http://127.0.0.1:8000/uploads/product/1.jpg"
+            }
+        ],
+        "category": "Home",
+        "seller": "KitchenEssentials",
+        "stock": 8,
+        "numOfReviews": 0,
+        "reviews": []
+    },
+    {
+        "name": "DJI Mavic Air 2 Drone",
+        "price": 799.99,
+        "MRP": 879.99,
+        "description": "The DJI Mavic Air 2 is a compact and feature-packed drone that allows you to capture stunning aerial footage and photos.",
+        "aboutThisItem": "The DJI Mavic Air 2 features a 48-megapixel camera and supports 4K video recording, delivering professional-quality results. It has a 3-axis gimbal for stable and smooth footage, even in windy conditions. The drone offers intelligent flight modes, including ActiveTrack, Point of Interest, and QuickShots, allowing you to capture dynamic and creative shots with ease. It also has a long battery life and a range of up to 10 kilometers, providing ample time and distance for exploration. With its foldable design and intuitive controls, the DJI Mavic Air 2 is a versatile and reliable companion for aerial photography and videography.",
+        "ratings": 0,
+        "images": [
+            {
+                "image": "http://127.0.0.1:8000/uploads/product/1.jpg"
+            }
+        ],
+        "category": "Outdoor",
+        "seller": "DroneZone",
+        "stock": 4,
+        "numOfReviews": 0,
+        "reviews": []
+    },
+    {
+        "name": "Samsung Galaxy Watch Active2",
+        "price": 249.99,
+        "MRP": 274.99,
+        "description": "The Samsung Galaxy Watch Active2 is a sleek and versatile smartwatch that helps you stay connected and tracks your fitness activities.",
+        "aboutThisItem": "The Samsung Galaxy Watch Active2 features a circular Super AMOLED display and a lightweight design, providing a comfortable fit for all-day wear. It offers a range of health and fitness tracking features, including heart rate monitoring, sleep tracking, and automatic workout detection. The smartwatch also provides access to notifications, music streaming, and voice commands, allowing you to stay connected on the go. With its customizable watch faces and interchangeable bands, the Samsung Galaxy Watch Active2 combines style and functionality in one device.",
+        "ratings": 0,
+        "images": [
+            {
+                "image": "http://127.0.0.1:8000/uploads/product/1.jpg"
+            }
+        ],
+        "category": "Accessories",
+        "seller": "TechZone",
+        "stock": 15,
+        "numOfReviews": 0,
+        "reviews": []
+    },
+    {
+        "name": "Canon EOS R5 Mirrorless Camera",
+        "price": 3499.99,
+        "MRP": 3849.99,
+        "description": "The Canon EOS R5 is a professional-grade mirrorless camera that offers high-resolution imaging and advanced video capabilities.",
+        "aboutThisItem": "The Canon EOS R5 features a 45-megapixel full-frame sensor and supports 8K video recording, delivering exceptional image quality and cinematic footage. It has an advanced autofocus system with eye and animal tracking, ensuring sharp and precise focus in various shooting situations. The mirrorless camera offers in-body image stabilization for steady handheld shots and a high-resolution electronic viewfinder for accurate framing. It also has a weather-sealed construction, making it suitable for shooting in challenging conditions. With its versatile capabilities and robust build, the Canon EOS R5 is a top choice for professional photographers and videographers.",
+        "ratings": 0,
+        "images": [
+            {
+                "image": "http://127.0.0.1:8000/uploads/product/1.jpg"
+            }
+        ],
+        "category": "Electronics",
+        "seller": "CameraWorld",
+        "stock": 3,
+        "numOfReviews": 0,
+        "reviews": []
+    },
+    {
+        "name": "Nike Air Zoom Pegasus 38 Running Shoes",
+        "price": 129.99,
+        "MRP": 142.99,
+        "description": "The Nike Air Zoom Pegasus 38 is a popular running shoe that combines comfort, responsiveness, and durability for an optimal running experience.",
+        "aboutThisItem": "The Nike Air Zoom Pegasus 38 features a lightweight and breathable upper, providing a secure and comfortable fit. It is equipped with Nike Zoom Air units in the forefoot and heel, delivering responsive cushioning and a smooth stride. The running shoe has a durable rubber outsole with waffle traction pattern, ensuring reliable grip on various surfaces. It also offers a padded collar and a plush tongue for added comfort during long runs. With its versatile performance and stylish design, the Nike Air Zoom Pegasus 38 is a favorite choice among runners of all levels.",
+        "ratings": 0,
+        "images": [
+            {
+                "image": "http://127.0.0.1:8000/uploads/product/1.jpg"
+            }
+        ],
+        "category": "Shoes",
+        "seller": "SportsZone",
+        "stock": 9,
+        "numOfReviews": 0,
+        "reviews": []
+    },
+    {
+        "name": "Samsung 55-Inch 4K Smart TV",
+        "price": 799.99,
+        "MRP": 879.99,
+        "description": "The Samsung 55-Inch 4K Smart TV offers stunning visuals, smart features, and immersive audio for a captivating entertainment experience.",
+        "aboutThisItem": "The Samsung 55-Inch 4K Smart TV features a crystal-clear 4K Ultra HD display, delivering vibrant colors and sharp details. It supports HDR technology, providing enhanced contrast and a wider color gamut for realistic visuals. The smart TV has built-in Wi-Fi and offers access to popular streaming services, allowing you to enjoy a wide range of movies, shows, and music. It also supports voice control and has multiple HDMI and USB ports for connecting various devices. With its sleek design and immersive audio, the Samsung 55-Inch 4K Smart TV is a perfect centerpiece for your home entertainment setup.",
+        "ratings": 0,
+        "images": [
+            {
+                "image": "http://127.0.0.1:8000/uploads/product/1.jpg"
+            }
+        ],
+        "category": "Electronics",
+        "seller": "TechZone",
+        "stock": 12,
+        "numOfReviews": 0,
+        "reviews": []
+    },
+    {
+        "name": "Fitbit Charge 4 Fitness Tracker",
+        "price": 129.99,
+        "MRP": 142.99,
+        "description": "The Fitbit Charge 4 is a feature-packed fitness tracker that helps you monitor your health, track workouts, and stay motivated.",
+        "aboutThisItem": "The Fitbit Charge 4 features a built-in GPS, allowing you to track your outdoor activities and view real-time stats on the display. It offers continuous heart rate monitoring, sleep tracking, and activity tracking, providing valuable insights into your overall health and fitness. The fitness tracker has a swim-proof design and offers up to 7 days of battery life, ensuring it can keep up with your active lifestyle. It also offers smart notifications, guided breathing sessions, and personalized fitness goals, helping you stay connected and motivated on your fitness journey. With its sleek design and advanced features, the Fitbit Charge 4 is an essential companion for fitness enthusiasts.",
+        "ratings": 0,
+        "images": [
+            {
+                "image": "http://127.0.0.1:8000/uploads/product/1.jpg"
+            }
+        ],
+        "category": "Beauty/Health",
+        "seller": "FitnessEssentials",
+        "stock": 14,
+        "numOfReviews": 0,
+        "reviews": []
+    },
+    {
+        "name": "Kindle Paperwhite E-Reader",
+        "price": 129.99,
+        "MRP": 142.99,
+        "description": "The Kindle Paperwhite is a lightweight and waterproof e-reader that allows you to carry thousands of books in a single device.",
+        "aboutThisItem": "The Kindle Paperwhite features a high-resolution display with built-in adjustable front light, providing a comfortable reading experience in any lighting condition. It has a generous storage capacity and offers access to millions of e-books, audiobooks, and magazines. The e-reader has a long battery life, allowing you to read for weeks on a single charge. It is also waterproof, making it perfect for reading by the pool or on the beach. With its compact size and extensive library, the Kindle Paperwhite is a must-have for book lovers and avid readers.",
+        "ratings": 0,
+        "images": [
+            {
+                "image": "http://127.0.0.1:8000/uploads/product/1.jpg"
+            }
+        ],
+        "category": "Books",
+        "seller": "Bookstore",
+        "stock": 20,
+        "numOfReviews": 0,
+        "reviews": []
+    },
+    {
+        "name": "Adidas Originals Trefoil Hoodie",
+        "price": 59.99,
+        "MRP": 65.99,
+        "description": "The Adidas Originals Trefoil Hoodie is a classic and comfortable hoodie that showcases the iconic Adidas branding.",
+        "aboutThisItem": "The Adidas Originals Trefoil Hoodie features a soft cotton blend fabric and a relaxed fit, providing all-day comfort. It has a drawstring hood and a kangaroo pocket, adding style and functionality. The hoodie is adorned with the iconic Adidas Trefoil logo on the front, representing a heritage of sport and streetwear. It is suitable for casual wear and can be paired with jeans, joggers, or shorts for a stylish and laid-back look. With its timeless design and quality construction, the Adidas Originals Trefoil Hoodie is a wardrobe essential for Adidas fans and fashion enthusiasts.",
+        "ratings": 0,
+        "images": [
+            {
+                "image": "http://127.0.0.1:8000/uploads/product/1.jpg"
+            }
+        ],
+        "category": "Clothes",
+        "seller": "FashionHub",
+        "stock": 25,
+        "numOfReviews": 0,
+        "reviews": []
+    },
+    {
+        "name": "Sony WH-1000XM4 Wireless Noise-Canceling Headphones",
+        "price": 349.99,
+        "MRP": 384.99,
+        "description": "The Sony WH-1000XM4 is a top-of-the-line wireless headphone that combines exceptional sound quality with advanced noise-canceling technology.",
+        "aboutThisItem": "The Sony WH-1000XM4 features industry-leading noise-canceling technology, allowing you to immerse yourself in your music without distractions. It delivers high-resolution audio and has a wide frequency response, providing a detailed and immersive listening experience. The wireless headphones offer touch controls, voice assistant support, and multipoint connectivity for seamless switching between devices. They have a comfortable over-ear design and a long battery life, making them suitable for long listening sessions. With their premium build quality and cutting-edge features, the Sony WH-1000XM4 Wireless Noise-Canceling Headphones are a top choice for audiophiles and frequent travelers.",
+        "ratings": 0,
+        "images": [
+            {
+                "image": "http://127.0.0.1:8000/uploads/product/1.jpg"
+            }
+        ],
+        "category": "Headphones",
+        "seller": "AudioZone",
+        "stock": 7,
+        "numOfReviews": 0,
+        "reviews": []
+    },
+    {
+        "name": "Apple MacBook Pro (16-inch, M1 Pro)",
+        "price": 2399.99,
+        "MRP": 2639.99,
+        "description": "The Apple MacBook Pro is a powerful and versatile laptop that offers exceptional performance and a stunning Retina display.",
+        "aboutThisItem": "The Apple MacBook Pro features the latest M1 Pro chip, delivering blazing-fast performance and efficient power usage. It has a 16-inch Retina display with True Tone technology, offering vibrant colors and sharp details. The laptop provides ample storage and memory options, ensuring you have enough space for your files and smooth multitasking. It also offers advanced security features, including Touch ID and the Apple T2 chip. The MacBook Pro has a sleek and portable design, making it suitable for professionals, creatives, and students. With its impressive capabilities and seamless integration with the Apple ecosystem, the Apple MacBook Pro is a top choice for those seeking a premium laptop experience.",
+        "ratings": 0,
+        "images": [
+            {
+                "image": "http://127.0.0.1:8000/uploads/product/1.jpg"
+            }
+        ],
+        "category": "Laptops",
+        "seller": "AppleStore",
+        "stock": 4,
+        "numOfReviews": 0,
+        "reviews": []
+    },
+    {
+        "name": "Amazon Echo (4th Generation) Smart Speaker",
+        "price": 99.99,
+        "MRP": 109.99,
+        "description": "The Amazon Echo (4th Generation) is a smart speaker that combines powerful audio with voice control and smart home integration.",
+        "aboutThisItem": "The Amazon Echo (4th Generation) features a premium speaker with Dolby processing, delivering crisp vocals and dynamic bass response. It has built-in Alexa, allowing you to control music playback, ask questions, set timers, and control compatible smart home devices with just your voice. The smart speaker offers multi-room music streaming and can be paired with other Echo devices for a synchronized listening experience. It also serves as a hub for your smart home, enabling you to control lights, thermostats, and more with simple voice commands. With its sleek design and intelligent features, the Amazon Echo (4th Generation) is a versatile addition to any home.",
+        "ratings": 0,
+        "images": [
+            {
+                "image": "http://127.0.0.1:8000/uploads/product/1.jpg"
+            }
+        ],
+        "category": "Electronics",
+        "seller": "Amazon",
+        "stock": 10,
+        "numOfReviews": 0,
+        "reviews": []
+    },
+    {
+        "name": "GoPro HERO9 Black Action Camera",
+        "price": 399.99,
+        "MRP": 439.99,
+        "description": "The GoPro HERO9 Black is a versatile action camera that captures stunning 5K videos and high-resolution photos in various adventure settings.",
+        "aboutThisItem": "The GoPro HERO9 Black features a 23.6-megapixel sensor and supports 5K video recording, delivering professional-quality footage with impressive detail. It offers HyperSmooth 3.0 video stabilization, ensuring smooth and shake-free videos even in challenging conditions. The action camera is waterproof and rugged, making it suitable for underwater adventures and outdoor activities. It has a front-facing display for easy framing and a large rear touchscreen for intuitive control. The HERO9 Black also offers TimeWarp 3.0, SuperPhoto, and LiveBurst features, expanding your creative possibilities. With its advanced capabilities and durable construction, the GoPro HERO9 Black is a must-have for capturing your thrilling moments.",
+        "ratings": 0,
+        "images": [
+            {
+                "image": "http://127.0.0.1:8000/uploads/product/1.jpg"
+            }
+        ],
+        "category": "Electronics",
+        "seller": "AdventureGear",
+        "stock": 8,
+        "numOfReviews": 0,
+        "reviews": []
+    },
+    {
+        "name": "Nike Air Zoom Pegasus 38 Running Shoes",
+        "price": 119.99,
+        "MRP": 131.99,
+        "description": "The Nike Air Zoom Pegasus 38 is a lightweight and responsive running shoe that offers exceptional comfort and support.",
+        "aboutThisItem": "The Nike Air Zoom Pegasus 38 features a breathable mesh upper and a cushioned midsole, providing a comfortable and supportive fit for your runs. It has Nike Zoom Air units in the forefoot and heel, delivering responsive cushioning and energy return with each step. The running shoe has a durable rubber outsole with a waffle pattern for enhanced traction on various surfaces. It also has a padded collar and a secure lace-up closure for a personalized fit. Whether you're a beginner or an experienced runner, the Nike Air Zoom Pegasus 38 is designed to help you perform at your best.",
+        "ratings": 0,
+        "images": [
+            {
+                "image": "http://127.0.0.1:8000/uploads/product/1.jpg"
+            }
+        ],
+        "category": "Shoes",
+        "seller": "Sportsworld",
         "stock": 16,
+        "numOfReviews": 0,
+        "reviews": []
+    },
+    {
+        "name": "Samsung Galaxy Tab S7+ Tablet",
+        "price": 749.99,
+        "MRP": 824.99,
+        "description": "The Samsung Galaxy Tab S7+ is a powerful and versatile tablet that offers PC-level productivity and entertainment on the go.",
+        "aboutThisItem": "The Samsung Galaxy Tab S7+ features a large 12.4-inch Super AMOLED display with a high refresh rate, delivering vivid colors and smooth visuals. It is powered by a fast processor and ample RAM, ensuring seamless multitasking and responsive performance. The tablet supports the S Pen, offering precise writing and drawing capabilities. It also has a Book Cover Keyboard (sold separately) that transforms it into a laptop-like experience. The Galaxy Tab S7+ offers a long-lasting battery, expandable storage, and advanced audio capabilities for immersive entertainment. With its slim and sleek design, the Samsung Galaxy Tab S7+ is a premium tablet for work and play.",
+        "ratings": 0,
+        "images": [
+            {
+                "image": "http://127.0.0.1:8000/uploads/product/1.jpg"
+            }
+        ],
+        "category": "Electronics",
+        "seller": "SamsungStore",
+        "stock": 6,
+        "numOfReviews": 0,
+        "reviews": []
+    },
+    {
+        "name": "Sony WH-1000XM4 Wireless Noise-Canceling Headphones",
+        "price": 349.99,
+        "MRP": 384.99,
+        "description": "The Sony WH-1000XM4 is a premium pair of wireless noise-canceling headphones that deliver exceptional audio quality and immersive listening experience.",
+        "aboutThisItem": "The Sony WH-1000XM4 headphones feature advanced noise-canceling technology, effectively blocking out external distractions and allowing you to focus on your music or calls. They have 40mm drivers that deliver rich and detailed sound across a wide frequency range. The headphones support high-resolution audio and feature adaptive sound control, adjusting the ambient sound settings based on your activity and environment. They also have a comfortable over-ear design with soft cushioning and a lightweight construction for long-lasting comfort. The Sony WH-1000XM4 headphones offer up to 30 hours of battery life and support quick charging. With their premium build quality and intelligent features, they are an excellent choice for audiophiles and frequent travelers.",
+        "ratings": 0,
+        "images": [
+            {
+                "image": "http://127.0.0.1:8000/uploads/product/1.jpg"
+            }
+        ],
+        "category": "Headphones",
+        "seller": "AudioTech",
+        "stock": 7,
+        "numOfReviews": 0,
+        "reviews": []
+    },
+    {
+        "name": "Canon EOS Rebel T8i DSLR Camera",
+        "price": 899.99,
+        "MRP": 989.99,
+        "description": "The Canon EOS Rebel T8i is a versatile DSLR camera that combines high-resolution imaging capabilities with intuitive controls, making it suitable for both beginners and experienced photographers.",
+        "aboutThisItem": "The Canon EOS Rebel T8i features a 24.1-megapixel APS-C sensor and a DIGIC 8 image processor, delivering sharp and detailed photos and videos. It has a fast and accurate autofocus system, allowing you to capture subjects with precision. The DSLR camera offers a vari-angle touchscreen LCD for easy framing and navigation through menus. It supports Full HD video recording and has built-in Wi-Fi and Bluetooth connectivity for seamless file transfer and remote control. The Canon EOS Rebel T8i also features creative filters, scene modes, and a range of compatible lenses, enabling you to explore your creativity and capture stunning shots in various situations. Whether you're capturing landscapes, portraits, or action shots, this camera provides the tools you need to express your artistic vision.",
+        "ratings": 0,
+        "images": [
+            {
+                "image": "http://127.0.0.1:8000/uploads/product/1.jpg"
+            }
+        ],
+        "category": "Electronics",
+        "seller": "CameraWorld",
+        "stock": 9,
+        "numOfReviews": 0,
+        "reviews": []
+    },
+    {
+        "name": "Kindle Paperwhite E-Reader",
+        "price": 129.99,
+        "MRP": 142.99,
+        "description": "The Kindle Paperwhite is a popular e-reader that offers a high-resolution display, adjustable backlight, and a vast selection of e-books.",
+        "aboutThisItem": "The Kindle Paperwhite features a 6-inch glare-free display with a resolution of 300 ppi, providing a crisp and clear reading experience, even in bright sunlight. It has an adjustable backlight that allows you to read comfortably in any lighting conditions. The e-reader is waterproof, making it suitable for reading by the pool or in the bathtub. It offers a built-in adjustable font size and font style, enabling you to customize your reading experience. The Kindle Paperwhite provides access to the Kindle Store, where you can choose from millions of e-books, magazines, and audiobooks. It has a long battery life and ample storage to hold thousands of books. With its compact and lightweight design, the Kindle Paperwhite is perfect for book lovers who want to carry their library wherever they go.",
+        "ratings": 0,
+        "images": [
+            {
+                "image": "http://127.0.0.1:8000/uploads/product/1.jpg"
+            }
+        ],
+        "category": "Books",
+        "seller": "BookNook",
+        "stock": 11,
+        "numOfReviews": 0,
+        "reviews": []
+    },
+    {
+        "name": "LG OLED55CXPUA 55-Inch 4K Smart OLED TV",
+        "price": 1499.99,
+        "MRP": 1649.99,
+        "description": "The LG OLED55CXPUA is a high-quality 55-inch 4K smart OLED TV that offers stunning picture quality and immersive viewing experience.",
+        "aboutThisItem": "The LG OLED55CXPUA features a 55-inch OLED panel with individually lit pixels, delivering perfect blacks, vibrant colors, and infinite contrast. It supports 4K resolution and HDR formats, including Dolby Vision and HDR10, providing a lifelike and cinematic visual experience. The TV has a fast refresh rate and low input lag, making it ideal for gaming. It runs on LG's webOS platform, offering a user-friendly interface and access to a wide range of streaming apps and services. The OLED55CXPUA also has built-in voice control and compatibility with virtual assistants like Alexa and Google Assistant. With its sleek design and slim profile, this LG OLED TV enhances the aesthetics of any living space while delivering exceptional performance.",
+        "ratings": 0,
+        "images": [
+            {
+                "image": "http://127.0.0.1:8000/uploads/product/1.jpg"
+            }
+        ],
+        "category": "Electronics",
+        "seller": "ElectroWorld",
+        "stock": 7,
+        "numOfReviews": 0,
+        "reviews": []
+    },
+    {
+        "name": "Levi's 501 Original Fit Jeans",
+        "price": 59.99,
+        "MRP": 65.99,
+        "description": "The Levi's 501 Original Fit Jeans are classic and timeless denim jeans that offer a comfortable and stylish fit.",
+        "aboutThisItem": "The Levi's 501 Original Fit Jeans feature a straight leg and a regular fit through the seat and thigh. They are made from durable and high-quality denim fabric, ensuring long-lasting wear. The jeans have a button fly and a classic five-pocket design, providing ample storage for your essentials. They can be dressed up or down, making them suitable for various occasions. With their iconic design and reliable craftsmanship, the Levi's 501 Original Fit Jeans are a wardrobe staple that never goes out of style.",
+        "ratings": 0,
+        "images": [
+            {
+                "image": "http://127.0.0.1:8000/uploads/product/1.jpg"
+            }
+        ],
+        "category": "Clothes",
+        "seller": "FashionHub",
+        "stock": 15,
+        "numOfReviews": 0,
+        "reviews": []
+    },
+    {
+        "name": "Nike Air Max 270 Sneakers",
+        "price": 129.99,
+        "MRP": 142.99,
+        "description": "The Nike Air Max 270 sneakers are stylish and comfortable footwear that combines fashion and performance.",
+        "aboutThisItem": "The Nike Air Max 270 sneakers feature a breathable mesh upper and a cushioned midsole with a visible Air Max unit in the heel, offering lightweight comfort and responsive cushioning. They have a lace-up closure for a secure fit and a rubber outsole for durable traction. The sneakers have a modern and sleek design that pairs well with various outfits, making them suitable for both athletic activities and casual wear. With their iconic branding and cutting-edge technology, the Nike Air Max 270 sneakers are a popular choice among sneaker enthusiasts and fashion-conscious individuals.",
+        "ratings": 0,
+        "images": [
+            {
+                "image": "http://127.0.0.1:8000/uploads/product/1.jpg"
+            }
+        ],
+        "category": "Shoes",
+        "seller": "SportsZone",
+        "stock": 13,
+        "numOfReviews": 0,
+        "reviews": []
+    },
+    {
+        "name": "Contigo AUTOSEAL Vacuum-Insulated Stainless Steel Travel Mug",
+        "price": 24.99,
+        "MRP": 27.49,
+        "description": "The Contigo AUTOSEAL Travel Mug is a reliable and convenient companion for enjoying your favorite hot or cold beverages on the go.",
+        "aboutThisItem": "The Contigo AUTOSEAL Travel Mug features vacuum-insulated stainless steel construction, keeping your drinks hot for up to 5 hours or cold for up to 12 hours. It has a leak-proof lid with an AUTOSEAL button that seals between sips, preventing spills and leaks. The travel mug fits most standard car cup holders and has a comfortable grip for easy handling. It is dishwasher-safe for effortless cleaning. Whether you're commuting, traveling, or running errands, the Contigo AUTOSEAL Travel Mug provides a secure and insulated solution to enjoy your beverages anytime, anywhere.",
+        "ratings": 0,
+        "images": [
+            {
+                "image": "http://127.0.0.1:8000/uploads/product/1.jpg"
+            }
+        ],
+        "category": "Misc",
+        "seller": "TravelEssentials",
+        "stock": 12,
+        "numOfReviews": 0,
+        "reviews": []
+    },
+    {
+        "name": "Fitbit Charge 4 Fitness and Activity Tracker",
+        "price": 129.99,
+        "MRP": 142.99,
+        "description": "The Fitbit Charge 4 is a versatile fitness and activity tracker that helps you monitor your health, track workouts, and stay connected.",
+        "aboutThisItem": "The Fitbit Charge 4 features a built-in GPS, allowing you to track your outdoor activities and view real-time stats on the device's display. It provides 24/7 heart rate monitoring, sleep tracking, and activity tracking, giving you insights into your health and fitness levels. The tracker offers various exercise modes and personalized workout recommendations, helping you achieve your fitness goals. It has a swim-proof design and is water-resistant up to 50 meters, making it suitable for swimming and water activities. The Fitbit Charge 4 also offers smart features like call and text notifications, app notifications, and contactless payments with Fitbit Pay. With its sleek and comfortable design, this fitness tracker is an essential companion for an active lifestyle.",
+        "ratings": 0,
+        "images": [
+            {
+                "image": "http://127.0.0.1:8000/uploads/product/1.jpg"
+            }
+        ],
+        "category": "Sports",
+        "seller": "FitnessZone",
+        "stock": 10,
+        "numOfReviews": 0,
+        "reviews": []
+    },
+    {
+        "name": "Coleman Sundome Tent",
+        "price": 79.99,
+        "MRP": 87.99,
+        "description": "The Coleman Sundome Tent is a reliable and spacious tent that provides shelter and comfort during camping trips and outdoor adventures.",
+        "aboutThisItem": "The Coleman Sundome Tent features a dome-shaped design with a spacious interior that can accommodate up to 4 people. It has a WeatherTec system that includes welded floors and inverted seams to keep you dry and protected from the elements. The tent has large windows and a ground vent for enhanced ventilation and airflow. It is easy to set up with its snag-free continuous pole sleeves and a patented pin-and-ring system. The Coleman Sundome Tent is made from durable materials that are designed to withstand various weather conditions. Whether you're camping with friends or family, this tent offers a comfortable and reliable shelter for your outdoor escapades.",
+        "ratings": 0,
+        "images": [
+            {
+                "image": "http://127.0.0.1:8000/uploads/product/1.jpg"
+            }
+        ],
+        "category": "Outdoor",
+        "seller": "CampingWorld",
+        "stock": 9,
+        "numOfReviews": 0,
+        "reviews": []
+    },
+    {
+        "name": "Instant Pot Duo 7-in-1 Electric Pressure Cooker",
+        "price": 99.99,
+        "MRP": 109.99,
+        "description": "The Instant Pot Duo is a versatile and efficient electric pressure cooker that simplifies cooking and saves time in the kitchen.",
+        "aboutThisItem": "The Instant Pot Duo combines the functions of a pressure cooker, slow cooker, rice cooker, steamer, sauté pan, yogurt maker, and warmer in one compact appliance. It features a large capacity and a range of programmable cooking settings, allowing you to prepare a variety of meals with ease. The pressure cooker uses advanced technology to cook food faster than traditional methods, while retaining flavors and nutrients. It has safety features, including pressure and temperature controls, as well as a lid-locking mechanism for added security. The Instant Pot Duo is designed for convenience, with easy-to-use controls and a user-friendly interface. Whether you're cooking soups, stews, rice, or even desserts, this electric pressure cooker is a reliable kitchen companion.",
+        "ratings": 0,
+        "images": [
+            {
+                "image": "http://127.0.0.1:8000/uploads/product/1.jpg"
+            }
+        ],
+        "category": "Home",
+        "seller": "KitchenEssentials",
+        "stock": 8,
+        "numOfReviews": 0,
+        "reviews": []
+    },
+    {
+        "name": "L'Oréal Paris Revitalift Anti-Aging Face Cream",
+        "price": 29.99,
+        "MRP": 32.99,
+        "description": "The L'Oréal Paris Revitalift Anti-Aging Face Cream is a luxurious skincare product that helps reduce the signs of aging and improves skin's firmness and elasticity.",
+        "aboutThisItem": "The L'Oréal Paris Revitalift Anti-Aging Face Cream is enriched with powerful ingredients like Pro-Retinol and Centella Asiatica, which help to visibly reduce wrinkles and fine lines, firm the skin, and improve its texture. The cream has a lightweight and non-greasy formula that absorbs quickly, leaving the skin feeling smooth and moisturized. It is suitable for all skin types and can be used both day and night. With regular use, the Revitalift Anti-Aging Face Cream helps to restore a youthful appearance and promotes a radiant and healthy complexion.",
+        "ratings": 0,
+        "images": [
+            {
+                "image": "http://127.0.0.1:8000/uploads/product/1.jpg"
+            }
+        ],
+        "category": "Beauty/Health",
+        "seller": "BeautyWorld",
+        "stock": 7,
+        "numOfReviews": 0,
+        "reviews": []
+    },
+    {
+        "name": "Wilson NFL MVP Football",
+        "price": 19.99,
+        "MRP": 21.99,
+        "description": "The Wilson NFL MVP Football is a high-quality and durable football that delivers exceptional performance and grip for recreational play.",
+        "aboutThisItem": "The Wilson NFL MVP Football features a composite leather cover that provides a comfortable feel and excellent grip. It has a classic design and official NFL branding, giving it an authentic look. The football is constructed with a butyl rubber bladder, ensuring superior air retention and shape retention for long-lasting performance. It is suitable for recreational play in various weather conditions. Whether you're playing catch with friends or organizing a friendly game, the Wilson NFL MVP Football is a reliable choice that brings fun and excitement to your outdoor activities.",
+        "ratings": 0,
+        "images": [
+            {
+                "image": "http://127.0.0.1:8000/uploads/product/1.jpg"
+            }
+        ],
+        "category": "Sports",
+        "seller": "SportsZone",
+        "stock": 9,
+        "numOfReviews": 0,
+        "reviews": []
+    },
+    {
+        "name": "Amazon Echo Dot (4th Generation) Smart Speaker",
+        "price": 49.99,
+        "MRP": 54.99,
+        "description": "The Amazon Echo Dot is a compact and versatile smart speaker that offers voice control, music streaming, and smart home integration.",
+        "aboutThisItem": "The Amazon Echo Dot features a sleek and compact design, making it perfect for any room in your home. It is equipped with Amazon's Alexa voice assistant, allowing you to play music, check the weather, set alarms, control smart home devices, and more using just your voice. The smart speaker delivers rich and immersive sound, with the ability to stream music from popular services like Amazon Music, Spotify, and Apple Music. It can also be paired with other Echo devices for a multi-room audio experience. The Echo Dot supports smart home integration, enabling you to control compatible devices like lights, thermostats, and locks using voice commands. With its advanced features and convenient voice control, the Amazon Echo Dot enhances your everyday life with technology.",
+        "ratings": 0,
+        "images": [
+            {
+                "image": "http://127.0.0.1:8000/uploads/product/1.jpg"
+            }
+        ],
+        "category": "Electronics",
+        "seller": "Amazon",
+        "stock": 10,
         "numOfReviews": 0,
         "reviews": []
     }
