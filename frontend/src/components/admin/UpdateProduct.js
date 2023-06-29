@@ -15,6 +15,7 @@ export default function UpdateProduct() {
   const [name, setName] = useState("");
   const [price, setPrice] = useState("");
   const [description, setDescription] = useState("");
+  const [aboutThisItem, setAboutThisItem] = useState("");
   const [category, setCategory] = useState("");
   const [stock, setStock] = useState(0);
   const [seller, setSeller] = useState("");
@@ -56,6 +57,7 @@ export default function UpdateProduct() {
     formData.append("price", price);
     formData.append("stock", stock);
     formData.append("description", description);
+    formData.append("aboutThisItem", aboutThisItem);
     formData.append("seller", seller);
     formData.append("category", category);
     formData.append("imagesCleared", imagesCleared);
@@ -103,6 +105,7 @@ export default function UpdateProduct() {
       setPrice(product.price);
       setStock(product.stock);
       setDescription(product.description);
+      setAboutThisItem(product.aboutThisItem || "");
       setSeller(product.seller);
       setCategory(product.category);
 
@@ -218,10 +221,22 @@ export default function UpdateProduct() {
                 sx={{ width: "100%" }}
                 label="Description"
                 multiline
-                rows={4}
+                rows={2}
                 variant="standard"
                 value={description}
                 onChange={(e) => setDescription(e.target.value)}
+              />
+            </div>
+
+            <div className="">
+              <TextField
+                sx={{ width: "100%" }}
+                label="About This Item"
+                multiline
+                rows={5}
+                variant="standard"
+                value={aboutThisItem}
+                onChange={(e) => setAboutThisItem(e.target.value)}
               />
             </div>
 
