@@ -1,7 +1,11 @@
 import { Fragment, useEffect, useState, memo, useCallback } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useParams, Link } from "react-router-dom";
-import { createReview, getProduct } from "../../actions/productActions";
+import { useParams, Link, useNavigate } from "react-router-dom";
+import {
+  createReview,
+  getProduct,
+  getProducts,
+} from "../../actions/productActions";
 import {
   clearReviewSubmitted,
   clearError,
@@ -21,6 +25,7 @@ import {
   IconButton,
   Rating,
   TextField,
+  Typography,
   useTheme,
 } from "@mui/material";
 import {
@@ -28,7 +33,13 @@ import {
   KeyboardDoubleArrowRight,
   Star,
 } from "@mui/icons-material";
-import { FlexCenter } from "../styledComponents/FlexBetween";
+import FlexBetween, {
+  FlexCenter,
+  FlexEvenly,
+} from "../styledComponents/FlexBetween";
+import { buyNow } from "../../slices/orderSlice";
+import { buyNowAction } from "../../actions/orderAction";
+import Product from "./Product";
 
 const labels = {
   0.5: "Useless",
@@ -63,21 +74,39 @@ export const CarouselReUse = memo(({ product, h, w }) => (
 const BasicDetails = memo(({ product }) => (
   <>
     <h3>{product.name}</h3>
-    <Box sx={{ width: 100, display: "flex", alignItems: "center" }}>
-      <Rating
-        name="text-feedback"
-        value={product.ratings}
-        readOnly
-        precision={0.5}
-        emptyIcon={<StarIcon style={{ opacity: 0.55 }} fontSize="inherit" />}
-      />
-      <Box sx={{ ml: 2 }}>{labels[product.ratings]}</Box>
-    </Box>
+    {product.ratings != 0 && (
+      <>
+        <Box sx={{ width: 100, display: "flex", alignItems: "center" }}>
+          <Rating
+            name="text-feedback"
+            value={product.ratings}
+            readOnly
+            precision={0.5}
+            emptyIcon={
+              <StarIcon style={{ opacity: 0.55 }} fontSize="inherit" />
+            }
+          />
+          <Box sx={{ ml: 2 }}>{labels[product.ratings]}</Box>
+        </Box>
+        <span id="noOfReviews">({product.numOfReviews} Reviews)</span>
+        <Divider />
+      </>
+    )}
 
-    <span id="noOfReviews">({product.numOfReviews} Reviews)</span>
-    <p id="product_price">${product.price}</p>
+    <Box m="10px 0">
+      <Typography variant="h5" sx={{ display: "inline" }}>
+        ${product.price}
+      </Typography>
+      ({parseInt(((product.MRP - product.price) / product.MRP) * 100)}% off)
+      <br />
+      <span>
+        M.R.P: $<s>{product.MRP}</s>
+      </span>
+      <br />
+      <span>You save: ${parseInt(product.MRP - product.price)}</span>
+    </Box>
     <p>
-      Status:{" "}
+      Status:
       <span className={product.stock > 0 ? "greenColor" : "redColor"}>
         {product.stock > 0 ? "In Stock" : "Out of Stock"}
       </span>
@@ -180,12 +209,14 @@ export default function ProductDetail() {
   const dispatch = useDispatch();
   const { id } = useParams();
   const theme = useTheme();
+  const navigate = useNavigate();
   const {
     loading,
     product = {},
     isReviewSubmitted = false,
     error,
   } = useSelector((state) => state.productState);
+  const { products = [] } = useSelector((state) => state.productsState);
   const { user } = useSelector((state) => state.authState);
 
   const [quantity, setQuantity] = useState(1);
@@ -227,6 +258,7 @@ export default function ProductDetail() {
     if (!product._id || product._id || isReviewSubmitted) {
       dispatch(getProduct(id));
     }
+
     if (isReviewSubmitted) {
       handleClose();
       toast("Review Submitted Successfully!", {
@@ -244,10 +276,21 @@ export default function ProductDetail() {
       return;
     }
 
-    return () => {
-      dispatch(clearProduct());
-    };
+    // return () => {
+    //   dispatch(clearProduct());
+    // };
   }, [id, isReviewSubmitted, error]);
+
+  useEffect(() => {
+    if (product._id) {
+      dispatch(getProducts(null, null, product.category, null, null, 12));
+    }
+  }, [product]);
+
+  const buyNowHandler = () => {
+    dispatch(buyNowAction({ product: product, quantity: quantity }));
+    navigate("/shipping");
+  };
 
   const modelObj = {
     show,
@@ -280,22 +323,74 @@ export default function ProductDetail() {
             <Box className=" mt-5">
               <BasicDetails product={product} />
               <hr />
-              <AddToCart
-                decreaseQty={decreaseQty}
-                increaseQty={increaseQty}
-                quantity={quantity}
-                product={product}
-                clickCallBack={() => {
-                  dispatch(addCartItem(product._id, quantity));
-                  toast("Cart Item Added!", {
-                    type: "success",
-                    position: toast.POSITION.BOTTOM_CENTER,
-                  });
-                }}
-              />
+              <FlexEvenly>
+                <Button
+                  variant="contained"
+                  color="secondary"
+                  disabled={product.stock === 0 ? true : false}
+                  onClick={buyNowHandler}
+                >
+                  Buy Now
+                </Button>
+                <AddToCart
+                  decreaseQty={decreaseQty}
+                  increaseQty={increaseQty}
+                  quantity={quantity}
+                  product={product}
+                  clickCallBack={() => {
+                    dispatch(addCartItem(product._id, quantity));
+                    toast("Cart Item Added!", {
+                      type: "success",
+                      position: toast.POSITION.BOTTOM_CENTER,
+                    });
+                  }}
+                />
+              </FlexEvenly>
             </Box>
           </Box>
           <Divider />
+          {product.aboutThisItem && (
+            <Box>
+              <Typography variant="h5">About this product</Typography>
+              <ul>
+                {product.aboutThisItem
+                  .split(".")
+                  .map((v, i) =>
+                    product.aboutThisItem.split(".").length != i + 1 ? (
+                      <li key={i}>{v}.</li>
+                    ) : (
+                      ""
+                    )
+                  )}
+              </ul>
+              <Divider />
+            </Box>
+          )}
+          <Box>
+            <b>Products related to this item</b>
+            <Box className="mt-2">
+              <Box
+                display="flex"
+                flexDirection="row"
+                flexWrap="nowrap"
+                height="260px"
+                width="100%"
+                gap="3px"
+                sx={{
+                  "& div": {
+                    width: "105px",
+                  },
+                  overflowX: "scroll",
+                }}
+              >
+                {products &&
+                  products.map((product) => (
+                    <Product key={product._id} product={product} />
+                  ))}
+              </Box>
+            </Box>
+          </Box>
+
           {user ? (
             <Button
               type="button"

@@ -3,11 +3,7 @@ import Box from "@mui/material/Box";
 import Rating from "@mui/material/Rating";
 import StarIcon from "@mui/icons-material/Star";
 import { Typography } from "@mui/material";
-import {
-  FlexCenter,
-  FlexCenterStart,
-  FlexStart,
-} from "../styledComponents/FlexBetween";
+import { FlexCenterStart, FlexStart } from "../styledComponents/FlexBetween";
 
 export default function Product({ product }) {
   return (
@@ -51,7 +47,7 @@ export default function Product({ product }) {
             </div>
           )}
           <p>
-            <Typography variant="h5" sx={{ display: "inline" }}>
+            <Typography variant="h5" component="b">
               ${product.price}
             </Typography>
             ({parseInt(((product.MRP - product.price) / product.MRP) * 100)}%

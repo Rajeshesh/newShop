@@ -31,8 +31,6 @@ export default function Cart() {
         //  navigate('/login?redirect=shipping') want to check why isn't work.
 
 
-
-
     }
 
     return (

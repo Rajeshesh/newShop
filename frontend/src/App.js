@@ -42,6 +42,7 @@ import { Box, CssBaseline, ThemeProvider, createTheme } from "@mui/material";
 import { themeSettings } from "./theme";
 import { useSelector } from "react-redux";
 import No from "./No";
+import ConfirmOrderBuyNow from "./components/cart/ConfirmOrderBuyNow";
 
 //lazy route components
 const ProductDetail = lazy(() => import("./components/product/ProductDetail"));
@@ -153,11 +154,19 @@ function App() {
                   }
                 />
                 <Route
+                  path="/order/confirm/buyNow"
+                  element={
+                    <ProtectedRoute>
+                      <ConfirmOrderBuyNow />
+                    </ProtectedRoute>
+                  }
+                />
+                <Route
                   path="/order/success"
                   element={
                     <ProtectedRoute>
                       <OrderSuccess />
-                     </ProtectedRoute>
+                    </ProtectedRoute>
                   }
                 />
                 <Route

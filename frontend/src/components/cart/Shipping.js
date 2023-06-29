@@ -1,4 +1,4 @@
-import { Fragment, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { countries } from "countries-list";
 import { useNavigate } from "react-router-dom";
@@ -9,6 +9,7 @@ import { Button, MenuItem, TextField } from "@mui/material";
 import { BoxS } from "../styledComponents/AnimationComponent";
 import { FlexCenter } from "../styledComponents/FlexBetween";
 import { FormContainer } from "../styledComponents/Form";
+import { buyNowClose } from "../../slices/orderSlice";
 
 export const validateShipping = (shippingInfo, navigate) => {
   if (
@@ -28,6 +29,7 @@ export const validateShipping = (shippingInfo, navigate) => {
 
 export default function Shipping() {
   const { shippingInfo = {} } = useSelector((state) => state.cartState);
+  const { buyNow } = useSelector((state) => state.orderState);
 
   const [address, setAddress] = useState(shippingInfo.address);
   const [city, setCity] = useState(shippingInfo.city);
@@ -45,8 +47,16 @@ export default function Shipping() {
     dispatch(
       saveShippingInfo({ address, city, phoneNo, postalCode, country, state })
     );
-    navigate("/order/confirm");
+    if (buyNow.quantity) {
+      navigate("/order/confirm/buyNow");
+    } else {
+      navigate("/order/confirm");
+    }
   };
+
+  // useEffect(() => {
+  //   return () => dispatch(buyNowClose());
+  // });
 
   return (
     <Fragment>

@@ -1,23 +1,18 @@
-import MetaData from "../layouts/MetaData";
 import React, { useEffect } from "react";
-import { validateShipping } from "./Shipping";
 import { useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
+import { validateShipping } from "./Shipping";
+import MetaData from "../layouts/MetaData";
 import CheckoutSteps from "./CheckoutSteps";
-import { Button } from "@mui/material";
 import ShippingInfo from "./ShippingInfo";
 import OrderSummary from "./OrderSummary";
 
-export default function ConfirmOrder() {
+const ConfirmOrderBuyNow = () => {
   const navigate = useNavigate();
-  const { shippingInfo, items: cartItems } = useSelector(
-    (state) => state.cartState
-  );
-
-  const itemsPrice = cartItems.reduce(
-    (acc, item) => acc + item.price * item.quantity,
-    0
-  );
+  const { shippingInfo } = useSelector((state) => state.cartState);
+  const { buyNow } = useSelector((state) => state.orderState);
+  
+  const itemsPrice = buyNow.product.price * buyNow.quantity;
   const shippingPrice = itemsPrice > 499 ? 0 : 50;
   let taxPrice = Number(0.05 * itemsPrice);
   const totalPrice = Number(itemsPrice + shippingPrice + taxPrice).toFixed(2);
@@ -46,35 +41,32 @@ export default function ConfirmOrder() {
           <ShippingInfo shippingInfo={shippingInfo} />
           <hr />
           <div>
-            <h4 className="mt-4">Your Items:</h4>
-            {cartItems.map((item, i) => (
-              <div key={i}>
-                <div className="mt-2 mb-2">
-                  <div className="confirmOrder__product">
-                    <div className="mr-4">
-                      <img
-                        src={item.image}
-                        alt={item.name}
-                        height="45"
-                        width="65"
-                      />
-                    </div>
-
-                    <div className="mr-4">
-                      <Link to={`/product/${item.product}`}>{item.name}</Link>
-                    </div>
-
-                    <div className=" mt-4 mr-4">
-                      <p>
-                        {item.quantity} x ${item.price} ={" "}
-                        <b>${item.quantity * item.price}</b>
-                      </p>
-                    </div>
-                  </div>
+            <h4 className="mt-4">Your Item:</h4>
+            <div className="mt-2 mb-2">
+              <div className="confirmOrder__product">
+                <div className="mr-4">
+                  <img
+                    src={buyNow.product.images[0].image}
+                    alt={buyNow.product.name}
+                    height="45"
+                    width="65"
+                  />
                 </div>
-                <hr />
+
+                <div className="mr-4">
+                  <Link to={`/product/${buyNow.product["_id"]}`}>
+                    {buyNow.product.name}
+                  </Link>
+                </div>
+
+                <div className=" mt-4 mr-4">
+                  <p>
+                    {buyNow.quantity} x ${buyNow.product.price} ={" "}
+                    <b>${buyNow.quantity * buyNow.product.price}</b>
+                  </p>
+                </div>
               </div>
-            ))}
+            </div>
           </div>
 
           <hr />
@@ -90,4 +82,6 @@ export default function ConfirmOrder() {
       </div>
     </>
   );
-}
+};
+
+export default ConfirmOrderBuyNow;

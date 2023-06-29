@@ -12,7 +12,10 @@ import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { createOrder } from "../../actions/orderAction";
 import { orderCompleted } from "../../slices/cartSlice";
-import { clearError as clearOrderError } from "../../slices/orderSlice";
+import {
+  buyNowClose,
+  clearError as clearOrderError,
+} from "../../slices/orderSlice";
 import CheckoutSteps from "./CheckoutSteps";
 import { validateShipping } from "./Shipping";
 import { FlexCenter } from "../styledComponents/FlexBetween";
@@ -29,6 +32,8 @@ export default function Payment() {
   const { items: cartItems, shippingInfo } = useSelector(
     (state) => state.cartState
   );
+  const { buyNow } = useSelector((state) => state.orderState);
+
   const { error: orderError } = useSelector((state) => state.orderState);
   const paymentData = {
     amount: Math.round(orderInfo.totalPrice * 100),
@@ -46,7 +51,17 @@ export default function Payment() {
   };
 
   const order = {
-    orderItems: cartItems,
+    orderItems: buyNow.quantity
+      ? [
+          {
+            name: buyNow.product.name,
+            quantity: buyNow.quantity,
+            image: buyNow.product.images[0].image,
+            price: buyNow.product.price,
+            product: buyNow.product["_id"],
+          },
+        ]
+      : cartItems,
     shippingInfo,
   };
 
@@ -100,7 +115,11 @@ export default function Payment() {
             id: (await result).paymentIntent.id,
             status: (await result).paymentIntent.status,
           };
-          dispatch(orderCompleted());
+          if (buyNow.quantity) {
+            dispatch(buyNowClose());
+          } else {
+            dispatch(orderCompleted());
+          }
           dispatch(createOrder(order));
           navigate("/order/success");
         } else {
