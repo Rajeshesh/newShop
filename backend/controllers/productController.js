@@ -2,6 +2,15 @@ const Product = require("../models/productModel");
 const ErrorHandler = require("../utils/errorHandler");
 const catchAsyncError = require("../middlewares/catchAsyncError");
 const APIFeatures = require("../utils/apiFeatures");
+const fs = require("fs");
+
+// let allPro = await Product.find(
+//   {},
+//   { _id: 0, createdAt: 0, "images._id": 0, "reviews._id": 0,__v:0 }
+// );
+// fs.writeFile("shopProductsOnDB.js", `let pro=[${allPro}]`, "utf-8", (err) =>
+//   err ? console.log(err) : console.log("success")
+// );
 
 //Get Products - /api/v1/products
 exports.getProducts = catchAsyncError(async (req, res, next) => {
