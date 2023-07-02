@@ -114,7 +114,7 @@ export default function Header() {
               <MenuIcon />
             </IconButton>
             <Link to="/" style={{ textDecoration: "none" }}>
-              <Typography variant="h4" color="secondary" component="p">
+              <Typography id="top" variant="h4" color="secondary" component="p">
                 Shop
               </Typography>
             </Link>

@@ -308,8 +308,8 @@ export const themeSettings = ({ mode, font }) => {
             },
             background: {
               default: tokensDark.grey[0],
-              alt: tokensDark.grey[50],
-              alt1: tokensDark.grey[100],
+              alt: tokensDark.grey[100],
+              alt1: tokensDark.grey[50],
             },
           }
         : {

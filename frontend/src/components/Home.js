@@ -32,7 +32,9 @@ export default function Home() {
       ) : (
         <Fragment>
           <MetaData title={"Buy Best Products"} />
-          <h3 className="mt-3 mb-1">Latest Products</h3>
+          <h3 className="mt-3 mb-1" id="top">
+            Latest Products
+          </h3>
           <section className="mt-2">
             <div className="products ">
               {products &&
