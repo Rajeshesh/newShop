@@ -7,10 +7,7 @@ import {
   Twitter,
   GitHub,
 } from "@mui/icons-material";
-import FlexBetween, {
-  FlexBetweenStart,
-  FlexCenter,
-} from "../styledComponents/FlexBetween";
+import { FlexCenter } from "../styledComponents/FlexBetween";
 import { Link } from "react-router-dom";
 
 export default function Footer() {
@@ -39,6 +36,14 @@ export default function Footer() {
           "h4 , p": {
             textAlign: "center",
           },
+          a: {
+            transition: "0.4s",
+            ":hover": {
+              color: theme.palette.bg3,
+              fontSize: "120%",
+              transition: "0.2s",
+            },
+          },
         }}
       >
         <div className="m-1">
@@ -57,7 +62,14 @@ export default function Footer() {
           </p>
         </div>
         {above600 && (
-          <div className="m-1">
+          <Box
+            sx={{
+              "p a:hover": {
+                fontSize: "100%",
+              },
+            }}
+            className="m-3"
+          >
             <p>
               <a href="mailto:cisr6146@gmail.com">
                 <Email />
@@ -74,19 +86,28 @@ export default function Footer() {
               </a>
             </p>
             <p>
-              <a>
+              <a href="https://github.com/Rajeshesh">
                 <Twitter />
               </a>
             </p>
             <p>
-              <a>
+              <a href="https://www.linkedin.com/in/rajesh-p-09b86724a">
                 <Facebook />
               </a>
             </p>
-          </div>
+          </Box>
         )}
 
-        <div className="m-1">
+        <Box
+          sx={{
+            "& p a:hover": {
+              fontSize: "100%",
+              fontStyle: "italic",
+              transition: "0.07s",
+            },
+          }}
+          className="m-1"
+        >
           <h4>Stay with Us</h4>
           <p>
             <Link to="myprofile">Your Account</Link>
@@ -95,10 +116,10 @@ export default function Footer() {
             <Link to="orders">Your Orders</Link>
           </p>
           <p>
-            <Link to="/">Your Recently Viewed Items</Link>
+            <Link to="/">Recently Viewed Items</Link>
           </p>
-        </div>
-        <div className="m-1">
+        </Box>
+        <Box className="m-1">
           <h4>Let Us Help you</h4>
           <p>
             <Link to="/customer/service">Customer Service</Link>
@@ -109,7 +130,7 @@ export default function Footer() {
           <p>
             <Link to="/help">Help</Link>
           </p>
-        </div>
+        </Box>
       </Box>
       <Box
         display="flex"
@@ -119,7 +140,10 @@ export default function Footer() {
         bgcolor={theme.palette.background.alt1}
       >
         {!above600 && (
-          <div className="mt-1">
+          <Box
+            sx={{ "a:hover": { color: theme.palette.bg3 } }}
+            className="mt-1"
+          >
             <a className="ml-1" href="mailto:cisr6146@gmail.com">
               <Email />
             </a>
@@ -132,19 +156,22 @@ export default function Footer() {
             <a className="ml-1" href="https://github.com/Rajeshesh">
               <GitHub />
             </a>
-            <a className="ml-1">
+            <a
+              className="ml-1"
+              href="https://www.linkedin.com/in/rajesh-p-09b86724a"
+            >
               <Twitter />
             </a>
-            <a className="ml-1">
+            <a className="ml-1" href="https://github.com/Rajeshesh">
               <Facebook />
             </a>
-          </div>
+          </Box>
         )}
         <FlexCenter m="7px" gap="15px">
-          <Button sx={{ bgcolor: theme.palette.bg3 }} variant="contained">
+          <Button sx={{ bgcolor: theme.palette.bg4 }} variant="contained">
             Switch Account
           </Button>
-          <Button variant="contained" sx={{ bgcolor: theme.palette.bg5 }}>
+          <Button variant="contained" sx={{ bgcolor: theme.palette.bg2 }}>
             Sign Out
           </Button>
         </FlexCenter>

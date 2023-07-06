@@ -285,8 +285,8 @@ export const themeSettings = ({ mode, font }) => {
             },
             background: {
               default: purple[900],
-              alt: purple[700],
-              alt1: purple[600],
+              alt: purple[800],
+              alt1: purple[700],
             },
           }
         : mode === "light"
@@ -308,8 +308,8 @@ export const themeSettings = ({ mode, font }) => {
             },
             background: {
               default: tokensDark.grey[0],
-              alt: tokensDark.grey[100],
-              alt1: tokensDark.grey[50],
+              alt: tokensDark.grey[200],
+              alt1: tokensDark.grey[100],
             },
           }
         : {
@@ -331,37 +331,49 @@ export const themeSettings = ({ mode, font }) => {
               alt: orange[600],
               alt1: orange[500],
             },
-          }), //orange 
+          }), //orange
       bg1:
-        mode === "orange"
-          ? [blue[800], blue]
-          : mode === "pink"
-          ? [purple[700], purple]
-          : [blue[900], blue],
-      bg2:
-        mode === "orange"
-          ? [pink[700], pink]
-          : mode === "light"
-          ? [green[500], green]
-          : [green[600], green],
-      bg3:
-        mode === "purple"
-          ? [pink[600], pink]
-          : mode === "light"
-          ? [orange[500], orange]
-          : mode === "pink"
-          ? [lightBlue[800], lightBlue]
-          : mode === "dark"
-          ? [purple[500], purple]
-          : [purple[600], purple],
-      bg4:
+        //next or small area 2
         mode === "orange"
           ? [lightBlue[400], lightBlue]
+          : mode === "pink"
+          ? [orange[500], orange]
+          : mode === "dark"
+          ? [yellow[600], yellow]
+          : mode === "purple"
+          ? [lime[400], lime]
+          : [purple[500], purple],
+      bg2:
+        //background+text or bigg area 2
+        mode === "orange"
+          ? [lime[500], lime]
+          : mode === "pink"
+          ? [lightBlue[400], lightBlue]
+          : mode === "light"
+          ? [lime[500], lime]
+          : mode === "purple"
+          ? [lightBlue[400], lightBlue]
+          : [pink[600], pink],
+      bg3:
+        //next or small area 1
+        mode === "purple"
+          ? [pink[500], pink]
+          : mode === "light"
+          ? [orange[600], orange]
+          : mode === "pink"
+          ? [blue[900], blue]
+          : mode === "dark"
+          ? [purple[400], purple]
+          : [purple[600], purple],
+      bg4:
+        //background or bigg area 1
+        mode === "orange"
+          ? [pink[700], pink]
           : mode === "light"
           ? [yellow[600], yellow]
           : mode === "pink"
           ? [lime[700], lime]
-          : [yellow[700], yellow],
+          : [green[600], green],
       bg5:
         mode === "dark" || mode === "purple"
           ? [black[200], black]
