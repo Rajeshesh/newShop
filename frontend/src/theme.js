@@ -264,8 +264,8 @@ export const themeSettings = ({ mode, font }) => {
             },
             background: {
               default: pink[100],
-              alt: pink[700],
-              alt1: pink[600],
+              alt: pink[600],
+              alt1: pink[500],
             },
           }
         : mode === "purple"
@@ -331,7 +331,7 @@ export const themeSettings = ({ mode, font }) => {
               alt: orange[600],
               alt1: orange[500],
             },
-          }), //orange
+          }), //orange 
       bg1:
         mode === "orange"
           ? [blue[800], blue]

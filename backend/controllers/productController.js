@@ -16,8 +16,15 @@ const fs = require("fs");
 exports.getProducts = catchAsyncError(async (req, res, next) => {
   const resPerPage = req.query.resPerPage || 24;
 
+  // const p = await Product.find({});
+  // for (let i = 0; i < p.length; i++) {
+  //   p[i].price--;
+  //   p[i].save();
+  //   console.log(1);
+  // }
+
   let buildQuery = () => {
-    return new APIFeatures(Product.find(), req.query).search().filter();
+    return new APIFeatures(Product.find(), req.query).search().off().filter();
   };
 
   const filteredProductsCount = await buildQuery().query.countDocuments({});

@@ -8,101 +8,109 @@ import {
   GitHub,
 } from "@mui/icons-material";
 import FlexBetween, {
+  FlexBetweenStart,
   FlexCenter,
 } from "../styledComponents/FlexBetween";
 import { Link } from "react-router-dom";
 
 export default function Footer() {
   const theme = useTheme();
-  const below500 = useMediaQuery("(min-width:400px)");
+  const above400 = useMediaQuery("(min-width:400px)");
+  const above600 = useMediaQuery("(min-width:600px)");
   return (
     <footer className="pt-3 pb-3">
-      <FlexCenter
-        bgcolor={theme.palette.background.alt1}
-        flexDirection="column"
-      >
-        <ArrowDropUp />
-        <p>Back to top</p>
-      </FlexCenter>
-      <FlexBetween
-        flexDirection={below500 ? "row" : "column"}
+      <Link to="/">
+        <FlexCenter
+          bgcolor={theme.palette.background.alt1}
+          flexDirection="column"
+        >
+          <ArrowDropUp />
+          <p>Back to top</p>
+        </FlexCenter>
+      </Link>
+      <Box
+        display="flex"
+        justifyContent={above400 ? "space-between" : "start"}
+        alignItems={above400 ? "flex-start" : "center"}
+        flexDirection={above400 ? "row" : "column"}
         bgcolor={theme.palette.background.alt}
+        p="5px"
+        sx={{
+          "h4 , p": {
+            textAlign: "center",
+          },
+        }}
       >
-        <div>
-          <ul>
-            <li style={{ fontWeight: "bold" }}>Get to Know Us</li>
-            <li>
-              <Link to="contact">Contact Us</Link>
-            </li>
-            <li>
-              <Link to="/">Shop.in</Link>
-            </li>
-            <li>
-              <Link to="careers">Careers</Link>
-            </li>
-            <li>
-              <Link to="about">About Us</Link>
-            </li>
-          </ul>
+        <div className="m-1">
+          <h4>Get to Know Us</h4>
+          <p>
+            <a href="mailto:cisr6146@gmail.com">Contact Us</a>
+          </p>
+          <p>
+            <Link to="/">Shop.in</Link>
+          </p>
+          <p>
+            <Link to="careers">Careers</Link>
+          </p>
+          <p>
+            <Link to="about">About Us</Link>
+          </p>
         </div>
-        <div>
-          <ul>
-            <li>
-              <a href="mailto:rp4549993@gmail.com">
+        {above600 && (
+          <div className="m-1">
+            <p>
+              <a href="mailto:cisr6146@gmail.com">
                 <Email />
               </a>
-            </li>
-            <li>
-              <a>
+            </p>
+            <p>
+              <a href="https://www.linkedin.com/in/rajesh-p-09b86724a">
                 <LinkedIn />
               </a>
-            </li>
-            <li>
-              <a>
+            </p>
+            <p>
+              <a href="https://github.com/Rajeshesh">
                 <GitHub />
               </a>
-            </li>
-            <li>
+            </p>
+            <p>
               <a>
                 <Twitter />
               </a>
-            </li>
-            <li>
+            </p>
+            <p>
               <a>
                 <Facebook />
               </a>
-            </li>
-          </ul>
+            </p>
+          </div>
+        )}
+
+        <div className="m-1">
+          <h4>Stay with Us</h4>
+          <p>
+            <Link to="myprofile">Your Account</Link>
+          </p>
+          <p>
+            <Link to="orders">Your Orders</Link>
+          </p>
+          <p>
+            <Link to="/">Your Recently Viewed Items</Link>
+          </p>
         </div>
-        <div>
-          <ul>
-            <li style={{ fontWeight: "bold" }}>Stay with Us</li>
-            <li>
-              <Link to="myprofile">Your Account</Link>
-            </li>
-            <li>
-              <Link to="orders">Your Orders</Link>
-            </li>
-            <li>
-              <Link to="/">Your Recently Viewed Items</Link>
-            </li>
-          </ul>
+        <div className="m-1">
+          <h4>Let Us Help you</h4>
+          <p>
+            <Link to="/customer/service">Customer Service</Link>
+          </p>
+          <p>
+            <Link to="/return/centre">Return Centre</Link>
+          </p>
+          <p>
+            <Link to="/help">Help</Link>
+          </p>
         </div>
-        <div>
-          <ul>
-            <li style={{ fontWeight: "bold" }}>Let Us Help you</li>
-            <li>
-              <Link to="/customer/service">Customer Service</Link>
-            </li>
-            <li>
-              <Link to="/return/centre">Return Centre</Link>
-            </li>
-            <li>
-              <Link to="/help">Help</Link>
-            </li>
-          </ul>
-        </div>
-      </FlexBetween>
+      </Box>
       <Box
         display="flex"
         flexDirection="column"
@@ -110,6 +118,28 @@ export default function Footer() {
         width="100%"
         bgcolor={theme.palette.background.alt1}
       >
+        {!above600 && (
+          <div className="mt-1">
+            <a className="ml-1" href="mailto:cisr6146@gmail.com">
+              <Email />
+            </a>
+            <a
+              className="ml-1"
+              href="https://www.linkedin.com/in/rajesh-p-09b86724a"
+            >
+              <LinkedIn />
+            </a>
+            <a className="ml-1" href="https://github.com/Rajeshesh">
+              <GitHub />
+            </a>
+            <a className="ml-1">
+              <Twitter />
+            </a>
+            <a className="ml-1">
+              <Facebook />
+            </a>
+          </div>
+        )}
         <FlexCenter m="7px" gap="15px">
           <Button sx={{ bgcolor: theme.palette.bg3 }} variant="contained">
             Switch Account

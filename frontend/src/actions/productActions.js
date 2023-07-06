@@ -6,6 +6,12 @@ import {
   adminProductsRequest,
   adminProductsSuccess,
   adminProductsFail,
+  productsOffRequest,
+  productsOffSuccess,
+  productsOffFail,
+  productsCatRequest,
+  productsCatSuccess,
+  productsCatFail,
 } from "../slices/productsSlice";
 import {
   productFail,
@@ -59,6 +65,70 @@ export const getProducts =
     } catch (error) {
       //handle error
       dispatch(productsFail(error.response.data.message));
+    }
+  };
+export const getProductsCat =
+  (keyword, price, category, rating, currentPage, resPerPage) =>
+  async (dispatch) => {
+    try {
+      dispatch(productsCatRequest());
+      let link = `/api/v1/products?page=${currentPage}`;
+
+      if (keyword) {
+        link += `&keyword=${keyword}`;
+      }
+      if (resPerPage) {
+        link += `&resPerPage=${resPerPage}`;
+      }
+      if (price) {
+        link += `&price[gte]=${price[0]}&price[lte]=${price[1]}`;
+      }
+      if (category) {
+        link += `&category=${category}`;
+      }
+      if (rating) {
+        link += `&ratings=${rating}`;
+      }
+
+      const { data } = await axios.get(link);
+      dispatch(productsCatSuccess(data));
+    } catch (error) {
+      //handle error
+      dispatch(productsCatFail(error.response.data.message));
+    }
+  };
+
+export const getProductsOff =
+  (keyword, price, category, rating, currentPage, resPerPage, off) =>
+  async (dispatch) => {
+    try {
+      dispatch(productsOffRequest());
+      let link = `/api/v1/products?page=${currentPage}`;
+
+      if (keyword) {
+        link += `&keyword=${keyword}`;
+      }
+      if (resPerPage) {
+        link += `&resPerPage=${resPerPage}`;
+      }
+      if (price) {
+        link += `&price[gte]=${price[0]}&price[lte]=${price[1]}`;
+      }
+      if (category) {
+        link += `&category=${category}`;
+      }
+      if (rating) {
+        link += `&ratings=${rating}`;
+      }
+      if (off) {
+        link += `&off=${off}`;
+      }
+
+      const { data } = await axios.get(link);
+      dispatch(productsOffSuccess(data));
+    } catch (error) {
+      //handle error
+      dispatch(productsOffFail(error.response.data.message));
     }
   };
 

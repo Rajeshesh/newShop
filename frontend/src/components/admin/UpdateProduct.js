@@ -13,7 +13,7 @@ import { ClearAll } from "@mui/icons-material";
 
 export default function UpdateProduct() {
   const [name, setName] = useState("");
-  const [price, setPrice] = useState("");
+  const [price, setPrice] = useState(0);
   const [description, setDescription] = useState("");
   const [aboutThisItem, setAboutThisItem] = useState("");
   const [category, setCategory] = useState("");

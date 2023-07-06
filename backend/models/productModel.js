@@ -15,6 +15,10 @@ const productSchema = new mongoose.Schema({
   MRP: {
     type: Number,
   },
+  off: {
+    type: Number,
+    default: 0,
+  },
   description: {
     type: String,
     required: [true, "Please enter product description"],
@@ -30,7 +34,7 @@ const productSchema = new mongoose.Schema({
     {
       image: {
         type: String,
-        required: [true,'image path is req in db'],
+        required: [true, "image path is req in db"],
       },
     },
   ],
@@ -93,6 +97,15 @@ const productSchema = new mongoose.Schema({
     type: Date,
     default: Date.now(),
   },
+});
+
+productSchema.pre("save", async function (next) {
+  if (this.isModified("price") || this.isModified("MRP")) {
+    this.price = this.price.toFixed(2);
+    this.MRP = this.MRP.toFixed(2);
+    this.off = Math.abs(((this.price - this.MRP) / this.MRP) * 100).toFixed(2);
+  }
+  next();
 });
 
 let schema = mongoose.model("Product", productSchema);
