@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  mode: "dark",
+  mode: localStorage.getItem("shopMode") || "dark",
   font: "'Expletus Sans', cursive",
 };
 
@@ -10,9 +10,14 @@ export const globalSlice = createSlice({
   initialState,
   reducers: {
     setMode: (state) => {
-      state.mode = state.mode === "light" ? "dark" : "light";
+      localStorage.setItem(
+        "shopMode",
+        state.mode === "light" ? "dark" : "light"
+      );
+      state.mode = localStorage.getItem("shopMode");
     },
     setModeLike: (state, actions) => {
+      localStorage.setItem("shopMode", actions.payload);
       state.mode = actions.payload;
     },
     setFont: (state, actions) => {

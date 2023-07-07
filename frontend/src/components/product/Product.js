@@ -2,10 +2,11 @@ import { Link } from "react-router-dom";
 import Box from "@mui/material/Box";
 import Rating from "@mui/material/Rating";
 import StarIcon from "@mui/icons-material/Star";
-import { Typography } from "@mui/material";
+import { Typography, useTheme } from "@mui/material";
 import { FlexCenterStart, FlexStart } from "../styledComponents/FlexBetween";
 
 export default function Product({ product }) {
+  let { palette } = useTheme();
   return (
     <Box border="1px solid gray" height="100%" className={`product p-2`}>
       <div>
@@ -20,7 +21,11 @@ export default function Product({ product }) {
         </Link>
         <FlexCenterStart flexDirection="column">
           <Link to={`/product/${product._id}`}>
-            <Typography variant="h5" className="truncated-text">
+            <Typography
+              variant="h5"
+              sx={{ "&:hover": { color: palette.bg3 } }}
+              className="truncated-text"
+            >
               {product.name}
             </Typography>
           </Link>

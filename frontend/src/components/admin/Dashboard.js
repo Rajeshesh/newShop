@@ -75,7 +75,7 @@ export default function Dashboard() {
           <div className="dsbd__i p-8">
             <Box
               sx={{
-                background: `linear-gradient(50deg,transparent,${theme.palette.purple[400]})`,
+                background: `linear-gradient(50deg,transparent,${theme.colors.purple[400]})`,
               }}
             >
               <div className="">
@@ -97,7 +97,7 @@ export default function Dashboard() {
 
             <Box
               sx={{
-                background: `linear-gradient(50deg,transparent,${theme.palette.purple[400]})`,
+                background: `linear-gradient(50deg,transparent,${theme.colors.purple[400]})`,
               }}
             >
               <div className="">
@@ -118,7 +118,7 @@ export default function Dashboard() {
 
             <Box
               sx={{
-                background: `linear-gradient(50deg,transparent,${theme.palette.purple[400]})`,
+                background: `linear-gradient(50deg,transparent,${theme.colors.purple[400]})`,
               }}
             >
               <div className="">

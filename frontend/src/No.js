@@ -12,6 +12,7 @@ import {
   lightBlue,
   purple,
 } from "./theme";
+import { BorderFlow } from "./components/styledComponents/AnimationComponent";
 
 let redC = Object.entries(red);
 let orangeC = Object.entries(orange);

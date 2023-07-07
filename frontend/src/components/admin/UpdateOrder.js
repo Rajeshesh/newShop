@@ -1,4 +1,4 @@
-import { Box, Button, MenuItem, TextField } from "@mui/material";
+import { Box, Button, MenuItem, TextField, useTheme } from "@mui/material";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
@@ -17,6 +17,7 @@ import { BorderFlowBySpan } from "../styledComponents/AnimationComponent";
 export default function UpdateOrder() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
+  const { palette } = useTheme();
   const { id: orderId } = useParams();
   const {
     loading = true,
@@ -78,7 +79,13 @@ export default function UpdateOrder() {
             <span className="spanA"></span>
             <span className="spanA"></span>
             <span className="spanA"></span>
-            <FormContainer component="form" p="15px" m="4px" width="300px">
+            <FormContainer
+              onSubmit={sumbitHandler}
+              component="form"
+              p="15px"
+              m="4px"
+              width="300px"
+            >
               <div>
                 <TextField
                   sx={{ width: "100%" }}
@@ -95,12 +102,12 @@ export default function UpdateOrder() {
                   <MenuItem value={"Shipped"}>Shipped</MenuItem>
                 </TextField>
               </div>
-              <div >
+              <div>
                 <Button
                   variant="contained"
                   disabled={loading}
-                  onClick={sumbitHandler}
                   className="mt-4"
+                  type="submit"
                 >
                   Update Status
                 </Button>

@@ -8,15 +8,16 @@ import {
   GitHub,
 } from "@mui/icons-material";
 import { FlexCenter } from "../styledComponents/FlexBetween";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 export default function Footer() {
   const theme = useTheme();
+  const { pathname } = useLocation();
   const above400 = useMediaQuery("(min-width:400px)");
   const above600 = useMediaQuery("(min-width:600px)");
   return (
     <footer className="pt-3 pb-3">
-      <Link to="/">
+      <Link to={pathname} target="_blank">
         <FlexCenter
           bgcolor={theme.palette.background.alt1}
           flexDirection="column"

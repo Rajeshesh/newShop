@@ -121,21 +121,21 @@ const BasicDetails = memo(({ product }) => (
 ));
 
 const AddToCart = memo(
-  ({ decreaseQty, quantity, increaseQty, product, clickCallBack }) => (
+  ({ decreaseQty, quantity, increaseQty, product, clickCallBack, theme }) => (
     <>
-      <div className="stockCounter ">
+      <FlexCenter minWidth="100px">
         <IconButton className="" onClick={decreaseQty}>
           <KeyboardDoubleArrowLeft />
         </IconButton>
-        <input type="number" className="count" value={quantity} readOnly />
+        <b>{quantity}</b>
         <IconButton className="" onClick={increaseQty}>
           <KeyboardDoubleArrowRight />
         </IconButton>
-      </div>
+      </FlexCenter>
       <Button
         type="button"
         variant="contained"
-        color="secondary"
+        sx={{ bgcolor: theme.palette.bg2 }}
         disabled={product.stock === 0 ? true : false}
         className="ml-4"
         onClick={clickCallBack}
@@ -317,16 +317,18 @@ export default function ProductDetail() {
               margin: "0 auto",
             }}
           >
-            <Box>
-              <CarouselReUse product={product} h={`350`} w={`350`} />
-            </Box>
+            <FlexCenter>
+              <Box maxWidth="350px">
+                <CarouselReUse product={product} h={`350`} w={`350`} />
+              </Box>
+            </FlexCenter>
             <Box className=" mt-5">
               <BasicDetails product={product} />
               <hr />
               <FlexEvenly>
                 <Button
                   variant="contained"
-                  color="secondary"
+                  sx={{ bgcolor: theme.palette.bg4 }}
                   disabled={product.stock === 0 ? true : false}
                   onClick={buyNowHandler}
                 >
@@ -337,6 +339,7 @@ export default function ProductDetail() {
                   increaseQty={increaseQty}
                   quantity={quantity}
                   product={product}
+                  theme={theme}
                   clickCallBack={() => {
                     dispatch(addCartItem(product._id, quantity));
                     toast("Cart Item Added!", {

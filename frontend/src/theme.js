@@ -335,49 +335,48 @@ export const themeSettings = ({ mode, font }) => {
       bg1:
         //next or small area 2
         mode === "orange"
-          ? [lightBlue[400], lightBlue]
+          ? lightBlue[700]
           : mode === "pink"
-          ? [orange[500], orange]
+          ? orange[500]
           : mode === "dark"
-          ? [yellow[600], yellow]
+          ? yellow[600]
           : mode === "purple"
-          ? [lime[400], lime]
-          : [purple[500], purple],
+          ? lime[400]
+          : purple[500],
       bg2:
         //background+text or bigg area 2
         mode === "orange"
-          ? [lime[500], lime]
+          ? lime[600]
           : mode === "pink"
-          ? [lightBlue[400], lightBlue]
+          ? lightBlue[400]
           : mode === "light"
-          ? [lime[500], lime]
+          ? lime[500]
           : mode === "purple"
-          ? [lightBlue[400], lightBlue]
-          : [pink[600], pink],
+          ? lightBlue[800]
+          : pink[600],
       bg3:
         //next or small area 1
         mode === "purple"
-          ? [pink[500], pink]
+          ? pink[500]
           : mode === "light"
-          ? [orange[600], orange]
+          ? orange[600]
           : mode === "pink"
-          ? [blue[900], blue]
+          ? blue[900]
           : mode === "dark"
-          ? [purple[400], purple]
-          : [purple[600], purple],
+          ? purple[400]
+          : purple[600],
       bg4:
         //background or bigg area 1
         mode === "orange"
-          ? [pink[700], pink]
+          ? pink[700]
           : mode === "light"
-          ? [yellow[600], yellow]
+          ? yellow[600]
           : mode === "pink"
-          ? [lime[700], lime]
-          : [green[600], green],
-      bg5:
-        mode === "dark" || mode === "purple"
-          ? [black[200], black]
-          : [black[300], black],
+          ? lime[700]
+          : green[600],
+      bg5: mode === "dark" || mode === "purple" ? black[200] : black[300],
+    },
+    colors: {
       orange,
       purple,
       black,

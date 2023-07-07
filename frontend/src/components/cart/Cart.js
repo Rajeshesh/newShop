@@ -3,7 +3,7 @@ import {
   KeyboardDoubleArrowLeft,
   KeyboardDoubleArrowRight,
 } from "@mui/icons-material";
-import { Button, IconButton } from "@mui/material";
+import { Box, Button, IconButton, useTheme } from "@mui/material";
 import { Fragment } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
@@ -13,11 +13,13 @@ import {
   removeItemFromCart,
 } from "../../slices/cartSlice";
 import { buyNowClose } from "../../slices/orderSlice";
+import { FlexCenter } from "../styledComponents/FlexBetween";
 
 export default function Cart() {
   const dispatch = useDispatch();
-  const { items } = useSelector((state) => state.cartState);
   const navigate = useNavigate();
+  const { palette } = useTheme();
+  const { items } = useSelector((state) => state.cartState);
 
   const increaseQty = (item) => {
     const count = item.quantity;
@@ -69,30 +71,23 @@ export default function Cart() {
                       <div className="">
                         <div className="pt-10 pl-9">${item.price}</div>
 
-                        <div className="">
-                          <div className="stockCounter">
-                            <IconButton
-                              className=""
-                              onClick={() => decreaseQty(item)}
-                            >
-                              <KeyboardDoubleArrowLeft />
-                            </IconButton>
+                        <FlexCenter minWidth="100px">
+                          <IconButton
+                            className=""
+                            onClick={() => decreaseQty(item)}
+                          >
+                            <KeyboardDoubleArrowLeft />
+                          </IconButton>
 
-                            <input
-                              type="number"
-                              className="count"
-                              value={item.quantity}
-                              readOnly
-                            />
+                          <Box he>{item.quantity}</Box>
 
-                            <IconButton
-                              className=""
-                              onClick={() => increaseQty(item)}
-                            >
-                              <KeyboardDoubleArrowRight />
-                            </IconButton>
-                          </div>
-                        </div>
+                          <IconButton
+                            className=""
+                            onClick={() => increaseQty(item)}
+                          >
+                            <KeyboardDoubleArrowRight />
+                          </IconButton>
+                        </FlexCenter>
 
                         <IconButton
                           className="ml-3"
@@ -138,6 +133,7 @@ export default function Cart() {
                 <Button
                   variant="contained"
                   className=""
+                  sx={{ bgcolor: palette.bg4 }}
                   onClick={() => checkoutHandler()}
                 >
                   Check out

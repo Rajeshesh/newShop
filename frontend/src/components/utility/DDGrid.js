@@ -21,7 +21,7 @@ const DDGrid = ({
   AReviewsData,
   productId,
 }) => {
-  const theme = useTheme();
+  const { palette, colors } = useTheme();
   const dispatch = useDispatch();
   let data = {};
   data.data = orderData
@@ -49,7 +49,7 @@ const DDGrid = ({
           headerName: "Status",
           renderCell: (params) =>
             params.value === "Delivered" ? (
-              <Box color={theme.palette.green[500]}>{params.value}</Box>
+              <Box color={colors.green[500]}>{params.value}</Box>
             ) : (
               <Box color="red">{params.value}</Box>
             ),
@@ -83,7 +83,7 @@ const DDGrid = ({
             <FlexBetween>
               <IconButton>
                 <Link to={`/admin/product/${params.row._id}`}>
-                  <Edit />
+                  <Edit sx={{ color: palette.bg2 }} />
                 </Link>
               </IconButton>
               <IconButton
@@ -112,7 +112,7 @@ const DDGrid = ({
           headerName: "Status",
           renderCell: (params) =>
             params.value === "Delivered" ? (
-              <Box color={theme.palette.green[500]}>{params.value}</Box>
+              <Box color={colors.green[500]}>{params.value}</Box>
             ) : (
               <Box color="red">{params.value}</Box>
             ),
@@ -124,7 +124,7 @@ const DDGrid = ({
             <FlexBetween>
               <IconButton>
                 <Link to={`/admin/order/${params.row._id}`}>
-                  <Edit />
+                  <Edit sx={{ color: palette.bg2 }} />
                 </Link>
               </IconButton>
               <IconButton
@@ -149,7 +149,7 @@ const DDGrid = ({
           headerName: "Role",
           renderCell: (params) =>
             params.value === "admin" ? (
-              <Box color={theme.palette.secondary[500]}>{params.value}</Box>
+              <Box color={palette.secondary[500]}>{params.value}</Box>
             ) : (
               <Box>{params.value}</Box>
             ),
@@ -162,7 +162,7 @@ const DDGrid = ({
             <FlexBetween>
               <IconButton>
                 <Link to={`/admin/user/${params.row._id}`}>
-                  <Edit />
+                  <Edit sx={{ color: palette.bg2 }} />
                 </Link>
               </IconButton>
               <IconButton
