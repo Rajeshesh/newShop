@@ -8,10 +8,15 @@ import {
   GitHub,
 } from "@mui/icons-material";
 import { FlexCenter } from "../styledComponents/FlexBetween";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { logout } from "../../actions/userActions";
 
 export default function Footer() {
   const theme = useTheme();
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+
   const { pathname } = useLocation();
   const above400 = useMediaQuery("(min-width:400px)");
   const above600 = useMediaQuery("(min-width:600px)");
@@ -169,10 +174,23 @@ export default function Footer() {
           </Box>
         )}
         <FlexCenter m="7px" gap="15px">
-          <Button sx={{ bgcolor: theme.palette.bg4 }} variant="contained">
+          <Button
+            sx={{ bgcolor: theme.palette.bg4 }}
+            onClick={(e) => {
+              dispatch(logout);
+              navigate("/login");
+            }}
+            variant="contained"
+          >
             Switch Account
           </Button>
-          <Button variant="contained" sx={{ bgcolor: theme.palette.bg2 }}>
+          <Button
+            variant="contained"
+            onClick={(e) => {
+              dispatch(logout);
+            }}
+            sx={{ bgcolor: theme.palette.bg2 }}
+          >
             Sign Out
           </Button>
         </FlexCenter>
