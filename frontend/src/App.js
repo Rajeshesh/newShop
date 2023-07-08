@@ -43,6 +43,8 @@ import { themeSettings } from "./theme";
 import { useSelector } from "react-redux";
 import No from "./No";
 import ConfirmOrderBuyNow from "./components/cart/ConfirmOrderBuyNow";
+import PageNotFound from "./components/PageNotFound";
+import { full2Animation } from "./components/styledComponents/animation";
 
 //lazy route components
 const ProductDetail = lazy(() => import("./components/product/ProductDetail"));
@@ -75,209 +77,221 @@ function App() {
             <Header />
             <div className="main">
               <ToastContainer theme="dark" />
-              <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/no" element={<No />} />
-                <Route path="/search/:keyword" element={<ProductSearch />} />
-
-                <Route
-                  path="/login"
-                  element={
-                    <GuestRoute>
-                      <Login />
-                    </GuestRoute>
-                  }
-                />
-                <Route
-                  path="/register"
-                  element={
-                    <GuestRoute>
-                      <Register />
-                    </GuestRoute>
-                  }
-                />
-                <Route
-                  path="/myprofile"
-                  element={
-                    <ProtectedRoute>
-                      <Profile />
-                    </ProtectedRoute>
-                  }
-                />
-                <Route
-                  path="/myprofile/update"
-                  element={
-                    <ProtectedRoute>
-                      <UpdateProfile />
-                    </ProtectedRoute>
-                  }
-                />
-                <Route
-                  path="/myprofile/update/password"
-                  element={
-                    <ProtectedRoute>
-                      <UpdatePassword />
-                    </ProtectedRoute>
-                  }
-                />
-                <Route
-                  path="/password/forgot"
-                  element={
-                    <GuestRoute>
-                      <ForgotPassword />
-                    </GuestRoute>
-                  }
-                />
-                <Route
-                  path="/password/reset/:token"
-                  element={
-                    <GuestRoute>
-                      <ResetPassword />
-                    </GuestRoute>
-                  }
-                />
-                <Route path="/cart" element={<CartC />} />
-                <Route
-                  path="/shipping"
-                  element={
-                    <ProtectedRoute>
-                      <Shipping />
-                    </ProtectedRoute>
-                  }
-                />
-                <Route
-                  path="/order/confirm"
-                  element={
-                    <ProtectedRoute>
-                      <ConfirmOrder />
-                    </ProtectedRoute>
-                  }
-                />
-                <Route
-                  path="/order/confirm/buyNow"
-                  element={
-                    <ProtectedRoute>
-                      <ConfirmOrderBuyNow />
-                    </ProtectedRoute>
-                  }
-                />
-                <Route
-                  path="/order/success"
-                  element={
-                    <ProtectedRoute>
-                      <OrderSuccess />
-                    </ProtectedRoute>
-                  }
-                />
-                <Route
-                  path="/orders"
-                  element={
-                    <ProtectedRoute>
-                      <UserOrder />
-                    </ProtectedRoute>
-                  }
-                />
-                <Route
-                  path="/order/:id"
-                  element={
-                    <ProtectedRoute>
-                      <OrderDetail />
-                    </ProtectedRoute>
-                  }
-                />
-                {stripeApiKey && (
+              <Suspense
+                fallback={
+                  <Box
+                    sx={{
+                      background: `linear-gradient(to right,transparent,${theme.palette.bg2},${theme.palette.bg4},${theme.palette.bg3})`,
+                      width: "100%",
+                      height: "4px",
+                      animation: `${full2Animation(
+                        "transform:translateX(-100%);",
+                        "transform:translateX(100%);"
+                      )} 3s linear infinite`,
+                    }}
+                  ></Box>
+                }
+              >
+                <Routes>
+                  <Route path="/" element={<Home />} />
+                  <Route path="/product/:id" element={<ProductDetail />} />
+                  <Route path="/no" element={<No />} />
+                  <Route path="/search/:keyword" element={<ProductSearch />} />
                   <Route
-                    path="/payment"
+                    path="/login"
+                    element={
+                      <GuestRoute>
+                        <Login />
+                      </GuestRoute>
+                    }
+                  />
+                  <Route
+                    path="/register"
+                    element={
+                      <GuestRoute>
+                        <Register />
+                      </GuestRoute>
+                    }
+                  />
+                  <Route
+                    path="/myprofile"
                     element={
                       <ProtectedRoute>
-                        <Elements stripe={loadStripe(stripeApiKey)}>
-                          <Payment />
-                        </Elements>
+                        <Profile />
                       </ProtectedRoute>
                     }
                   />
-                )}
-              </Routes>
-              <Suspense fallback={<div>...</div>}>
-                <Routes>
-                  <Route path="/product/:id" element={<ProductDetail />} />
+                  <Route
+                    path="/myprofile/update"
+                    element={
+                      <ProtectedRoute>
+                        <UpdateProfile />
+                      </ProtectedRoute>
+                    }
+                  />
+                  <Route
+                    path="/myprofile/update/password"
+                    element={
+                      <ProtectedRoute>
+                        <UpdatePassword />
+                      </ProtectedRoute>
+                    }
+                  />
+                  <Route
+                    path="/password/forgot"
+                    element={
+                      <GuestRoute>
+                        <ForgotPassword />
+                      </GuestRoute>
+                    }
+                  />
+                  <Route
+                    path="/password/reset/:token"
+                    element={
+                      <GuestRoute>
+                        <ResetPassword />
+                      </GuestRoute>
+                    }
+                  />
+                  <Route path="/cart" element={<CartC />} />
+                  <Route
+                    path="/shipping"
+                    element={
+                      <ProtectedRoute>
+                        <Shipping />
+                      </ProtectedRoute>
+                    }
+                  />
+                  <Route
+                    path="/order/confirm"
+                    element={
+                      <ProtectedRoute>
+                        <ConfirmOrder />
+                      </ProtectedRoute>
+                    }
+                  />
+                  <Route
+                    path="/order/confirm/buyNow"
+                    element={
+                      <ProtectedRoute>
+                        <ConfirmOrderBuyNow />
+                      </ProtectedRoute>
+                    }
+                  />
+                  <Route
+                    path="/order/success"
+                    element={
+                      <ProtectedRoute>
+                        <OrderSuccess />
+                      </ProtectedRoute>
+                    }
+                  />
+                  <Route
+                    path="/orders"
+                    element={
+                      <ProtectedRoute>
+                        <UserOrder />
+                      </ProtectedRoute>
+                    }
+                  />
+                  <Route
+                    path="/order/:id"
+                    element={
+                      <ProtectedRoute>
+                        <OrderDetail />
+                      </ProtectedRoute>
+                    }
+                  />
+                  {stripeApiKey && (
+                    <Route
+                      path="/payment"
+                      element={
+                        <ProtectedRoute>
+                          <Elements stripe={loadStripe(stripeApiKey)}>
+                            <Payment />
+                          </Elements>
+                        </ProtectedRoute>
+                      }
+                    />
+                  )}
+                  {/* admin only routes */}
+                  <Route
+                    path="/admin/dashboard"
+                    element={
+                      <ProtectedRoute isAdmin={true}>
+                        <Dashboard />
+                      </ProtectedRoute>
+                    }
+                  />
+                  <Route
+                    path="/admin/products"
+                    element={
+                      <ProtectedRoute isAdmin={true}>
+                        <ProductsList />
+                      </ProtectedRoute>
+                    }
+                  />
+                  <Route
+                    path="/admin/products/create"
+                    element={
+                      <ProtectedRoute isAdmin={true}>
+                        <NewProduct />
+                      </ProtectedRoute>
+                    }
+                  />
+                  <Route
+                    path="/admin/product/:id"
+                    element={
+                      <ProtectedRoute isAdmin={true}>
+                        <UpdateProduct />
+                      </ProtectedRoute>
+                    }
+                  />
+                  <Route
+                    path="/admin/order"
+                    element={
+                      <ProtectedRoute isAdmin={true}>
+                        <OrderList />
+                      </ProtectedRoute>
+                    }
+                  />
+                  <Route
+                    path="/admin/order/:id"
+                    element={
+                      <ProtectedRoute isAdmin={true}>
+                        <UpdateOrder />
+                      </ProtectedRoute>
+                    }
+                  />
+                  <Route
+                    path="/admin/users"
+                    element={
+                      <ProtectedRoute isAdmin={true}>
+                        <UserList />
+                      </ProtectedRoute>
+                    }
+                  />
+                  <Route
+                    path="/admin/user/:id"
+                    element={
+                      <ProtectedRoute isAdmin={true}>
+                        <UpdateUser />
+                      </ProtectedRoute>
+                    }
+                  />
+                  <Route
+                    path="/admin/reviews"
+                    element={
+                      <ProtectedRoute isAdmin={true}>
+                        <ReviewList />
+                      </ProtectedRoute>
+                    }
+                  />
+                  <Route path="*" element={<PageNotFound />} />
                 </Routes>
               </Suspense>
             </div>
-            <Routes>
-              <Route
-                path="/admin/dashboard"
-                element={
-                  <ProtectedRoute isAdmin={true}>
-                    <Dashboard />
-                  </ProtectedRoute>
-                }
-              />
-              <Route
-                path="/admin/products"
-                element={
-                  <ProtectedRoute isAdmin={true}>
-                    <ProductsList />
-                  </ProtectedRoute>
-                }
-              />
-              <Route
-                path="/admin/products/create"
-                element={
-                  <ProtectedRoute isAdmin={true}>
-                    <NewProduct />
-                  </ProtectedRoute>
-                }
-              />
-              <Route
-                path="/admin/product/:id"
-                element={
-                  <ProtectedRoute isAdmin={true}>
-                    <UpdateProduct />
-                  </ProtectedRoute>
-                }
-              />
-              <Route
-                path="/admin/order"
-                element={
-                  <ProtectedRoute isAdmin={true}>
-                    <OrderList />
-                  </ProtectedRoute>
-                }
-              />
-              <Route
-                path="/admin/order/:id"
-                element={
-                  <ProtectedRoute isAdmin={true}>
-                    <UpdateOrder />
-                  </ProtectedRoute>
-                }
-              />
-              <Route
-                path="/admin/users"
-                element={
-                  <ProtectedRoute isAdmin={true}>
-                    <UserList />
-                  </ProtectedRoute>
-                }
-              />
-              <Route
-                path="/admin/user/:id"
-                element={
-                  <ProtectedRoute isAdmin={true}>
-                    <UpdateUser />
-                  </ProtectedRoute>
-                }
-              />
-              <Route
-                path="/admin/reviews"
-                element={
-                  <ProtectedRoute isAdmin={true}>
-                    <ReviewList />
-                  </ProtectedRoute>
-                }
-              />
-            </Routes>
+
             <Footer />
           </HelmetProvider>
         </Box>

@@ -176,8 +176,8 @@ export default function Footer() {
         <FlexCenter m="7px" gap="15px">
           <Button
             sx={{ bgcolor: theme.palette.bg4 }}
-            onClick={(e) => {
-              dispatch(logout);
+            onClick={async (e) => {
+              await dispatch(logout);
               navigate("/login");
             }}
             variant="contained"
