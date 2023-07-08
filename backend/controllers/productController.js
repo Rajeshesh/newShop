@@ -47,20 +47,25 @@ exports.getProducts = catchAsyncError(async (req, res, next) => {
 
 //Create Product - /api/v1/product/new
 exports.newProduct = catchAsyncError(async (req, res, next) => {
-  let images = [];
+  if (req.body.MRP < req.body.price) {
+    return next(new ErrorHandler("MRP should be greater then price", 400));
+  }
 
   let BASE_URL = process.env.BACKEND_URL;
   if (process.env.NODE_ENV === "production") {
     BASE_URL = `${req.protocol}://${req.get("host")}`;
   }
 
+  let images = [];
   if (req.files.length > 0) {
     req.files.forEach((file) => {
       let url = `${BASE_URL}/uploads/product/${file.originalname}`;
       images.push({ image: url });
     });
   }
-  images.push(...req.body.imagesUrl.split(",").map((v) => ({ image: v })));
+  if (req.body.imagesUrl) {
+    images.push(...req.body.imagesUrl.split(",").map((v) => ({ image: v })));
+  }
 
   req.body.images = images;
 
@@ -91,6 +96,10 @@ exports.getSingleProduct = catchAsyncError(async (req, res, next) => {
 
 //Update Product - api/v1/product/:id
 exports.updateProduct = catchAsyncError(async (req, res, next) => {
+  if (req.body.MRP < req.body.price) {
+    return next(new ErrorHandler("MRP should be greater then price", 400));
+  }
+  
   let product = await Product.findById(req.params.id);
   //uploading images
   let images = [];

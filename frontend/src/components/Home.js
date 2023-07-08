@@ -53,39 +53,51 @@ export default function Home() {
       ) : (
         <Fragment>
           <MetaData title={"Buy Best Products"} />
-          <h3 className="mt-3 mb-1" id="top">
-            Latest Products
-          </h3>
-          <section className="mt-2">
-            <div className="products ">
-              {products &&
-                products.map((product) => (
-                  <Product key={product._id} product={product} />
-                ))}
-            </div>
-          </section>
-          <h3 className="mt-3 mb-1" id="top">
-            More than {off}% off
-          </h3>
-          <section className="mt-2">
-            <div className="products ">
-              {productsOff &&
-                productsOff.map((product) => (
-                  <Product key={product._id} product={product} />
-                ))}
-            </div>
-          </section>
-          <h3 className="mt-3 mb-1" id="top">
-            New Electronic Gadgets
-          </h3>
-          <section className="mt-2">
-            <div className="products ">
-              {productsCat &&
-                productsCat.map((product) => (
-                  <Product key={product._id} product={product} />
-                ))}
-            </div>
-          </section>
+          {products && (
+            <>
+              <h3 className="mt-3 mb-1" id="top">
+                Latest Products
+              </h3>
+              <section className="mt-2">
+                <div className="products ">
+                  {products &&
+                    products.map((product) => (
+                      <Product key={product._id} product={product} />
+                    ))}
+                </div>
+              </section>
+            </>
+          )}
+          {productsOff && (
+            <>
+              <h3 className="mt-3 mb-1" id="top">
+                More than {off}% off
+              </h3>
+              <section className="mt-2">
+                <div className="products ">
+                  {productsOff &&
+                    productsOff.map((product) => (
+                      <Product key={product._id} product={product} />
+                    ))}
+                </div>
+              </section>
+            </>
+          )}
+          {productsCat && (
+            <>
+              <h3 className="mt-3 mb-1" id="top">
+                New Electronic Gadgets
+              </h3>
+              <section className="mt-2">
+                <div className="products ">
+                  {productsCat &&
+                    productsCat.map((product) => (
+                      <Product key={product._id} product={product} />
+                    ))}
+                </div>
+              </section>
+            </>
+          )}
         </Fragment>
       )}
     </Box>

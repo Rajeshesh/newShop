@@ -12,7 +12,8 @@ import { BorderFlowBySpan } from "../styledComponents/AnimationComponent";
 
 export default function NewProduct() {
   const [name, setName] = useState("");
-  const [price, setPrice] = useState("");
+  const [price, setPrice] = useState('');
+  const [MRP, setMRP] = useState('');
   const [description, setDescription] = useState("");
   const [aboutThisItem, setAboutThisItem] = useState("");
   const [category, setCategory] = useState("");
@@ -49,6 +50,8 @@ export default function NewProduct() {
     const formData = new FormData();
     formData.append("name", name);
     formData.append("price", price);
+    formData.append("MRP", MRP);
+
     formData.append("stock", stock);
     formData.append("description", description);
     formData.append("aboutThisItem", aboutThisItem);
@@ -178,6 +181,18 @@ export default function NewProduct() {
                 variant="standard"
                 value={price}
                 onChange={(e) => setPrice(e.target.value)}
+              />
+            </div>
+
+            <div className="">
+              <TextField
+                sx={{ width: "100%" }}
+                type="number"
+                name="MRP"
+                label="MRP"
+                variant="standard"
+                value={MRP}
+                onChange={(e) => setMRP(e.target.value)}
               />
             </div>
 

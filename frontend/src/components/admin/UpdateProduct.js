@@ -14,6 +14,7 @@ import { ClearAll } from "@mui/icons-material";
 export default function UpdateProduct() {
   const [name, setName] = useState("");
   const [price, setPrice] = useState(0);
+  const [MRP, setMRP] = useState(1);
   const [description, setDescription] = useState("");
   const [aboutThisItem, setAboutThisItem] = useState("");
   const [category, setCategory] = useState("");
@@ -55,6 +56,7 @@ export default function UpdateProduct() {
     const formData = new FormData();
     formData.append("name", name);
     formData.append("price", price);
+    formData.append("MRP", MRP);
     formData.append("stock", stock);
     formData.append("description", description);
     formData.append("aboutThisItem", aboutThisItem);
@@ -103,11 +105,12 @@ export default function UpdateProduct() {
     if (product._id) {
       setName(product.name);
       setPrice(product.price);
-      setStock(product.stock);
+      setMRP(product.MRP);
       setDescription(product.description);
       setAboutThisItem(product.aboutThisItem || "");
-      setSeller(product.seller);
       setCategory(product.category);
+      setStock(product.stock);
+      setSeller(product.seller);
 
       let images = [];
       product.images.forEach((image) => {
@@ -213,6 +216,17 @@ export default function UpdateProduct() {
                 variant="standard"
                 value={price}
                 onChange={(e) => setPrice(e.target.value)}
+              />
+            </div>
+            <div className="">
+              <TextField
+                sx={{ width: "100%" }}
+                type="number"
+                name="MRP"
+                label="MRP"
+                variant="standard"
+                value={MRP}
+                onChange={(e) => setMRP(e.target.value)}
               />
             </div>
 

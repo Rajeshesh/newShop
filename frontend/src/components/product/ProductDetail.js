@@ -231,16 +231,15 @@ export default function ProductDetail() {
   const setCommentUCF = useCallback((v) => setComment(v), [comment]);
 
   const increaseQty = () => {
-    const count = document.querySelector(".count");
-    if (product.stock === 0 || count.valueAsNumber >= product.stock) return;
-    const qty = count.valueAsNumber + 1;
+    // const count = document.querySelector(".count");
+    if (product.stock === 0 || quantity >= product.stock) return;
+    const qty = quantity + 1;
     setQuantity(qty);
   };
 
   const decreaseQty = () => {
-    const count = document.querySelector(".count");
-    if (count.valueAsNumber === 1) return;
-    const qty = count.valueAsNumber - 1;
+    if (quantity === 1) return;
+    const qty = quantity - 1;
     setQuantity(qty);
   };
 
