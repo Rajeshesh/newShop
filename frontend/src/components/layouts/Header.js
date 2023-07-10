@@ -30,37 +30,22 @@ import FlexBetween from "../styledComponents/FlexBetween";
 import { setFont, setMode, setModeLike } from "../../slices/themeSlice";
 
 export default function Header() {
-  const { isAuthenticated, user = {} } = useSelector(
-    (state) => state.authState
-  );
-  const { items: cartItems } = useSelector((state) => state.cartState);
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const theme = useTheme();
-
-  const logoutHandler = () => {
-    dispatch(logout);
-  };
+  const { items: cartItems } = useSelector((state) => state.cartState);
   const { mode, font } = useSelector((state) => state.themeState);
+  const { isAuthenticated, user = {} } = useSelector(
+    (state) => state.authState
+  );
+
+  //sidebar
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   const [anchorEl, setAnchorEl] = useState(null);
   const isOpen = Boolean(anchorEl);
   let handleClick = (e) => setAnchorEl(e.currentTarget);
   const handleClose = () => setAnchorEl(null);
-
-  const [themeEl, setThemeEl] = useState(null);
-  const isThemeOpen = Boolean(themeEl);
-  const themeClick = (e) => setThemeEl(e.currentTarget);
-  const themeClose = () => setThemeEl(null);
-  const changeTheme = (e) => {
-    dispatch(setModeLike(e.target.innerText.toLowerCase()));
-    themeClose();
-  };
-
-  const [fontEl, setFontEl] = useState(null);
-  const isfontOpen = Boolean(fontEl);
-  const fontClick = (e) => setFontEl(e.currentTarget);
-  const fontClose = () => setFontEl(null);
 
   const changeFont = (e) => {
     let text = e.target.innerText;
@@ -92,12 +77,15 @@ export default function Header() {
       default:
         dispatch(setFont("'Inter', sans-serif"));
     }
-    fontClose();
   };
 
-  //sidebar
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const changeTheme = (e) => {
+    dispatch(setModeLike(e.target.innerText.toLowerCase()));
+  };
 
+  const logoutHandler = () => {
+    dispatch(logout);
+  };
   return (
     <AppBar position="sticky">
       <Toolbar
@@ -158,6 +146,7 @@ export default function Header() {
                   anchorEl={anchorEl}
                   open={isOpen}
                   onClose={handleClose}
+                  onClick={handleClose}
                   transformOrigin={{ horizontal: "right", vertical: "top" }}
                   anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
                   PaperProps={{
@@ -202,164 +191,6 @@ export default function Header() {
                   <MenuItem onClick={() => navigate("/orders")}>
                     Orders
                   </MenuItem>
-                  <MenuItem
-                    aria-controls={isThemeOpen ? "theme-menu" : undefined}
-                    aria-haspopup="true"
-                    aria-expanded={isThemeOpen ? "true" : undefined}
-                    onClick={themeClick}
-                  >
-                    Theme
-                  </MenuItem>
-                  <Menu
-                    id="theme-menu"
-                    aria-labelledby="theme-menu"
-                    anchorEl={themeEl}
-                    open={isThemeOpen}
-                    onClose={themeClose}
-                    anchorOrigin={{ vertical: "center", horizontal: "left" }}
-                    transformOrigin={{ horizontal: "right", vertical: "top" }}
-                  >
-                    <MenuItem
-                      onClick={changeTheme}
-                      sx={{
-                        border:
-                          mode === "pink"
-                            ? `1px solid ${theme.palette.secondary.main}`
-                            : "",
-                      }}
-                    >
-                      Pink
-                    </MenuItem>
-                    <MenuItem
-                      onClick={changeTheme}
-                      sx={{
-                        border:
-                          mode === "orange"
-                            ? `1px solid ${theme.palette.secondary.main}`
-                            : "",
-                      }}
-                    >
-                      Orange
-                    </MenuItem>
-                    <MenuItem
-                      onClick={changeTheme}
-                      sx={{
-                        border:
-                          mode === "purple"
-                            ? `1px solid ${theme.palette.secondary.main}`
-                            : "",
-                      }}
-                    >
-                      Purple
-                    </MenuItem>
-
-                    <MenuItem
-                      onClick={changeTheme}
-                      sx={{
-                        border:
-                          mode === "dark"
-                            ? `1px solid ${theme.palette.secondary.main}`
-                            : "",
-                      }}
-                    >
-                      Dark
-                    </MenuItem>
-                    <MenuItem
-                      onClick={changeTheme}
-                      sx={{
-                        border:
-                          mode === "light"
-                            ? `1px solid ${theme.palette.secondary.main}`
-                            : "",
-                      }}
-                    >
-                      Light
-                    </MenuItem>
-                  </Menu>
-                  <MenuItem
-                    onClick={fontClick}
-                    aria-controls={isfontOpen ? "font-menu" : undefined}
-                    aria-haspopup="true"
-                    aria-expanded={isfontOpen ? "true" : undefined}
-                  >
-                    Font Style
-                  </MenuItem>
-                  <Menu
-                    id="font-menu"
-                    aria-labelledby="font-menu"
-                    anchorEl={fontEl}
-                    open={isfontOpen}
-                    onClose={fontClose}
-                    anchorOrigin={{ vertical: "center", horizontal: "left" }}
-                    transformOrigin={{ horizontal: "right", vertical: "top" }}
-                  >
-                    <MenuItem
-                      onClick={changeFont}
-                      sx={{
-                        border:
-                          font === "'Inter', sans-serif"
-                            ? `1px solid ${theme.palette.secondary.main}`
-                            : "",
-                      }}
-                    >
-                      Inter
-                    </MenuItem>
-                    <MenuItem
-                      onClick={changeFont}
-                      sx={{
-                        border:
-                          font === "'Montserrat', sans-serif"
-                            ? `1px solid ${theme.palette.secondary.main}`
-                            : "",
-                      }}
-                    >
-                      Montserrat
-                    </MenuItem>
-                    <MenuItem
-                      onClick={changeFont}
-                      sx={{
-                        border:
-                          font === "'Roboto', sans-serif"
-                            ? `1px solid ${theme.palette.secondary.main}`
-                            : "",
-                      }}
-                    >
-                      Roboto
-                    </MenuItem>
-                    <MenuItem
-                      onClick={changeFont}
-                      sx={{
-                        border:
-                          font === "'Source Serif Pro', serif"
-                            ? `1px solid ${theme.palette.secondary.main}`
-                            : "",
-                      }}
-                    >
-                      Source Serif Pro
-                    </MenuItem>
-                    <MenuItem
-                      onClick={changeFont}
-                      sx={{
-                        border:
-                          font === "'Dancing Script', cursive"
-                            ? `1px solid ${theme.palette.secondary.main}`
-                            : "",
-                      }}
-                    >
-                      Dancing Script
-                    </MenuItem>
-                    <MenuItem
-                      onClick={changeFont}
-                      sx={{
-                        border:
-                          font === "'Expletus Sans', cursive"
-                            ? `1px solid ${theme.palette.secondary.main}`
-                            : "",
-                      }}
-                    >
-                      Expletus Sans
-                    </MenuItem>
-                  </Menu>
                   <MenuItem onClick={logoutHandler}>Logout</MenuItem>
                 </Menu>
               </div>

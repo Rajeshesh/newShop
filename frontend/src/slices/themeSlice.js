@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   mode: localStorage.getItem("shopMode") || "dark",
-  font: "'Expletus Sans', cursive",
+  font: localStorage.getItem("shopFont") || "'Expletus Sans', cursive",
 };
 
 export const globalSlice = createSlice({
@@ -21,6 +21,7 @@ export const globalSlice = createSlice({
       state.mode = actions.payload;
     },
     setFont: (state, actions) => {
+      localStorage.setItem("shopFont", actions.payload);
       state.font = actions.payload;
     },
   },

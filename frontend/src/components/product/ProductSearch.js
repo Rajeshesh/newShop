@@ -50,7 +50,7 @@ const CategoriesFilter = memo(({ setCategory }) => (
     </Box>
     <List>
       {categories.map((category, i) => (
-        <ListItem sx={{ maxWidth: "200px" }}>
+        <ListItem sx={{ maxWidth: "200px" }} key={i}>
           <ListItemButton
             key={i}
             onClick={() => {
@@ -76,7 +76,7 @@ const RatingFilter = memo(({ setRating }) => (
     </Box>
     <List>
       {[5, 4, 3, 2, 1].map((star, i) => (
-        <ListItem sx={{ maxWidth: "200px" }}>
+        <ListItem sx={{ maxWidth: "200px" }} key={i}>
           <ListItemButton
             key={i}
             onClick={() => {
@@ -116,10 +116,6 @@ export default function ProductSearch() {
 
   const setRatingUCB = useCallback((n) => setRating(n), [rating]);
   const setCategoryUCB = useCallback((v) => setCategory(v), [category]);
-
-  const setCurrentPageNo = (pageNo) => {
-    setCurrentPage(pageNo);
-  };
 
   const toggleDrawer = (open) => (event) => {
     if (

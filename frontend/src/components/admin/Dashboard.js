@@ -59,11 +59,10 @@ export default function Dashboard() {
           </Typography>
           <FlexCenter
             flexDirection="column"
-            bgcolor={
-              theme.palette.theme === "light"
-                ? theme.palette.primary[900]
-                : theme.palette.primary[400]
-            }
+            bgcolor={theme.palette.bg3}
+            sx={{
+              background: `linear-gradient(to right,transparent,${theme.palette.bg3},${theme.palette.bg2},${theme.palette.bg3},transparent)`,
+            }}
             m="8px"
           >
             <Typography variant="h3">Total Amount</Typography>
@@ -75,7 +74,7 @@ export default function Dashboard() {
           <div className="dsbd__i p-8">
             <Box
               sx={{
-                background: `linear-gradient(50deg,transparent,${theme.colors.purple[400]})`,
+                background: `linear-gradient(50deg,transparent,${theme.palette.bg2})`,
               }}
             >
               <div className="">
@@ -97,7 +96,7 @@ export default function Dashboard() {
 
             <Box
               sx={{
-                background: `linear-gradient(50deg,transparent,${theme.colors.purple[400]})`,
+                background: `linear-gradient(50deg,transparent,${theme.palette.bg2})`,
               }}
             >
               <div className="">
@@ -118,7 +117,7 @@ export default function Dashboard() {
 
             <Box
               sx={{
-                background: `linear-gradient(50deg,transparent,${theme.colors.purple[400]})`,
+                background: `linear-gradient(50deg,transparent,${theme.palette.bg4})`,
               }}
             >
               <div className="">

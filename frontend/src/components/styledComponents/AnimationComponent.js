@@ -48,7 +48,7 @@ export const BorderFlowBySpan = styled(Box)(({ theme: { palette } }) => ({
   position: "relative",
   overflow: "hidden",
   borderRadius: "8px",
-  "& .spanA:nth-child(1)": {
+  "& .spanA:nth-of-type(1)": {
     position: "absolute",
     top: "0",
     left: "0",
@@ -60,7 +60,7 @@ export const BorderFlowBySpan = styled(Box)(({ theme: { palette } }) => ({
       "transform:translateX(100%);"
     )} 2s linear infinite`,
   },
-  "& .spanA:nth-child(2)": {
+  "& .spanA:nth-of-type(2)": {
     position: "absolute",
     top: "0",
     right: "0",
@@ -73,7 +73,7 @@ export const BorderFlowBySpan = styled(Box)(({ theme: { palette } }) => ({
     )} 2s linear infinite`,
     animationDelay: "1s",
   },
-  "& .spanA:nth-child(3)": {
+  "& .spanA:nth-of-type(3)": {
     position: "absolute",
     bottom: "0",
     left: "0",
@@ -86,7 +86,7 @@ export const BorderFlowBySpan = styled(Box)(({ theme: { palette } }) => ({
     )} 2s linear infinite`,
     animationDelay: "2s",
   },
-  "& .spanA:nth-child(4)": {
+  "& .spanA:nth-of-type(4)": {
     position: "absolute",
     left: "0",
     top: "0",

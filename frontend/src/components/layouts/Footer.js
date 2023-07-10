@@ -200,9 +200,7 @@ export default function Footer() {
           <div>Interest-Based Ads</div>
         </FlexCenter>
         <p className="mt-1">
-          <p>
-            Copyright &copy; Developed Shop - 2023-2024, All Rights Reserved
-          </p>
+          Copyright &copy; Developed Shop - 2023-2024, All Rights Reserved
         </p>
       </Box>
     </footer>
