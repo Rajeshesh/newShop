@@ -12,7 +12,7 @@ const cartSlice = createSlice({
       : {},
   },
   reducers: {
-    addCartItemRequest(state, action) {
+    addCartItemRequest(state) {
       return {
         ...state,
         loading: true,

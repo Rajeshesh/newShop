@@ -15,7 +15,7 @@ const productSlice = createSlice({
         error: null
     },
     reducers: {
-        productRequest(state, action) {
+        productRequest(state) {
             return {
                 ...state,
                 loading: true
@@ -35,20 +35,20 @@ const productSlice = createSlice({
                 error: action.payload
             }
         },
-        createReviewRequest(state, action) {
+        createReviewRequest(state) {
             return {
                 ...state,
                 // loading: true
             }
         },
-        createReviewSuccess(state, action) {
+        createReviewSuccess(state) {
             return {
                 ...state,
                 // loading: false,
                 isReviewSubmitted: true
             }
         },
-        clearReviewSubmitted(state, action) {
+        clearReviewSubmitted(state) {
             return {
                 ...state,
                 isReviewSubmitted: false
@@ -61,21 +61,21 @@ const productSlice = createSlice({
                 error: action.payload
             }
         },
-        clearError(state, action) {
+        clearError(state) {
             return {
 
                 ...state,
                 error: null
             }
         },
-        clearProduct(state, action) {
+        clearProduct(state) {
             return {
 
                 ...state,
                 product: {}
             }
         },
-        newProductRequest(state, action) {
+        newProductRequest(state) {
             return {
                 ...state,
                 loading: true
@@ -97,20 +97,20 @@ const productSlice = createSlice({
                 error: action.payload,
             }
         },
-        clearProductCreated(state, action) {
+        clearProductCreated(state) {
             return {
                 ...state,
                 loading: false,
                 isProductCreated: false,
             }
         },
-        deleteProductRequest(state, action) {
+        deleteProductRequest(state) {
             return {
                 ...state,
                 loading: true
             }
         },
-        deleteProductSuccess(state, action) {
+        deleteProductSuccess(state) {
             return {
                 ...state,
                 loading: false,
@@ -124,14 +124,14 @@ const productSlice = createSlice({
                 error: action.payload,
             }
         },
-        clearProductDeleted(state, action) {
+        clearProductDeleted(state) {
             return {
                 ...state,
                 loading: false,
                 isProductDeleted: false,
             }
         },
-        updateProductRequest(state, action) {
+        updateProductRequest(state) {
             return {
                 ...state,
                 loading: true
@@ -152,14 +152,14 @@ const productSlice = createSlice({
                 error: action.payload
             }
         },
-        clearProductUpdated(state, action) {
+        clearProductUpdated(state) {
             return {
                 ...state,
                 loading: false,
                 isProductUpdated: false,
             }
         },
-        reviewsRequest(state, action) {
+        reviewsRequest(state) {
             return {
                 ...state,
                 loading: true
@@ -179,13 +179,13 @@ const productSlice = createSlice({
                 error: action.payload
             }
         },
-        deleteReviewRequest(state, action) {
+        deleteReviewRequest(state) {
             return {
                 ...state,
                 loading: true
             }
         },
-        deleteReviewSuccess(state, action) {
+        deleteReviewSuccess(state) {
             return {
                 ...state,
                 loading: false,
@@ -199,7 +199,7 @@ const productSlice = createSlice({
                 error: action.payload
             }
         },
-        clearReviewDeleted(state, action) {
+        clearReviewDeleted(state) {
             return {
                 ...state,
                 loading: false,

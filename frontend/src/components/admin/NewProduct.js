@@ -12,8 +12,8 @@ import { BorderFlowBySpan } from "../styledComponents/AnimationComponent";
 
 export default function NewProduct() {
   const [name, setName] = useState("");
-  const [price, setPrice] = useState('');
-  const [MRP, setMRP] = useState('');
+  const [price, setPrice] = useState("");
+  const [MRP, setMRP] = useState("");
   const [description, setDescription] = useState("");
   const [aboutThisItem, setAboutThisItem] = useState("");
   const [category, setCategory] = useState("");
@@ -164,7 +164,6 @@ export default function NewProduct() {
             <div>
               <TextField
                 sx={{ width: "100%" }}
-                name="name"
                 label="Name"
                 variant="standard"
                 value={name}
@@ -176,7 +175,6 @@ export default function NewProduct() {
               <TextField
                 sx={{ width: "100%" }}
                 type="number"
-                name="price"
                 label="Price"
                 variant="standard"
                 value={price}
@@ -188,7 +186,6 @@ export default function NewProduct() {
               <TextField
                 sx={{ width: "100%" }}
                 type="number"
-                name="MRP"
                 label="MRP"
                 variant="standard"
                 value={MRP}
@@ -241,7 +238,6 @@ export default function NewProduct() {
               <TextField
                 sx={{ width: "100%" }}
                 type="number"
-                name="stock"
                 label="Stock"
                 variant="standard"
                 value={stock}
@@ -252,7 +248,6 @@ export default function NewProduct() {
             <div>
               <TextField
                 sx={{ width: "100%" }}
-                name="sellerName"
                 label="Seller Name"
                 variant="standard"
                 value={seller}
@@ -262,7 +257,6 @@ export default function NewProduct() {
             <div>
               <TextField
                 sx={{ width: "100%" }}
-                name="imagesUrl"
                 label="images Url use ',' to seperate"
                 variant="standard"
                 value={imagesUrl}

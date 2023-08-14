@@ -2,8 +2,9 @@ const Product = require("../models/productModel");
 const ErrorHandler = require("../utils/errorHandler");
 const catchAsyncError = require("../middlewares/catchAsyncError");
 const APIFeatures = require("../utils/apiFeatures");
-const fs = require("fs");
 
+
+// const fs = require("fs");
 // let allPro = await Product.find(
 //   {},
 //   { _id: 0, createdAt: 0, "images._id": 0, "reviews._id": 0,__v:0 }
@@ -14,14 +15,13 @@ const fs = require("fs");
 
 //Get Products - /api/v1/products
 exports.getProducts = catchAsyncError(async (req, res, next) => {
-  const resPerPage = req.query.resPerPage || 24;
-
   // const p = await Product.find({});
   // for (let i = 0; i < p.length; i++) {
   //   p[i].price--;
   //   p[i].save();
   //   console.log(1);
   // }
+  const resPerPage = req.query.resPerPage || 24;
 
   let buildQuery = () => {
     return new APIFeatures(Product.find(), req.query).search().off().filter();
@@ -99,7 +99,7 @@ exports.updateProduct = catchAsyncError(async (req, res, next) => {
   if (req.body.MRP < req.body.price) {
     return next(new ErrorHandler("MRP should be greater then price", 400));
   }
-  
+
   let product = await Product.findById(req.params.id);
   //uploading images
   let images = [];

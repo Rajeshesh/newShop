@@ -227,7 +227,6 @@ export const themeSettings = ({ mode, font }) => {
       theme: mode,
       ...(mode === "dark"
         ? {
-            // palette values for dark mode
             primary: {
               ...tokensDark.primary,
               main: tokensDark.primary[400],
@@ -291,7 +290,6 @@ export const themeSettings = ({ mode, font }) => {
           }
         : mode === "light"
         ? {
-            // palette values for light mode
             primary: {
               ...tokensLight.primary,
               main: tokensDark.grey[50],

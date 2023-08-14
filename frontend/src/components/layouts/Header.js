@@ -27,7 +27,7 @@ import {
 
 import FlexBetween from "../styledComponents/FlexBetween";
 
-import { setFont, setMode, setModeLike } from "../../slices/themeSlice";
+import { setFont, setMode } from "../../slices/themeSlice";
 
 export default function Header() {
   const dispatch = useDispatch();
@@ -80,7 +80,7 @@ export default function Header() {
   };
 
   const changeTheme = (e) => {
-    dispatch(setModeLike(e.target.innerText.toLowerCase()));
+    dispatch(setMode(e.target.innerText.toLowerCase()));
   };
 
   const logoutHandler = () => {
@@ -172,7 +172,15 @@ export default function Header() {
                   }}
                 >
                   <MenuItem>
-                    <IconButton onClick={() => dispatch(setMode())}>
+                    <IconButton
+                      onClick={() =>
+                        dispatch(
+                          setMode(
+                            theme.palette.mode === "light" ? "dark" : "light"
+                          )
+                        )
+                      }
+                    >
                       {theme.palette.mode === "light" ? (
                         <LightModeOutlined sx={{ fontSize: "25px" }} />
                       ) : (

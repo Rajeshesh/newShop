@@ -9,7 +9,7 @@ const authSlice = createSlice({
     },
     reducers: {
 
-        loginRequest(state, action) {
+        loginRequest() {
             return {
                 loading: true,
                 isAuthenticated: false
@@ -30,7 +30,7 @@ const authSlice = createSlice({
                 user: null
             }
         },
-        registerRequest(state, action) {
+        registerRequest() {
             return {
                 loading: true,
                 isAuthenticated: false
@@ -50,13 +50,13 @@ const authSlice = createSlice({
                 error: action.payload,
             }
         },
-        clearAuthError(state, action) {
+        clearAuthError(state) {
             return {
                 ...state,
                 error: null,
             }
         },
-        loadUserRequest(state, action) {
+        loadUserRequest(state) {
             return {
                 ...state,
                 isAuthenticated: false,
@@ -70,13 +70,13 @@ const authSlice = createSlice({
                 user: action.payload.user
             }
         },
-        loadUserFail(state, action) {
+        loadUserFail(state) {
             return {
                 ...state,
                 loading: false,
             }
         },
-        logoutSuccess(state, action) {
+        logoutSuccess(state) {
             return {
                 ...state,
                 loading: false,
@@ -91,7 +91,7 @@ const authSlice = createSlice({
             }
         },
 
-        updateProfileRequest(state, action) {
+        updateProfileRequest(state) {
             return {
                 ...state,
                 loading: true,
@@ -114,13 +114,13 @@ const authSlice = createSlice({
                 error: action.payload
             }
         },
-        clearUpdateProfile(state, action) {
+        clearUpdateProfile(state) {
             return {
                 ...state,
                 isUpdated: false
             }
         },
-        updatePasswordRequest(state, action) {
+        updatePasswordRequest(state) {
             return {
                 ...state,
                 loading: true,
@@ -128,7 +128,7 @@ const authSlice = createSlice({
                 error: null
             }
         },
-        updatePasswordSuccess(state, action) {
+        updatePasswordSuccess(state) {
             return {
                 ...state,
                 loading: false,
@@ -142,7 +142,7 @@ const authSlice = createSlice({
                 error: action.payload
             }
         },
-        forgotPasswordRequest(state, action) {
+        forgotPasswordRequest() {
             return {
                 loading: true,
                 error: null,
@@ -161,7 +161,7 @@ const authSlice = createSlice({
                 error: action.payload
             }
         },
-        resetPasswordRequest(state, action) {
+        resetPasswordRequest() {
             return {
                 loading: true,
                 error: null,

@@ -24,7 +24,7 @@ const orderSlice = createSlice({
         buyNow: {},
       };
     },
-    createOrderRequest(state, action) {
+    createOrderRequest(state) {
       return {
         ...state,
         loading: true,
@@ -50,7 +50,7 @@ const orderSlice = createSlice({
         error: null,
       };
     },
-    userOrderRequest(state, action) {
+    userOrderRequest(state) {
       return {
         ...state,
         loading: true,
@@ -70,7 +70,7 @@ const orderSlice = createSlice({
         error: action.payload,
       };
     },
-    orderDetailRequest(state, action) {
+    orderDetailRequest(state) {
       return {
         ...state,
         loading: true,
@@ -90,7 +90,7 @@ const orderSlice = createSlice({
         error: action.payload,
       };
     },
-    adminOrderRequest(state, action) {
+    adminOrderRequest(state) {
       return {
         ...state,
         loading: true,
@@ -110,13 +110,13 @@ const orderSlice = createSlice({
         error: action.payload,
       };
     },
-    deleteOrderRequest(state, action) {
+    deleteOrderRequest(state) {
       return {
         ...state,
         loading: true,
       };
     },
-    deleteOrderSuccess(state, action) {
+    deleteOrderSuccess(state) {
       return {
         ...state,
         loading: false,
@@ -130,13 +130,13 @@ const orderSlice = createSlice({
         error: action.payload,
       };
     },
-    updateOrderRequest(state, action) {
+    updateOrderRequest(state) {
       return {
         ...state,
         loading: true,
       };
     },
-    updateOrderSuccess(state, action) {
+    updateOrderSuccess(state) {
       return {
         ...state,
         loading: false,
@@ -150,13 +150,13 @@ const orderSlice = createSlice({
         error: action.payload,
       };
     },
-    clearOrderDeleted(state, action) {
+    clearOrderDeleted(state) {
       return {
         ...state,
         isOrderDeleted: false,
       };
     },
-    clearOrderUpdated(state, action) {
+    clearOrderUpdated(state) {
       return {
         ...state,
         isOrderUpdated: false,

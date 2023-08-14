@@ -415,7 +415,7 @@ export default function ProductDetail() {
           ) : null}
           <div className=" mt-2 mb-5">
             <div className=" ">
-              <ModalReUse {...modelObj} />
+              <ModalReUse {...modelObj} /> {/* Prob Plowing */}
             </div>
           </div>
         </Fragment>

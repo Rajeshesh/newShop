@@ -64,6 +64,7 @@ export default function UpdateProfile() {
         position: toast.POSITION.BOTTOM_CENTER,
         onOpen: () => dispatch(clearUpdateProfile()),
       });
+      navigate("/myprofile")
       return;
     }
     if (error) {

@@ -6,7 +6,7 @@ const productsSlice = createSlice({
     loading: false,
   },
   reducers: {
-    productsRequest(state, action) {
+    productsRequest() {
       return {
         loading: true,
       };
@@ -25,7 +25,7 @@ const productsSlice = createSlice({
         error: action.payload,
       };
     },
-    productsOffRequest(state, action) {
+    productsOffRequest(state) {
       return {
         ...state,
         loading: true,
@@ -47,7 +47,7 @@ const productsSlice = createSlice({
         error: action.payload,
       };
     },
-    productsCatRequest(state, action) {
+    productsCatRequest(state) {
       return {
         ...state,
         loading: true,
@@ -69,7 +69,7 @@ const productsSlice = createSlice({
         error: action.payload,
       };
     },
-    adminProductsRequest(state, action) {
+    adminProductsRequest() {
       return {
         loading: true,
       };
@@ -86,7 +86,7 @@ const productsSlice = createSlice({
         error: action.payload,
       };
     },
-    clearError(state, action) {
+    clearError(state) {
       return {
         ...state,
         loading: false,

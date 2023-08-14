@@ -12,17 +12,20 @@ import { FormContainer } from "../styledComponents/Form";
 import { ClearAll } from "@mui/icons-material";
 
 export default function UpdateProduct() {
-  const [name, setName] = useState("");
-  const [price, setPrice] = useState(0);
-  const [MRP, setMRP] = useState(1);
-  const [description, setDescription] = useState("");
-  const [aboutThisItem, setAboutThisItem] = useState("");
-  const [category, setCategory] = useState("");
-  const [stock, setStock] = useState(0);
-  const [seller, setSeller] = useState("");
+  const [details, setDetails] = useState({
+    name: "",
+    price: 0,
+    MRP: 1,
+    description: "",
+    aboutThisItem: "",
+    category: "",
+    stock: "",
+    seller: "",
+    imagesUrl: "",
+    imagesCleared: false,
+  });
+
   const [images, setImages] = useState([]);
-  const [imagesUrl, setImagesUrl] = useState("");
-  const [imagesCleared, setImagesCleared] = useState(false);
   const [imagesPreview, setImagesPreview] = useState([]);
 
   const navigate = useNavigate();
@@ -54,16 +57,16 @@ export default function UpdateProduct() {
   const sumbitHandler = (e) => {
     e.preventDefault();
     const formData = new FormData();
-    formData.append("name", name);
-    formData.append("price", price);
-    formData.append("MRP", MRP);
-    formData.append("stock", stock);
-    formData.append("description", description);
-    formData.append("aboutThisItem", aboutThisItem);
-    formData.append("seller", seller);
-    formData.append("category", category);
-    formData.append("imagesCleared", imagesCleared);
-    formData.append("imagesUrl", imagesUrl);
+    formData.append("name", details.name);
+    formData.append("price", details.price);
+    formData.append("MRP", details.MRP);
+    formData.append("stock", details.stock);
+    formData.append("description", details.description);
+    formData.append("aboutThisItem", details.aboutThisItem);
+    formData.append("seller", details.seller);
+    formData.append("category", details.category);
+    formData.append("imagesUrl", details.imagesUrl);
+    formData.append("imagesCleared", details.imagesCleared);
     images.forEach((image) => {
       formData.append("images", image);
     });
@@ -74,7 +77,9 @@ export default function UpdateProduct() {
   const clearImagesHandler = () => {
     setImages([]);
     setImagesPreview([]);
-    setImagesCleared(true);
+    setDetails((prev) => {
+      return { ...prev, imagesCleared: true };
+    });
   };
 
   useEffect(() => {
@@ -103,14 +108,19 @@ export default function UpdateProduct() {
 
   useEffect(() => {
     if (product._id) {
-      setName(product.name);
-      setPrice(product.price);
-      setMRP(product.MRP);
-      setDescription(product.description);
-      setAboutThisItem(product.aboutThisItem || "");
-      setCategory(product.category);
-      setStock(product.stock);
-      setSeller(product.seller);
+      setDetails((pre) => {
+        return {
+          ...pre,
+          name: product.name,
+          price: product.price,
+          MRP: product.MRP,
+          description: product.description,
+          aboutThisItem: product.aboutThisItem || "",
+          category: product.category,
+          stock: product.stock,
+          seller: product.seller,
+        };
+      });
 
       let images = [];
       product.images.forEach((image) => {
@@ -176,6 +186,12 @@ export default function UpdateProduct() {
     },
   ];
 
+  function handleChange(e) {
+    setDetails((prev) => {
+      return { ...prev, [e.target.name]: e.target.value };
+    });
+  }
+
   return (
     <div className="">
       <Box className="">
@@ -202,8 +218,8 @@ export default function UpdateProduct() {
                 name="name"
                 label="Name"
                 variant="standard"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
+                value={details.name}
+                onChange={handleChange}
               />
             </div>
 
@@ -214,8 +230,8 @@ export default function UpdateProduct() {
                 name="price"
                 label="Price"
                 variant="standard"
-                value={price}
-                onChange={(e) => setPrice(e.target.value)}
+                value={details.price}
+                onChange={handleChange}
               />
             </div>
             <div className="">
@@ -225,8 +241,8 @@ export default function UpdateProduct() {
                 name="MRP"
                 label="MRP"
                 variant="standard"
-                value={MRP}
-                onChange={(e) => setMRP(e.target.value)}
+                value={details.MRP}
+                onChange={handleChange}
               />
             </div>
 
@@ -234,11 +250,12 @@ export default function UpdateProduct() {
               <TextField
                 sx={{ width: "100%" }}
                 label="Description"
+                name="description"
                 multiline
                 rows={2}
                 variant="standard"
-                value={description}
-                onChange={(e) => setDescription(e.target.value)}
+                value={details.description}
+                onChange={handleChange}
               />
             </div>
 
@@ -246,11 +263,12 @@ export default function UpdateProduct() {
               <TextField
                 sx={{ width: "100%" }}
                 label="About This Item"
+                name="aboutThisItem"
                 multiline
                 rows={5}
                 variant="standard"
-                value={aboutThisItem}
-                onChange={(e) => setAboutThisItem(e.target.value)}
+                value={details.aboutThisItem}
+                onChange={handleChange}
               />
             </div>
 
@@ -259,10 +277,11 @@ export default function UpdateProduct() {
                 sx={{ width: "100%" }}
                 select
                 label="Category"
+                name="category"
                 helperText="Please select Product Category"
                 variant="standard"
-                onChange={(e) => setCategory(e.target.value)}
-                value={category}
+                onChange={handleChange}
+                value={details.category}
               >
                 {options.map((option) => (
                   <MenuItem key={option.value} value={option.value}>
@@ -278,19 +297,19 @@ export default function UpdateProduct() {
                 name="stock"
                 label="Stock"
                 variant="standard"
-                value={stock}
-                onChange={(e) => setStock(e.target.value)}
+                value={details.stock}
+                onChange={handleChange}
               />
             </div>
 
             <div>
               <TextField
                 sx={{ width: "100%" }}
-                name="sellerName"
+                name="seller"
                 label="Seller Name"
                 variant="standard"
-                value={seller}
-                onChange={(e) => setSeller(e.target.value)}
+                value={details.seller}
+                onChange={handleChange}
               />
             </div>
             <div>
@@ -299,8 +318,8 @@ export default function UpdateProduct() {
                 name="imagesUrl"
                 label="images Url use ',' to seperate"
                 variant="standard"
-                value={imagesUrl}
-                onChange={(e) => setImagesUrl(e.target.value)}
+                value={details.imagesUrl}
+                onChange={handleChange}
               />
             </div>
 

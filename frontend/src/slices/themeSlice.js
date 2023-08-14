@@ -9,14 +9,7 @@ export const globalSlice = createSlice({
   name: "global",
   initialState,
   reducers: {
-    setMode: (state) => {
-      localStorage.setItem(
-        "shopMode",
-        state.mode === "light" ? "dark" : "light"
-      );
-      state.mode = localStorage.getItem("shopMode");
-    },
-    setModeLike: (state, actions) => {
+    setMode: (state, actions) => {
       localStorage.setItem("shopMode", actions.payload);
       state.mode = actions.payload;
     },
@@ -27,6 +20,6 @@ export const globalSlice = createSlice({
   },
 });
 
-export const { setMode, setModeLike, setFont } = globalSlice.actions;
+export const { setMode, setFont } = globalSlice.actions;
 
 export default globalSlice.reducer;
