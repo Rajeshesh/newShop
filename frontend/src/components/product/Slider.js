@@ -1,36 +1,30 @@
 import Slider from "@mui/material/Slider";
 
-export default function RangeSlider({ price: value, setPrice: setValue }) {
-  function valuetext(value) {
-    return `${value}`;
-  }
-
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
-  };
-
-  return (
+const RangeSlider = ({ price, setPrice }) => (
+  <>
+    <h4>Price Range</h4>
     <Slider
       size="small"
       spacing={8}
       min={0}
       step={300}
-      max={10000}
+      max={5000}
       getAriaLabel={() => "Temperature range"}
-      value={value}
-      onChange={handleChange}
+      value={price}
+      onChange={(e, v) => setPrice(v)}
       valueLabelDisplay="auto"
-      getAriaValueText={valuetext}
+      // getAriaValueText={(priceText) => console.log(priceText)} //check this
       marks={[
         {
-          value: 10,
-          label: "10$",
+          value: 0,
+          label: "0$",
         },
         {
-          value: 10000,
-          label: "10000$",
+          value: 5000,
+          label: "5000$",
         },
       ]}
     />
-  );
-}
+  </>
+);
+export default RangeSlider;

@@ -1,7 +1,8 @@
+import { toast } from "react-toastify";
 import { Fragment, useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { Link, useNavigate } from "react-router-dom";
 import { clearError, updateProfile } from "../../actions/userActions";
-import { toast } from "react-toastify";
 import { clearUpdateProfile } from "../../slices/authSlice";
 import {
   Avatar,
@@ -13,12 +14,11 @@ import {
 } from "@mui/material";
 import { FlexCenter } from "../styledComponents/FlexBetween";
 import { FormContainer } from "../styledComponents/Form";
-import { Link, useNavigate } from "react-router-dom";
 import { BorderFlow } from "../styledComponents/AnimationComponent";
 
 export default function UpdateProfile() {
   const navigate = useNavigate();
-
+  const dispatch = useDispatch();
   const { loading, error, user, isUpdated } = useSelector(
     (state) => state.authState
   );
@@ -28,7 +28,6 @@ export default function UpdateProfile() {
   const [avatarPreview, setAvatarPReview] = useState(
     "/images/default_avatar.png"
   );
-  const dispatch = useDispatch();
 
   const submitHandler = (e) => {
     e.preventDefault();
@@ -64,7 +63,7 @@ export default function UpdateProfile() {
         position: toast.POSITION.BOTTOM_CENTER,
         onOpen: () => dispatch(clearUpdateProfile()),
       });
-      navigate("/myprofile")
+      navigate("/myprofile");
       return;
     }
     if (error) {
@@ -150,9 +149,7 @@ export default function UpdateProfile() {
               Update
             </Button>
             <Box textAlign="right" width="100%">
-              <Link to="/myprofile" >
-              Back to Profile
-              </Link>
+              <Link to="/myprofile">Back to Profile</Link>
             </Box>
           </FormContainer>
         </BorderFlow>
