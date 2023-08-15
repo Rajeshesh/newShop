@@ -56,7 +56,7 @@ export default function ProductsList() {
         ) : (
           <FlexCenter>
             <Box height="600px" sx={{ width: isNonMobile ? "600px" : "320px" }}>
-              <DDGrid AProductsData={products} horizontal />
+              <DDGrid adminProductsList={products} horizontal />
             </Box>
           </FlexCenter>
         )}

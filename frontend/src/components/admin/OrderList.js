@@ -57,7 +57,7 @@ export default function OrderList() {
                 height="600px"
                 sx={{ width: isNonMobile ? "520px" : "320px" }}
               >
-                <DDGrid AOrdersData={adminOrders} horizontal />
+                <DDGrid adminOrdersList={adminOrders} horizontal />
               </Box>
             </FlexCenter>
           )}

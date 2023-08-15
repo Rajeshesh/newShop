@@ -6,12 +6,8 @@ import {
 } from "@mui/x-data-grid";
 import React from "react";
 import { FlexCenter } from "../styledComponents/FlexBetween";
-import { useTheme } from "@mui/material";
 
-const DataGridCustomToolbar = () => {
-  const {
-    palette: { bg3: color },
-  } = useTheme();
+const DataGridCustomToolbar = ({ color }) => {
   return (
     <GridToolbarContainer>
       <FlexCenter

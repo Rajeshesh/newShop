@@ -1,13 +1,13 @@
-import { Fragment, useEffect, useState } from "react";
+import Loader from "./layouts/Loader";
+import MetaData from "./layouts/MetaData";
+import Product from "./product/Product";
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
   getProducts,
   getProductsCat,
   getProductsOff,
 } from "../actions/productActions";
-import Loader from "./layouts/Loader";
-import MetaData from "./layouts/MetaData";
-import Product from "./product/Product";
 import { toast } from "react-toastify";
 import { Box } from "@mui/material";
 

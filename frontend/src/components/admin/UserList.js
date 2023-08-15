@@ -57,7 +57,7 @@ export default function UserList() {
                 height="600px"
                 sx={{ width: isNonMobile ? "520px" : "320px" }}
               >
-                <DDGrid AUsersData={users} horizontal />
+                <DDGrid adminUsersList={users} horizontal />
               </Box>
             </FlexCenter>
           )}

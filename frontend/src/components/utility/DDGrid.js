@@ -11,31 +11,32 @@ import { deleteOrders } from "../../actions/orderAction";
 import { deleteUser } from "../../actions/userActions";
 
 const DDGrid = ({
-  orderData,
   horizontal,
   size,
   ToolNon,
-  AProductsData,
-  AOrdersData,
-  AUsersData,
-  AReviewsData,
   productId,
+  userOrders,
+  adminProductsList,
+  adminOrdersList,
+  adminUsersList,
+  adminReviewsList,
 }) => {
-  const { palette, colors } = useTheme();
   const dispatch = useDispatch();
+  const { palette, colors } = useTheme();
+
   let data = {};
-  data.data = orderData
-    ? orderData
-    : AProductsData
-    ? AProductsData
-    : AOrdersData
-    ? AOrdersData
-    : AUsersData
-    ? AUsersData
-    : AReviewsData
-    ? AReviewsData
+  data.data = userOrders
+    ? userOrders
+    : adminProductsList
+    ? adminProductsList
+    : adminOrdersList
+    ? adminOrdersList
+    : adminUsersList
+    ? adminUsersList
+    : adminReviewsList
+    ? adminReviewsList
     : [];
-  data.columns = orderData
+  data.columns = userOrders
     ? [
         { field: "_id", headerName: "ID" },
         {
@@ -66,7 +67,7 @@ const DDGrid = ({
           ),
         },
       ]
-    : AProductsData
+    : adminProductsList
     ? [
         { field: "_id", headerName: "ID" },
         {
@@ -98,7 +99,7 @@ const DDGrid = ({
           ),
         },
       ]
-    : AOrdersData
+    : adminOrdersList
     ? [
         { field: "_id", headerName: "ID" },
         {
@@ -139,7 +140,7 @@ const DDGrid = ({
           ),
         },
       ]
-    : AUsersData
+    : adminUsersList
     ? [
         { field: "_id", headerName: "ID" },
         { field: "name", headerName: "Name" },
@@ -177,7 +178,7 @@ const DDGrid = ({
           ),
         },
       ]
-    : AReviewsData
+    : adminReviewsList
     ? [
         { field: "_id", headerName: "ID" },
         { field: "user", headerName: "Name" },
@@ -208,7 +209,7 @@ const DDGrid = ({
       ]
     : [];
 
-  let sty = !horizontal
+  let style = !horizontal
     ? {
         "& .MuiDataGrid-footerContainer , .MuiTablePagination-toolbar": {
           display: "flex",
@@ -230,11 +231,15 @@ const DDGrid = ({
         },
         textAlign: "center",
       }
-    : {};
+    : {
+        "& .MuiDataGrid-footerContainer p": {
+          margin: 0,
+        },
+      };
   let toolbar = !ToolNon ? { toolbar: DataGridCustomToolbar } : {};
   return (
     <DataGrid
-      sx={sty}
+      sx={style}
       getRowId={(row) => row._id}
       rows={data.data}
       columns={data.columns}
@@ -245,6 +250,11 @@ const DDGrid = ({
         },
       }}
       slots={toolbar}
+      slotProps={{
+        toolbar: {
+          color: palette.bg3,
+        },
+      }}
     />
   );
 };

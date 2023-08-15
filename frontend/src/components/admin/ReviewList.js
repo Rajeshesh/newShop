@@ -87,7 +87,7 @@ export default function ReviewList() {
                   sx={{ width: isNonMobile ? "520px" : "320px" }}
                 >
                   <DDGrid
-                    AReviewsData={reviews}
+                    adminReviewsList={reviews}
                     horizontal
                     productId={productId}
                   />

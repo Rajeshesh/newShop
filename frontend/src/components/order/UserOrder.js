@@ -21,7 +21,7 @@ export default function UserOrder() {
       <h1 className="mt-5 ">My Orders</h1>
       <FlexCenter>
         <Box height="600px" sx={{ width: isNonMobile ? "530px" : "320px" }}>
-          <DDGrid orderData={userOrders} horizontal />
+          <DDGrid userOrders={userOrders} horizontal />
         </Box>
       </FlexCenter>
     </div>

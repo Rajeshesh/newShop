@@ -1,7 +1,6 @@
-import React from "react";
 import { useLocation } from "react-router-dom";
-import { FlexCenter } from "./styledComponents/FlexBetween";
 import { Box } from "@mui/material";
+import { FlexCenter } from "./styledComponents/FlexBetween";
 
 const PageNotFound = () => {
   const { pathname } = useLocation();
