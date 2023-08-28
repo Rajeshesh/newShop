@@ -3,7 +3,7 @@ import Box from "@mui/material/Box";
 import Rating from "@mui/material/Rating";
 import StarIcon from "@mui/icons-material/Star";
 import { Typography, useTheme } from "@mui/material";
-import { FlexCenterStart, FlexStart } from "../styledComponents/FlexBetween";
+import { FlexCenterStart } from "../styledComponents/FlexBetween";
 
 export default function Product({ product }) {
   let { palette } = useTheme();

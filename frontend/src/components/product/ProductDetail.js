@@ -6,11 +6,7 @@ import {
   getProduct,
   getProducts,
 } from "../../actions/productActions";
-import {
-  clearReviewSubmitted,
-  clearError,
-  clearProduct,
-} from "../../slices/productSlice";
+import { clearReviewSubmitted, clearError } from "../../slices/productSlice";
 import Loader from "../layouts/Loader";
 import { Carousel, Modal } from "react-bootstrap";
 import MetaData from "../layouts/MetaData";
@@ -31,13 +27,8 @@ import {
 import {
   KeyboardDoubleArrowLeft,
   KeyboardDoubleArrowRight,
-  Star,
 } from "@mui/icons-material";
-import FlexBetween, {
-  FlexCenter,
-  FlexEvenly,
-} from "../styledComponents/FlexBetween";
-import { buyNow } from "../../slices/orderSlice";
+import { FlexCenter, FlexEvenly } from "../styledComponents/FlexBetween";
 import { buyNowAction } from "../../actions/orderAction";
 import Product from "./Product";
 
@@ -146,70 +137,68 @@ const AddToCart = memo(
   )
 );
 
-const ModalReUse = memo(
-  ({
-    show,
-    handleClose,
-    setRatingUCF,
-    rating,
-    reviewHandlar,
-    loading,
-    setCommentUCF,
-    theme,
-  }) => (
-    <Modal show={show} onHide={handleClose}>
-      <Box bgcolor={theme.palette.background.alt1}>
-        <Modal.Header closeButton>
-          <Modal.Title>
-            <Box component="h2">Submit Review</Box>
-          </Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          <Box>
-            <Rating
-              defaultValue={rating}
-              precision={1}
-              onClick={(e) => setRatingUCF(e.target.value)}
-            />
-          </Box>
-          <Box
-            bgcolor={
-              theme.palette.theme === "light"
-                ? theme.palette.primary[900]
-                : theme.palette.primary[300]
-            }
-          >
-            <TextField
-              id="review"
-              name="review"
-              sx={{ width: "100%" }}
-              label="Review"
-              multiline
-              rows={4}
-              onChange={(e) => setCommentUCF(e.target.value)}
-            />
-          </Box>
-          <Button
-            disabled={loading}
-            onClick={reviewHandlar}
-            className="mt-3"
-            variant="outlined"
-            color="secondary"
-            aria-label="Close"
-          >
-            Submit
-          </Button>
-        </Modal.Body>
-      </Box>
-    </Modal>
-  )
+const ModalReUse = ({
+  show,
+  handleClose,
+  setRatingUCF,
+  rating,
+  reviewHandlar,
+  loading,
+  setCommentUCF,
+  theme,
+}) => (
+  <Modal show={show} onHide={handleClose}>
+    <Box bgcolor={theme.palette.background.alt1}>
+      <Modal.Header closeButton>
+        <Modal.Title>
+          <Box component="h2">Submit Review</Box>
+        </Modal.Title>
+      </Modal.Header>
+      <Modal.Body>
+        <Box>
+          <Rating
+            defaultValue={rating}
+            precision={1}
+            onClick={(e) => setRatingUCF(e.target.value)}
+          />
+        </Box>
+        <Box
+          bgcolor={
+            theme.palette.theme === "light"
+              ? theme.palette.primary[900]
+              : theme.palette.primary[300]
+          }
+        >
+          <TextField
+            id="review"
+            name="review"
+            sx={{ width: "100%" }}
+            label="Review"
+            multiline
+            rows={4}
+            onChange={(e) => setCommentUCF(e.target.value)}
+          />
+        </Box>
+        <Button
+          disabled={loading}
+          onClick={reviewHandlar}
+          className="mt-3"
+          variant="outlined"
+          color="secondary"
+          aria-label="Close"
+        >
+          Submit
+        </Button>
+      </Modal.Body>
+    </Box>
+  </Modal>
 );
 
 export default function ProductDetail() {
   const dispatch = useDispatch();
-  const { id } = useParams();
   const theme = useTheme();
   const navigate = useNavigate();
+  const { id } = useParams();
   const {
     loading,
     product = {},
@@ -220,7 +209,6 @@ export default function ProductDetail() {
   const { user } = useSelector((state) => state.authState);
 
   const [quantity, setQuantity] = useState(1);
-
   const [show, setShow] = useState(false);
   const [rating, setRating] = useState(4);
   const [comment, setComment] = useState("");
@@ -231,7 +219,6 @@ export default function ProductDetail() {
   const setCommentUCF = useCallback((v) => setComment(v), [comment]);
 
   const increaseQty = () => {
-    // const count = document.querySelector(".count");
     if (product.stock === 0 || quantity >= product.stock) return;
     const qty = quantity + 1;
     setQuantity(qty);
@@ -274,10 +261,6 @@ export default function ProductDetail() {
       });
       return;
     }
-
-    // return () => {
-    //   dispatch(clearProduct());
-    // };
   }, [id, isReviewSubmitted, error]);
 
   useEffect(() => {
@@ -395,7 +378,6 @@ export default function ProductDetail() {
 
           {user ? (
             <Button
-              type="button"
               variant="outlined"
               color="secondary"
               className="mt-4 mb-4"
