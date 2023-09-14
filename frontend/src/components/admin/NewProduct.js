@@ -8,7 +8,10 @@ import { clearError, clearProductCreated } from "../../slices/productSlice";
 import Sidebar from "./Sidebar";
 import { FormContainer } from "../styledComponents/Form";
 import { FlexCenter } from "../styledComponents/FlexBetween";
-import { BorderFlowBySpan } from "../styledComponents/AnimationComponent";
+import {
+  BorderFlowBySpan,
+  Spans,
+} from "../styledComponents/AnimationComponent";
 
 export default function NewProduct() {
   const [name, setName] = useState("");
@@ -148,10 +151,7 @@ export default function NewProduct() {
       </Box>
       <FlexCenter width="100%">
         <BorderFlowBySpan mt="20px">
-          <span className="spanA"></span>
-          <span className="spanA"></span>
-          <span className="spanA"></span>
-          <span className="spanA"></span>
+          <Spans />
           <FormContainer
             onSubmit={sumbitHandler}
             encType="multipart/form-data"
@@ -168,11 +168,13 @@ export default function NewProduct() {
                 variant="standard"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
+                required
               />
             </div>
 
             <div>
               <TextField
+                required
                 sx={{ width: "100%" }}
                 type="number"
                 label="Price"
@@ -184,6 +186,7 @@ export default function NewProduct() {
 
             <div className="">
               <TextField
+                required
                 sx={{ width: "100%" }}
                 type="number"
                 label="MRP"
@@ -195,6 +198,7 @@ export default function NewProduct() {
 
             <div>
               <TextField
+                required
                 sx={{ width: "100%" }}
                 label="Description"
                 multiline
@@ -207,6 +211,7 @@ export default function NewProduct() {
 
             <div className="">
               <TextField
+                required
                 sx={{ width: "100%" }}
                 label="About This Item"
                 multiline
@@ -219,6 +224,7 @@ export default function NewProduct() {
 
             <div>
               <TextField
+                required
                 sx={{ width: "100%" }}
                 select
                 label="Category"
@@ -236,6 +242,7 @@ export default function NewProduct() {
             </div>
             <div>
               <TextField
+                required
                 sx={{ width: "100%" }}
                 type="number"
                 label="Stock"
@@ -247,6 +254,7 @@ export default function NewProduct() {
 
             <div>
               <TextField
+                required
                 sx={{ width: "100%" }}
                 label="Seller Name"
                 variant="standard"

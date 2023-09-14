@@ -7,7 +7,7 @@ import { getProduct, updateProduct } from "../../actions/productActions";
 import { clearError, clearProductUpdated } from "../../slices/productSlice";
 import Sidebar from "./Sidebar";
 import { FlexCenter } from "../styledComponents/FlexBetween";
-import { BorderFlowBySpan } from "../styledComponents/AnimationComponent";
+import { BorderFlowBySpan, Spans } from "../styledComponents/AnimationComponent";
 import { FormContainer } from "../styledComponents/Form";
 import { ClearAll } from "@mui/icons-material";
 
@@ -199,10 +199,7 @@ export default function UpdateProduct() {
       </Box>
       <FlexCenter width="100%">
         <BorderFlowBySpan mt="20px">
-          <span className="spanA"></span>
-          <span className="spanA"></span>
-          <span className="spanA"></span>
-          <span className="spanA"></span>
+        <Spans />
           <FormContainer
             onSubmit={sumbitHandler}
             className="input__form"

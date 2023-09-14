@@ -109,6 +109,7 @@ export default function UpdatePassword() {
                 id="standard-adornment-password-Old"
                 name="password"
                 type={showPassword ? "text" : "password"}
+                required
                 endAdornment={
                   <InputAdornment position="end">
                     <IconButton
@@ -132,6 +133,7 @@ export default function UpdatePassword() {
                 type={showNewPassword ? "text" : "password"}
                 onChange={(e) => setPassword(e.target.value)}
                 value={password}
+                required
                 endAdornment={
                   <InputAdornment position="end">
                     <IconButton
@@ -155,6 +157,7 @@ export default function UpdatePassword() {
                 type={showNewPassword ? "text" : "password"}
                 onChange={(e) => setConformPassword(e.target.value)}
                 value={conformPassword}
+                required
                 endAdornment={
                   <InputAdornment position="end">
                     <IconButton
@@ -177,13 +180,8 @@ export default function UpdatePassword() {
             >
               Set Password
             </Button>
-            <Box
-              textAlign="center"
-              width="100%"
-            >
-              <Link to="/myprofile">
-              Back to Profile
-              </Link>
+            <Box textAlign="center" width="100%">
+              <Link to="/myprofile">Back to Profile</Link>
             </Box>
           </FormContainer>
         </BorderFlow>

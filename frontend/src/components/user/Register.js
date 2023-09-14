@@ -119,6 +119,7 @@ export default function Register() {
                 label="Name"
                 variant="standard"
                 onChange={onChange}
+                required
               />
             </div>
             <div>
@@ -129,6 +130,7 @@ export default function Register() {
                 type="email"
                 variant="standard"
                 onChange={onChange}
+                required
               />
             </div>
             <FormControl sx={{ width: "100%" }} variant="standard">
@@ -140,6 +142,7 @@ export default function Register() {
                 name="password"
                 onChange={onChange}
                 type={showPassword ? "text" : "password"}
+                required
                 endAdornment={
                   <InputAdornment position="end">
                     <IconButton

@@ -98,6 +98,7 @@ export default function Login() {
                 label="Email"
                 type="email"
                 variant="standard"
+                required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
@@ -111,6 +112,7 @@ export default function Login() {
                 id="standard-adornment-password"
                 name="password"
                 value={password}
+                required
                 onChange={(e) => setPassword(e.target.value)}
                 type={showPassword ? "text" : "password"}
                 endAdornment={

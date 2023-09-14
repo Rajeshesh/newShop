@@ -7,7 +7,10 @@ import { getUser, updateuser } from "../../actions/userActions";
 import { clearError, clearUserUpdated } from "../../slices/userSlice";
 import Sidebar from "./Sidebar";
 import { FlexCenter } from "../styledComponents/FlexBetween";
-import { BorderFlowBySpan } from "../styledComponents/AnimationComponent";
+import {
+  BorderFlowBySpan,
+  Spans,
+} from "../styledComponents/AnimationComponent";
 import { FormContainer } from "../styledComponents/Form";
 
 export default function UpdateUser() {
@@ -86,10 +89,7 @@ export default function UpdateUser() {
       </Box>
       <FlexCenter width="100%">
         <BorderFlowBySpan mt="20px">
-          <span className="spanA"></span>
-          <span className="spanA"></span>
-          <span className="spanA"></span>
-          <span className="spanA"></span>
+          <Spans />
           <FormContainer
             onSubmit={sumbitHandler}
             encType="multipart/form-data"

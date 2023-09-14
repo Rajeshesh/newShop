@@ -46,14 +46,14 @@ export default function ForgotPassword() {
         <BorderFlow
           sx={{
             width: "330px",
-            height: "285px",
+            height: "238px",
             "&::before": {
               width: "320px",
-              height: "285px",
+              height: "238px",
             },
             "&::after": {
               width: "320px",
-              height: "285px",
+              height: "238px",
             },
           }}
           mt="45px"
@@ -74,6 +74,7 @@ export default function ForgotPassword() {
                 variant="standard"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
+                required
               />
             </div>
 

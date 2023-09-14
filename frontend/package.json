@@ -34,7 +34,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build --proxy=http://3.82.129.40:8000",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

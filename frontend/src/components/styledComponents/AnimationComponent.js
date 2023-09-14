@@ -100,6 +100,14 @@ export const BorderFlowBySpan = styled(Box)(({ theme: { palette } }) => ({
     animationDelay: "3s",
   },
 }));
+export const Spans = () => (
+  <>
+    <span className="spanA"></span>
+    <span className="spanA"></span>
+    <span className="spanA"></span>
+    <span className="spanA"></span>
+  </>
+);
 
 export const BoxS = styled(Box)(({ theme: { palette } }) => ({
   position: "relative",
@@ -121,4 +129,3 @@ export const BoxS = styled(Box)(({ theme: { palette } }) => ({
     zIndex: "-1",
   },
 }));
-

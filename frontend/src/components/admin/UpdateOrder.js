@@ -12,7 +12,10 @@ import Sidebar from "./Sidebar";
 import OrderDetails from "../adminPublic/OrderDetails";
 import { FlexCenter } from "../styledComponents/FlexBetween";
 import { FormContainer } from "../styledComponents/Form";
-import { BorderFlowBySpan } from "../styledComponents/AnimationComponent";
+import {
+  BorderFlowBySpan,
+  Spans,
+} from "../styledComponents/AnimationComponent";
 
 export default function UpdateOrder() {
   const navigate = useNavigate();
@@ -75,10 +78,7 @@ export default function UpdateOrder() {
         </FlexCenter>
         <FlexCenter width="100%">
           <BorderFlowBySpan mt="20px">
-            <span className="spanA"></span>
-            <span className="spanA"></span>
-            <span className="spanA"></span>
-            <span className="spanA"></span>
+            <Spans />
             <FormContainer
               onSubmit={sumbitHandler}
               component="form"
